@@ -87,3 +87,7 @@ dist/
 
 # CLAUDE.md는 oh-my-opencode 미사용으로 추적 안 함
 CLAUDE.md
+
+# Raw research cache (not tracked — local only)
+# 2026-07-09: 토스 Open API 자료 캐시 (Hermes auto-researcher)
+docs/raw/

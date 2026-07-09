@@ -37,9 +37,13 @@ toss-trader/
 ├── history/                     # 6단계: 1 record = 1 JSON 파일
 │   └── .gitkeep                 # (history/*.json은 .gitignore)
 ├── docs/
-│   ├── ARCHITECTURE.md          # v0.4 정식
-│   ├── OPENAPI_REFERENCE.md     # v0.1 정식
-│   └── SAFETY.md                # (예정)
+│   ├── README.md                  ← 본 문서 (인덱스)
+│   ├── ARCHITECTURE.md            ← v0.4 정식
+│   ├── OPENAPI_REFERENCE.md       ← v0.1
+│   ├── SAFETY.md                  ← (예정)
+│   └── raw/                       ← (로컬 전용, .gitignore 무시) 토스 Open API 1차 자료 캐시
+│       ├── README.md              ← raw/ 안내
+│       └── toss-api-research-2026-07-09/  ← 34개 파일, 1.0MB
 ├── AGENTS.md                    # 이 파일
 ├── README.md
 ├── LICENSE
