@@ -1,5 +1,7 @@
 # AGENTS.md — 다른 PC 에이전트용 작업 가이드
 
+> ⚠️ **Next.js 16 (2026-07-10 보일러플레이트 검증)**: `create-next-app@latest` 결과 = `next@16.2.10` + `react@19.2.4` + `tailwind@4`. Next 15와 API/관례/파일 구조가 다를 수 있음. `node_modules/next/dist/docs/`의 가이드 우선 참조 + deprecation 경고 주의.
+
 ## 프로젝트 한 줄 요약
 
 토스증권 Open API 기반 투자 어시스턴트.
