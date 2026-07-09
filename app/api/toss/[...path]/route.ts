@@ -16,6 +16,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { tossFetch, TossError } from "@/lib/toss";
+import { guardRequest } from "@/lib/safety";
 
 interface RouteContext {
   params: Promise<{ path: string[] }>;
@@ -55,6 +56,21 @@ async function handle(req: NextRequest, ctx: RouteContext, method: "GET" | "POST
         );
       }
     }
+  }
+
+  // ── 안전 가드 체인 (3단계: lib/safety.ts 6대 가드) ──
+  const guard = guardRequest({
+    method,
+    path: tossPath,
+    body,
+    headers: {
+      "x-tossinvest-account": req.headers.get("x-tossinvest-account") ?? undefined,
+      "confirmhighvalueorder": req.headers.get("confirmhighvalueorder") ?? undefined,
+      "x-client-order-id": req.headers.get("x-client-order-id") ?? undefined,
+    },
+  });
+  if (!guard.ok) {
+    return NextResponse.json(guard.error, { status: guard.httpStatus });
   }
 
   // ── tossFetch 옵션 조립 ──
