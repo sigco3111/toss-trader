@@ -171,6 +171,47 @@ $ open https://toss-trader.vercel.app/
 | `/` (메인) | 시세/잔고/이력 + 매수/매도 버튼 (paper 기본) |
 | `BUY` 버튼 클릭 | Telegram confirm → 안전 가드 5종 통과 → 토스 주문 (DRY_RUN=false 시) |
 
+## 🌐 API endpoint (개발자/에이전트용)
+
+toss-trader는 토스 Open API의 **catch-all relay**를 제공합니다. `/api/toss/[...path]` 하나로 토스의 28개 endpoint 모두 호출 가능.
+
+| 동작 | 호출 예시 |
+|---|---|
+| 계좌 목록 | `GET /api/toss/api/v1/accounts` |
+| 보유 종목 | `GET /api/toss/api/v1/holdings` + `X-Tossinvest-Account: 1` 헤더 |
+| 시세 조회 | `GET /api/toss/api/v1/prices?symbols=005930,000660` |
+| 호가 조회 | `GET /api/toss/api/v1/orderbook?symbol=005930` |
+| 캔들 (차트) | `GET /api/toss/api/v1/candles?symbol=005930&interval=1d` |
+| 매수/매도 (paper) | `POST /api/toss/api/v1/orders` + JSON body (DRY_RUN=true 시 **자동 차단**, 423 응답) |
+| 매수/매도 (실계좌) | DRY_RUN=false + Telegram 사용자 confirm 후만 |
+
+> 📦 **전체 endpoint 표** (28종 + 5 카테고리 + 16 rate limit 그룹 + 422 가드 10종) = [docs/OPENAPI_REFERENCE.md](docs/OPENAPI_REFERENCE.md)
+
+### 안전 가드 (5종 자동 적용)
+
+| # | 가드 | 효과 |
+|---|---|---|
+| 1 | `DRY_RUN=true` 기본 | POST `/api/v1/orders` 자동 차단 (HTTP 423) |
+| 2 | 422 코드 자동 인식 | 10종 코드 → 사용자 친화 메시지 변환 |
+| 3 | 1억+ 주문 | `confirmHighValueOrder: true` 헤더 자동 설정 가능 |
+| 4 | 429/5xx 재시도 | `Retry-After` 우선 + 지수 백오프 (1s→2s→4s, max 3회) |
+| 5 | 401 토큰 재발급 | 캐시 무효화 후 1회 재시도 |
+
+### 응답 envelope (toss-trader 메타 추가)
+
+```json
+{
+  "data": { /* 토스 원본 응답 */ },
+  "servedAt": "2026-07-10T07:30:00.000Z",
+  "dryRun": true,
+  "rateLimit": {
+    "limit": 5,
+    "remaining": 4,
+    "reset": 1
+  }
+}
+```
+
 ---
 
 ## 🛠️ 개발자 섹션

@@ -24,12 +24,14 @@
 
 ```bash
 cat > ~/.hermes/secrets/tossinvest.env <<'EOF'
-TOSSINVEST_API_KEY=***
-TOSSINVEST_SECRET_KEY=***
+TOSS_CLIENT_ID=***
+TOSS_CLIENT_SECRET=***
 DRY_RUN=true
 EOF
 chmod 600 ~/.hermes/secrets/tossinvest.env
 ```
+
+> ℹ️ env 키 이름 통일 (2026-07-10): README v0.6/AGENTS.md = `TOSS_CLIENT_ID` / `TOSS_CLIENT_SECRET`. 본 문서(L27-28)는 README/AGENTS.md와 통일됨.
 
 > ⚠️ **사전 신청자 대상 단계적 롤아웃 중** — 메뉴가 보이지 않으면 토스 고객센터 사전 신청 필요.
 > **사업자등록증 불필요** — 일반 개인 종합매매 계좌 보유자도 발급 가능.
@@ -46,8 +48,8 @@ chmod 600 ~/.hermes/secrets/tossinvest.env
 curl -s -X POST 'https://openapi.tossinvest.com/oauth2/token' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'grant_type=client_credentials' \
-  -d "client_id=$TOSSINVEST_API_KEY" \
-  -d "client_secret=$TOSSINVEST_SECRET_KEY"
+  -d "client_id=$TOSS_CLIENT_ID" \
+  -d "client_secret=$TOSS_CLIENT_SECRET"
 
 # 시세 조회 (토큰만)
 curl -s 'https://openapi.tossinvest.com/api/v1/stocks?symbols=005930' \
