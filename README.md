@@ -1,12 +1,13 @@
 # 🤖 toss-trader
 
-> **프로젝트**: 토스증권 Open API 기반 투자 어시스턴트
+> **v1.0 공개 (2026-07-10)** — [RELEASE_NOTES.md](RELEASE_NOTES.md) | 토스증권 Open API 기반 투자 어시스턴트
 > **Paper trading 기본값, 실계좌는 명시적 사용자 확인 후**
 > **스택**: Next.js 16.2.10 (App Router) + React 19.2.4 + TypeScript 5 + Tailwind CSS 4 + ESLint 9 (2026-07-10 보일러플레이트 검증 완료)
 > **v0.4 단순화**: Notion 이력 제거 + kstost/stock 원본 history.ts 방식 (로컬 JSON)
 
-[kstost/stock](https://github.com/kstost/stock)에서 영감을 받아 **원본과 같은 Next.js + Vercel 구조**로 재설계한 버전입니다.
-자세한 아키텍처는 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 참조.
+- [kstost/stock](https://github.com/kstost/stock)에서 영감을 받아 **원본과 같은 Next.js + Vercel 구조**로 재설계한 버전입니다.
+- 자세한 아키텍처는 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 참조.
+- **v1.0 릴리스 노트**: [RELEASE_NOTES.md](RELEASE_NOTES.md) — 8단계 요약 + 업그레이드 가이드 + 로드맵.
 
 ## 🎬 라이브 데모
 
