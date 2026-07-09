@@ -1,178 +1,223 @@
 # 🤖 toss-trader
 
-> 토스증권 Open API + oh-my-opencode 기반 투자 어시스턴트
-> **paper trading 우선, 실계좌 주문은 명시적 사용자 확인 후에만 실행**
+> 토스증권 Open API + 다중 LLM (NIM/미니맥스/OpenAI) 기반 투자 어시스턴트
+> **BYOK 시크릿 격리 + paper trading 우선, 실계좌는 명시적 사용자 확인 후**
 
-[kstost/stock](https://github.com/kstost/stock)에서 영감을 받아 **우리 스택으로 재설계**한 버전입니다.
+[kstost/stock](https://github.com/kstost/stock)에서 영감을 받아 **원본과 같은 Next.js + Vercel 구조**로 재설계한 버전입니다.
+자세한 아키텍처는 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 참조.
 
 ## 🎬 라이브 데모
 
-CLI 기반 (Telegram inline button 알림). 별도 데모 URL 없음.
+```text
+Vercel 자동 배포 (예정) — https://toss-trader.vercel.app/
+```
 
 ```
-$ python3 -m tosstrader analyze 005930
-# → 분석 결과 + Telegram inline [BUY] [SELL] [HOLD] 버튼
+$ open https://toss-trader.vercel.app/
+# → SettingsForm에 토스/NIM/OpenAI 키 1회 입력 (localStorage)
+# → 대시보드에서 시세 조회, LLM 분석, BUY/SELL 시뮬레이션
 ```
 
 ## 🤖 생성 정보
 
-- **기반**: [kstost/stock](https://github.com/kstost/stock) (MIT, kstost) — Next.js + Codex CLI + 토스 Open API
-- **재설계 사유**: Codex `--yolo` + 서버 메모리 평문 보관 → oh-my-opencode + `~/.hermes/secrets/` 패턴으로 이관
-- **분석 엔진**: `oh-my-opencode` (OpenCode 플러그인). bunx 호출, 도구 화이트리스트
-- **대상**: sigco3111의 `~/.hermes/secrets/tossinvest.env` 보유 사용자
+- **기반**: [kstost/stock](https://github.com/kstost/stock) (MIT, kstost) — Next.js 15 + Codex CLI + 토스 Open API
+- **재설계 사유**: 원본과 같은 Next.js 구조 채택 + 다중 LLM (Codex = NIM 경유로 미니맥스 등 공식 지원) + BYOK 시크릿 격리
+- **분석 엔진**: LLM provider 라우터 (NIM / 미니맥스 / GLM-5 / GPT-OSS 120B / DeepSeek V4 Pro / Mistral / Nemotron / OpenAI)
+- **대상**: sigco3111 + 토스증권 WTS 계좌 보유 일반 개인 (사업자등록증 무관)
 
 ## ✨ 주요 특징
 
-- 🔒 **시크릿 격리** — 토스 API Key/Secret은 `~/.hermes/secrets/tossinvest.env` (chmod 600) 외 노출 0
-- 📝 **Paper trading 기본값** — 실계좌 주문은 `DRY_RUN=false` 명시 후에만 활성
-- 🤖 **oh-my-opencode 분석** — OpenCode 플러그인, 도구 호출 화이트리스트, yolo 미사용
+- 🔒 **BYOK 시크릿 격리** — 토스/NIM/OpenAI 키는 브라우저 localStorage에만, Vercel env 0
+- 📝 **Paper trading 기본값** — `DRY_RUN=true` 기본, 실계좌는 UI 토글 명시 후만 활성
+- 🧠 **다중 LLM** — NIM 카탈로그 6종 (미니맥스 M2.7 / GLM-5 / GPT-OSS 120B / DeepSeek V4 Pro / Mistral / Nemotron) + OpenAI 옵션
 - 💬 **Telegram confirm** — BUY/SELL은 Telegram inline button 사용자 명시 확인 후
-- 🗂️ **Notion 이력** — 모든 분석/주문은 Notion DB + 로컬 JSON 이중 기록
-- 🛡️ **안전 규칙** — 주문 endpoint 호출은 prompt 단계에서 차단, 사용자 행동지침이 비어있으면 HOLD 우선
+- 🗂️ **Notion 이력** — 모든 분석/주문은 Notion DB 기록 (Vercel env 사용, 서버 측)
+- 🛡️ **안전 가드 5종** — `safety.ts` (DRY_RUN + 422 가드 + confirmHighValueOrder + Telegram confirm + BYOK 입력 검증)
 
 ## 🚀 실행 방법
 
 ```bash
 # 1) 의존성
-pip install -e .
+npm install
 
-# 2) 시크릿 로드 (chmod 600 필수)
-export TOSSINVEST_API_KEY=***  # 토스 Open API 콘솔에서 발급
-export TOSSINVEST_SECRET_KEY=***
+# 2) Vercel env (서버 측 도구만)
+#   NOTION_API_KEY, TELEGRAM_BOT_TOKEN
+vercel env add NOTION_API_KEY
+vercel env add TELEGRAM_BOT_TOKEN
 
-# 3) 분석 (paper)
-python3 -m tosstrader analyze 005930
+# 3) Vercel 배포
+vercel --prod --yes --token $(cat ~/.hermes/secrets/vercel_token.txt)
 
-# 4) 실계좌 (명시적 opt-in, 기본값 차단)
-DRY_RUN=false python3 -m tosstrader order buy 005930 --qty 2 --price 81000
+# 4) 사용자: 브라우저로 접속 → SettingsForm에 4개 키 입력 (localStorage 영구)
+#    - Toss API Key
+#    - Toss Secret Key
+#    - NIM/OpenAI/MiniMax API Key
+#    - DRY_RUN toggle (기본 ON)
 ```
 
 ## 🎮 조작법
 
-| 명령 | 동작 |
+| 화면 | 동작 |
 |---|---|
-| `python3 -m tosstrader analyze <종목코드>` | 1회 분석 + Telegram 알림 |
-| `python3 -m tosstrader watch <종목코드>` | 30초 간격 연속 분석 |
-| `python3 -m tosstrader order buy <코드> --qty N --price P` | 지정가 매수 (paper 기본) |
-| `python3 -m tosstrader order sell <코드> --qty N --price P` | 지정가 매도 (paper 기본) |
-| `python3 -m tosstrader history` | Notion 이력 조회 |
+| `/` (메인) | 시세/잔고/이력 + LLM 분석 + BUY/SELL 버튼 |
+| `/settings` | BYOK 폼 (4개 키 입력/수정) |
+| `BUY` 버튼 클릭 | Telegram confirm → 안전 가드 5종 통과 → 토스 주문 (DRY_RUN=false 시) |
 
 ## 🛠️ 기술 스택
 
-- **언어**: Python 3.11+ (PEP 604 union, 3.8 미지원)
-- **분석 엔진**: `oh-my-opencode` (`bunx oh-my-opencode` v4.16.0+, OpenCode 플러그인)
-- **HTTP**: `httpx` (async) + `tornado` 없음
-- **시크릿**: 환경변수 + `~/.hermes/secrets/tossinvest.env`
-- **이력**: Notion DB (`toss-trader` database) + 로컬 `history/*.json`
+- **프레임워크**: Next.js 15 (App Router) + TypeScript + Tailwind
+- **LLM SDK**: `openai` (OpenAI 호환 — NIM, OpenAI, Mistral 모두)
+- **시크릿**: localStorage (BYOK)
+- **Vercel env**: Notion API, Telegram Bot (서버 측 도구만)
+- **이력**: Notion DB (`toss-trader` database)
 - **알림**: Telegram Bot API (inline keyboard)
-- **테스트**: `pytest` + `vcrpy` (HTTP 녹화)
+- **테스트**: `vitest` + MSW (HTTP mock)
 
 ## 📂 프로젝트 구조
 
 ```
 toss-trader/
-├── README.md
-├── LICENSE                       # MIT, 원본 kstost/stock 명기
-├── AGENTS.md                     # 다른 PC 에이전트용 작업 가이드
-├── .gitignore                    # 시크릿 + history + Python 표준
-├── pyproject.toml
-├── src/tosstrader/
-│   ├── __init__.py
-│   ├── cli.py                    # argparse 엔트리
-│   ├── broker/
-│   │   ├── __init__.py
-│   │   ├── toss.py               # 토스 Open API 클라이언트
-│   │   └── paper.py              # paper trading 시뮬
-│   ├── agent/
-│   │   ├── __init__.py
-│   │   ├── opencode.py           # oh-my-opencode 호출 래퍼 (bunx)
-│   │   ├── schema.py             # 출력 Zod 스키마
-│   │   └── prompt.py             # 안전 규칙 포함 시스템 프롬프트
-│   ├── notify/
-│   │   ├── __init__.py
-│   │   └── telegram.py           # inline button 알림
-│   ├── history/
-│   │   ├── __init__.py
-│   │   ├── notion.py             # Notion DB 기록
-│   │   └── local.py              # JSON 백업
-│   └── safety.py                 # dry-run 가드 + 화이트리스트
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx                  # 메인 대시보드
+│   ├── settings/page.tsx         # BYOK 폼
+│   └── api/
+│       ├── llm/route.ts          # LLM provider 라우터
+│       ├── llm/nim/route.ts      # NIM (미니맥스/GLM-5/...)
+│       ├── llm/openai/route.ts
+│       ├── toss/route.ts         # 토스 Open API relay
+│       ├── notion/route.ts
+│       └── telegram/route.ts
+├── components/
+│   ├── ChatPanel.tsx
+│   ├── Portfolio.tsx
+│   ├── OrderButton.tsx
+│   └── SettingsForm.tsx          # BYOK localStorage 폼
+├── lib/
+│   ├── llm/
+│   │   ├── router.ts             # provider 라우팅
+│   │   ├── nim.ts
+│   │   ├── openai.ts
+│   │   └── anthropic.ts          # (선택)
+│   ├── toss.ts
+│   ├── notion.ts
+│   ├── telegram.ts
+│   └── safety.ts                 # 5대 가드
 ├── schemas/
 │   └── recommendation.schema.json
-├── history/                      # gitignore 대상
-├── tests/
-│   ├── test_safety.py
-│   ├── test_broker_paper.py
-│   └── cassettes/                # vcrpy 녹화
-└── docs/
-    ├── ARCHITECTURE.md
-    ├── SAFETY.md
-    └── NOTION_SETUP.md
+├── docs/
+│   ├── ARCHITECTURE.md           # 2차 스캐폴드 정식 문서
+│   ├── OPENAPI_REFERENCE.md      # 토스 API v1.1.5 레퍼런스
+│   ├── SAFETY.md                 # (예정)
+│   └── NOTION_SETUP.md           # (예정)
+├── .env.example                  # Vercel env 예시 (Notion/Telegram만)
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+├── AGENTS.md
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ## 🎨 디자인 결정
 
 ### 원본 (kstost/stock) 대비 변경점
 
-| 차원 | 원본 | 우리 |
+| 차원 | 원본 (kstost) | 우리 (v0.2) |
 |---|---|---|
-| 분석 엔진 | `codex exec --yolo --ephemeral` | `oh-my-opencode` 화이트리스트 |
-| 시크릿 보관 | Next.js 서버 메모리 | `~/.hermes/secrets/` chmod 600 |
+| UI | Next.js + Vercel | ✅ Next.js + Vercel (동일) |
+| LLM | Codex CLI 단일 + `--yolo --ephemeral` | LLM provider 라우터 (NIM 카탈로그 6종 + OpenAI) |
+| LLM 호출 | `child_process.spawn('codex')` | Vercel Edge Function HTTP 호출 |
+| 시크릿 | Next.js 서버 메모리 | BYOK localStorage (영구) |
 | 주문 실행 | 화면 버튼 즉시 | Telegram inline button + 사용자 확인 |
-| 데이터 | 로컬 JSON only | Notion DB + 로컬 JSON 이중 |
-| 주문 안전장치 | prompt 차원 | `safety.py` dry-run 가드 + 환경변수 opt-in |
-| Paper trading | ❌ 없음 | ✅ 기본값 |
+| 안전장치 | prompt 차원 | `safety.ts` 가드 5종 + 422 자동 처리 |
+| Paper trading | ❌ 없음 | ✅ 기본값 (`DRY_RUN=true`) |
+| Codex 미니맥스 | ❌ 미사용 | ⭕ NIM 카탈로그로 미니맥스 M2.7 지원 |
+
+### 5대 안전 가드 (safety.ts)
+
+1. `DRY_RUN=true` 기본값 — 토스 주문 endpoint 완전 차단
+2. 토스 422 `account-restricted` / `prerequisite-required` 자동 안내
+3. `confirm-high-value-required` (1억+) 자동 confirmHighValueOrder
+4. Telegram inline button = 사용자 마지막 confirm
+5. BYOK 입력값 길이/형식 검증 (실패 → 안전 기본값)
 
 ### paper trading 우선 철학
 
 실계좌 주문은 **비가역 (irreversible)** 입니다. 한 번 체결된 주문은 시장가로만 청산 가능하며, 잘못된 행동지침 한 줄이 수백만 원 손실로 이어질 수 있습니다. 따라서:
 
 - 모든 분석은 **paper** 모드에서 검증
-- 실계좌 모드 진입은 환경변수 `DRY_RUN=false` 명시
-- Telegram inline button이 사용자 마지막 확인 (Telegram 평문 노출 절대 금지)
+- 실계좌 모드 진입은 UI 토글 + 사용자 confirm 명시
+- Telegram inline button이 사용자 마지막 확인
+
+### LLM 다중 프로바이더 선택 기준
+
+| 시나리오 | 추천 |
+|---|---|
+| 빠른 시그널, 무료 | `openai/gpt-oss-120b` (NIM) |
+| 한국어/중국 시장 분석 | `MiniMax/MiniMax-M2.7` (NIM) |
+| 깊은 추론, 코딩 | `deepseek-ai/DeepSeek-V4-Pro` (NIM) |
+| 다국어/유럽 시장 | `mistralai/Mistral-Large-3` (NIM) |
+| OpenAI 호환 표준 | `gpt-5.x` (OpenAI) |
+| Claude 특화 추론 | `claude-sonnet-4.6` (Anthropic, 선택) |
 
 ## 🧠 동작 원리
 
-```
-사용자 명령 (CLI)
+```text
+사용자 (브라우저)
     ↓
-[1] safety.py: DRY_RUN 체크 + 화이트리스트
+[1] settings/page.tsx: BYOK 폼 → localStorage에 4개 키 저장
     ↓
-[2] broker/toss.py: 시세/잔고/계좌 조회 (GET only, 주문 endpoint 차단)
+[2] 메인 대시보드: 종목 선택 + "분석" 클릭
     ↓
-[3] agent/opencode.py: oh-my-opencode 호출
-    ├─ system prompt: 안전 규칙 (주문 endpoint 호출 금지, HOLD 우선, ...)
-    ├─ tool whitelist: 조회 API만 허용
-    └─ output schema: Zod 검증
+[3] app/api/toss/route.ts: 토스 Open API 호출 (BYOK 토큰)
+    ├─ 시세/잔고/계좌 조회 (GET only, 주문 endpoint 차단)
+    └─ 응답: TossApiResponse
     ↓
-[4] decision: BUY/SELL/HOLD + confidence + 권장 주문
+[4] app/api/llm/route.ts: provider 라우터
+    ├─ provider 선택 (UI 드롭다운)
+    ├─ BYOK 토큰 (localStorage)
+    ├─ nim.ts / openai.ts / anthropic.ts: provider별 HTTP 호출
+    └─ 응답: StreamingResponse (SSE)
     ↓
-[5] notify/telegram.py: inline button [BUY] [SELL] [HOLD]
+[5] components/ChatPanel.tsx: LLM 분석 표시 (BUY/SELL/HOLD)
     ↓
-[6] 사용자 confirm → paper.paper 또는 toss.toss 호출
+[6] BUY/SELL 클릭
+    ├─ DRY_RUN=true → paper 시뮬레이션
+    ├─ DRY_RUN=false → app/api/telegram/route.ts → Telegram inline button 발송
     ↓
-[7] history: Notion DB + 로컬 JSON 기록
+[7] 사용자 Telegram 확인 → /api/toss/route.ts (POST /api/v1/orders)
+    ├─ 422 가드 (account-restricted / prerequisite-required / confirm-high-value-required)
+    └─ 체결 응답
+    ↓
+[8] app/api/notion/route.ts: Notion DB 기록
 ```
 
-> **상세 토스 Open API 레퍼런스 (URL, 발급 절차, 422 안전 가드)**: [`docs/OPENAPI_REFERENCE.md`](docs/OPENAPI_REFERENCE.md)
+> **상세 아키텍처 + LLM provider 매트릭스 + 안전 가드**: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+> **상세 토스 Open API 레퍼런스**: [`docs/OPENAPI_REFERENCE.md`](docs/OPENAPI_REFERENCE.md)
 
 ## 🔬 검증
 
-- [ ] `pytest -q` 0 실패
-- [ ] `safety.py` dry-run 가드 — `DRY_RUN=true`에서 주문 endpoint 호출 0회
-- [ ] `toss.py` 주문 endpoint 격리 — `safety.OrderEndpointForbidden` 단위 테스트
-- [ ] Zod schema 검증 — 잘못된 응답 즉시 reject
-- [ ] 시크릿 격리 — `~/.hermes/secrets/` 외 평문 노출 0
+- [ ] `npm run build` 0 에러
+- [ ] `npm run test` 0 실패
+- [ ] `safety.ts` dry-run 가드 — `DRY_RUN=true`에서 주문 endpoint 호출 0회
+- [ ] BYOK localStorage 영구성 — 페이지 reload 후에도 키 보존
+- [ ] LLM provider 라우터 — 6종 provider 모두 정상 호출
+- [ ] 토스 422 가드 — 5종 코드 자동 인식 + 사용자 안내
 - [ ] Telegram inline button — 사용자 confirm 없이 실행 0회
 
 ## 📝 프롬프트 이력
 
-- **v0.0 (2026-07-09)**: kstost/stock 영감 + 우리 스택으로 재설계. 1차 = 4파일 스캐폴드 (README, .gitignore, LICENSE, AGENTS.md)
-- 구현은 다음 세션부터 단계적으로
+- **v0.0 (2026-07-09)**: kstost/stock 영감 + 우리 스택 (Python + oh-my-opencode + CLI + Telegram) 1차 스캐폴드
+- **v0.1 (2026-07-09)**: docs/OPENAPI_REFERENCE.md 정식 문서 (URL + 발급 + 422 + rate limit)
+- **v0.2 (2026-07-09)**: 아키텍처 결정 — Next.js + Vercel + BYOK + 다중 LLM (NIM/미니맥스/OpenAI) + Codex 미니맥스 공식 지원 활용
 
 ## 🤝 원본 크레딧
 
-- 원본: [kstost/stock](https://github.com/kstost/stock) (MIT License, 2026)
-- 재설계 사유 + diff는 위 "디자인 결정" 섹션 참조
+- 원본: [kstost/stock](https://github.com/kstost/stock) (MIT License, 2026) — Next.js 15 + Codex CLI + Tossinvest Open API
+- LLM provider 카탈로그: [openai/plugins/nvidia](https://github.com/openai/plugins/tree/main/plugins/nvidia) (NVIDIA 공식 Codex 플러그인, 미니맥스 M2.7 등 6종)
+- OpenAI Codex docs: [developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## 📜 License
 
