@@ -18,6 +18,7 @@
  */
 
 import { useState } from "react";
+import type { OrderHistoryRecord } from "@/lib/types";
 
 type Side = "BUY" | "SELL";
 
@@ -105,8 +106,9 @@ export function OrderButton({ symbol, symbolName, currentPrice }: OrderButtonPro
     void poll();
   };
 
-  // ── 3. 주문 실행 (toss relay) ──
+  // ── 3. 주문 실행 (toss relay) + history write ──
   const executeOrder = async (orderId: string) => {
+    const epochSeconds = Math.floor(Date.now() / 1000);
     try {
       const res = await fetch("/api/toss/api/v1/orders", {
         method: "POST",
@@ -125,8 +127,44 @@ export function OrderButton({ symbol, symbolName, currentPrice }: OrderButtonPro
       if (res.ok) {
         setResult({ ok: true, data });
         setPending(null);
+
+        // 6단계: history 기록 (kstost 방식 — 로컬 JSON, Vercel에서 readonly 시 silent fail)
+        try {
+          const record: OrderHistoryRecord = {
+            kind: "order",
+            epochSeconds,
+            createdAt: new Date(epochSeconds * 1000).toISOString(),
+            orderId,
+            request: { symbol, side, quantity, price, orderType: "LIMIT", telegramConfirmed: true },
+            response: { ok: true, httpStatus: res.status, body: data },
+          };
+          const fd = new FormData();
+          fd.append("record", JSON.stringify(record));
+          await fetch("/api/history", { method: "POST", body: fd }).catch(() => undefined);
+        } catch {
+          // history write 실패는 주문 자체에 영향 없음
+        }
       } else {
         setResult({ ok: false, code: data.code, message: data.message, data });
+
+        // 실패도 기록
+        try {
+          const record: OrderHistoryRecord = {
+            kind: "order",
+            epochSeconds,
+            createdAt: new Date(epochSeconds * 1000).toISOString(),
+            orderId,
+            request: { symbol, side, quantity, price, orderType: "LIMIT", telegramConfirmed: true },
+            response: { ok: false, httpStatus: res.status, body: data },
+          };
+          await fetch("/api/history", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ record }),
+          }).catch(() => undefined);
+        } catch {
+          // ignore
+        }
       }
     } catch (e) {
       setResult({ ok: false, message: (e as Error).message });
