@@ -31,7 +31,9 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel
@@ -40,11 +42,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# === toss-trader 추가 (v0.3 시크릿 격리) ===
-# Secrets — 절대 추적 금지
-*.key
-*.pem
-tossinvest.env
 
 # Runtime / state
 .history/
