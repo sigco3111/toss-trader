@@ -165,12 +165,44 @@ toss-trader/
 
 ## 🚦 배포 워크플로 (v0.4)
 
-1. **Vercel connect** — `https://github.com/sigco3111/toss-trader`
-2. **Vercel env** — `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` (서버 측만, 둘 다 dev fallback은 env 없을 때 자동)
-3. **Vercel deploy** — 자동 preview → `--prod`
-4. **사용자 진입** — Vercel URL → 메인 대시보드 (Portfolio + OrderButton)
-5. **첫 분석** — Portfolio polling 10초. 매수/매도 시 OrderButton → Telegram → 사용자 confirm → 토스 주문
-6. **history 기록** — OrderButton이 매수/매도 결과 시 자동 POST `/api/history`. Vercel에서 readonly면 silent.
+### 자동 배포 (권장)
+
+1. **GitHub fork** — `https://github.com/sigco3111/toss-trader` 우상단 Fork
+2. **Vercel connect** — [vercel.com](https://vercel.com) → Add New Project → fork한 저장소 Import
+3. **Vercel env** — Project Settings → Environment Variables:
+   - `TOSS_CLIENT_ID` (필수)
+   - `TOSS_CLIENT_SECRET` (필수)
+   - `TELEGRAM_BOT_TOKEN` (선택, dev fallback 지원)
+   - `TELEGRAM_CHAT_ID` (선택)
+   - `TOSS_TRADING_MODE=paper` (기본값)
+   - `DRY_RUN=true` (기본값)
+4. **Deploy** — 자동 빌드 + preview URL 생성
+5. **main push마다 자동 prod** — 이후 GitHub push 시 자동 deploy
+
+### 수동 배포 (CLI)
+
+```bash
+# 1) Vercel CLI 설치 + 로그인
+npm i -g vercel
+vercel login
+
+# 2) 프로젝트 연결
+vercel link
+
+# 3) 환경변수 추가 (대시보드 권장, CLI도 가능)
+vercel env add TOSS_CLIENT_ID
+# → 값 입력 → Production/Preview/Development 선택
+
+# 4) 프로덕션 배포
+vercel --prod --yes --token $(cat ~/.hermes/secrets/vercel_token.txt)
+```
+
+### 사용자 진입 플로우
+
+1. Vercel URL 접속 → 메인 대시보드 (Portfolio + OrderButton)
+2. Portfolio 10초 polling 자동 시작
+3. 매수/매도 시 OrderButton → Telegram 메시지 → 사용자 [확인] → 토스 주문
+4. history 기록 (Vercel에서 readonly면 silent)
 
 ## 📝 출처
 

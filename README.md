@@ -65,6 +65,12 @@ toss-trader는 토스 Open API의 **catch-all relay**를 제공합니다. `/api/
 | 이력 기록 (자동) | OrderButton이 매수/매도 결과 시 자동 POST |
 | Vercel readonly | GET/POST 모두 `availability: "readonly"` 응답 |
 
+| Deploy | URL / 명령 |
+|---|---|
+| Vercel 대시보드 | https://vercel.com/dashboard |
+| 자동 preview | PR마다 자동 생성 |
+| Vercel CLI | `vercel --prod --yes --token $(cat ~/.hermes/secrets/vercel_token.txt)` |
+
 > 📦 **전전 endpoint 표** (28종 + 5 카테고리 + 16 rate limit 그룹 + 422 가드 10종) = [docs/OPENAPI_REFERENCE.md](docs/OPENAPI_REFERENCE.md)
 
 ### 안전 가드 (6종 자동 적용)
@@ -115,26 +121,74 @@ toss-trader는 토스 Open API의 **catch-all relay**를 제공합니다. `/api/
 # 1) 의존성
 npm install
 
-# 2) 토스 Open API 키 (오빠 PC)
-#    ~/.hermes/secrets/tossinvest.env (chmod 600)
-#      TOSS_CLIENT_ID=...
-#      TOSS_CLIENT_SECRET=...
+# 2) 환경변수 셋업
+#    .env.example → .env.local 복사 후 본인 값 입력
+cp .env.example .env.local
+#    .env.local 편집:
+#      TOSS_CLIENT_ID=실제_클라이언트_ID
+#      TOSS_CLIENT_SECRET=실제_시크릿
+#      TELEGRAM_BOT_TOKEN=봇_토큰 (선택)
+#      TELEGRAM_CHAT_ID=본인_chat_id (선택)
 
-# 3) Telegram Bot (선택, 미설정 시 dev fallback)
-#    BotFather @BotFather → /newbot → 토큰 받기
-#    ~/.hermes/secrets/telegram_bot_token.txt 저장 (chmod 600)
-#    Vercel env 또는 .env: TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID
-
-# 4) Vercel env (서버 측 도구만)
+# 3) Vercel 배포 (또는 자동: GitHub push 시 자동 deploy)
+#    옵션 A: Vercel 대시보드 → GitHub repo 연결 → 자동 preview/prod
+#    옵션 B: Vercel CLI
 vercel link
-vercel env add TELEGRAM_BOT_TOKEN
-
-# 5) Vercel 배포
 vercel --prod --yes --token $(cat ~/.hermes/secrets/vercel_token.txt)
 
-# 6) 로컬 dev
+# 4) 로컬 dev
 npm run dev  # http://localhost:3000
 ```
+
+### Vercel 환경변수 셋업 (v0.4)
+
+Vercel 대시보드 → Project → **Settings → Environment Variables** 에서 추가:
+
+| Key | Value 예시 | 용도 |
+|---|---|---|
+| `TOSS_CLIENT_ID` | `toss_a1b2c3...` | 토스 Open API client_id (필수) |
+| `TOSS_CLIENT_SECRET` | `sk_live_...` | 토스 Open API client_secret (필수) |
+| `TELEGRAM_BOT_TOKEN` | `123456:ABC-...` | Telegram 봇 토큰 (선택, dev fallback 지원) |
+| `TELEGRAM_CHAT_ID` | `123456789` | 본인 Telegram chat_id (선택) |
+| `TOSS_TRADING_MODE` | `paper` (기본값) | `paper` / `live` / `simulation` |
+| `TOSS_MAX_TRADE_AMOUNT` | `1000000` (기본값) | 단일 주문 한도 (원) |
+| `DRY_RUN` | `true` (기본값) | `false` + live + Telegram confirm 시 실계좌 |
+
+> **Production / Preview / Development** 3개 환경별로 따로 설정 가능. 보통 Production + Preview에만 토큰 넣음.
+
+### `vercel.json` 핵심 설정
+
+```json
+{
+  "framework": "nextjs",
+  "regions": ["icn1"],
+  "buildCommand": "npm run build",
+  "functions": {
+    "app/api/telegram/callback/route.ts": { "maxDuration": 10 },
+    "app/api/telegram/send/route.ts": { "maxDuration": 10 },
+    "app/api/toss/[...path]/route.ts": { "maxDuration": 10 },
+    "app/api/history/route.ts": { "maxDuration": 10 }
+  }
+}
+```
+
+- `icn1`: Vercel 서울 리전 (한국 사용 시 latency 최소화)
+- `maxDuration: 10`: Edge Function 기본 10초. toss-trader API는 sub-second 응답이라 충분
+
+### `.env.example` (커밋 가능, 실제 값 없음)
+
+```bash
+TOSS_CLIENT_ID=your_client_id_here
+TOSS_CLIENT_SECRET=your_client_secret_here
+TOSS_TRADING_MODE=paper
+TOSS_MAX_TRADE_AMOUNT=1000000
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+TELEGRAM_CHAT_ID=your_chat_id_here
+TELEGRAM_CONFIRM_TTL_SEC=300
+DRY_RUN=true
+```
+
+> 실제 값은 `.env.local` (git 추적 금지)에 입력. Vercel은 대시보드에서 직접 추가.
 
 ### 🛠️ 개발 도구 — OpenCode + oh-my-opencode
 
@@ -323,6 +377,7 @@ toss-trader/
 - **v0.6 (2026-07-10)**: README 비개발자용 가이드 5단계 추가
 - **v0.7 (2026-07-10)**: 2~5단계 — 토스 Open API relay + 6대 안전 가드 + Telegram confirm + OrderButton + Portfolio
 - **v0.8 (2026-07-10)**: 6단계 — Notion 제거 + kstost/stock 원본 history.ts 방식 (로컬 JSON, 1 record = 1 파일). lib/history.ts + lib/types.ts + app/api/history/route.ts 신규, @notionhq/client 의존성 제거. OrderButton이 매수/매도 결과 시 자동 history 기록
+- **v0.9 (2026-07-10)**: 7단계 — Vercel 배포 (vercel.json: framework=nextjs, regions=[icn1], functions maxDuration=10) + .env.example (TOSS_* / TELEGRAM_* / DRY_RUN 7개 env 키) + README 비개발자용 env 셋업 가이드 (Production/Preview/Development 3개 환경). 자주 막히는 곳 11개로 확장 (Deploy/401/history-readonly/telegram-send-failed 등 추가)
 
 ### 🤝 원본 크레딧
 

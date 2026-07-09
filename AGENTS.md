@@ -65,6 +65,7 @@ toss-trader/
 - **프레임워크**: Next.js 15 (App Router) + TypeScript + Tailwind
 - **LLM 분석**: ❌ toss-trader 코드에 LLM 호출 0줄. **OpenCode 글로벌 디폴트(`minimax/MiniMax-M3`)** 가 오빠 PC에서 모든 분석 처리
 - **Vercel env**: Telegram Bot Token (서버 측 도구만). v0.4에서 Notion env 제거
+- **Vercel 배포**: `vercel.json` (framework=nextjs, regions=[icn1], functions maxDuration=10) + 자동 GitHub push trigger
 - **사용자 토큰 (Toss)**: 토스 Open API `client_id`/`secret` 만. Vercel env에 박지 않고 toss-trader 코드 내에서도 보관 안 함 — 사용자 PC의 `~/.hermes/secrets/tossinvest.env` (chmod 600) + `toss/route.ts` 호출 시 헤더 주입
 - **이력 저장**: kstost/stock 원본 방식 (로컬 JSON, 1 record = 1 파일). Vercel에서 readonly 시 silent fail (next storage v0.5+ TODO)
 - **알림**: Telegram Bot API (inline button)
@@ -202,8 +203,8 @@ bunx oh-my-opencode@latest install --no-tui \
 - 3단계: `lib/safety.ts` 6대 가드 + TDD ✅
 - 4단계: `lib/telegram.ts` + `app/api/telegram/{send,callback}/route.ts` + `components/OrderButton.tsx` ✅
 - 5단계: `components/Portfolio.tsx` + `lib/format.ts` + `app/page.tsx` v0.3 ✅
-- **6단계: `lib/history.ts` + `lib/types.ts` + `app/api/history/route.ts` + `components/OrderButton.tsx` history write** ✅
-- 7단계: Vercel 배포 + 환경변수 (TELEGRAM_BOT_TOKEN만)
+- 6단계: `lib/history.ts` + `lib/types.ts` + `app/api/history/route.ts` + `components/OrderButton.tsx` history write ✅
+- **7단계: Vercel 배포** (vercel.json + .env.example) ✅
 - 8단계: e2e 테스트 (Vercel preview URL)
 
 각 단계마다 `npm run test` 그린 유지.
