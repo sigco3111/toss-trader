@@ -74,21 +74,35 @@ export function Portfolio({ accountSeq = 1 }: { accountSeq?: number }) {
         setStatus("error");
         return;
       }
-      const items = (holdingsBody as ApiEnvelope<HoldingItem[]>).data ?? [];
+      // 토스 API 응답: { result: { items: [...] } } → items 추출
+      // envelope는 우리 toss-trader 추가, items는 토스 원본
+      const rawData = (holdingsBody as ApiEnvelope<unknown>).data;
+      const items = Array.isArray(rawData)
+        ? (rawData as HoldingItem[])
+        : (rawData as { result?: { items?: HoldingItem[] } })?.result?.items ?? [];
       setHoldings(items);
       setServedAt((holdingsBody as ApiEnvelope<HoldingItem[]>).servedAt);
 
       // 2) 시세 (배치)
+      // 토스 API 응답: { result: [{ symbol, lastPrice (string), ... }] }
       if (items.length > 0) {
         const symbols = items.map((h) => h.symbol).join(",");
         const priceRes = await fetch(`/api/toss/api/v1/prices?symbols=${encodeURIComponent(symbols)}`, {
           cache: "no-store",
         });
-        const priceBody = (await priceRes.json()) as ApiEnvelope<Array<{ symbol: string; price: number }>> | ApiError;
+        const priceBody = (await priceRes.json()) as ApiEnvelope<unknown> | ApiError;
         if (priceRes.ok && "data" in priceBody) {
+          const rawPriceData = (priceBody as ApiEnvelope<unknown>).data;
+          // 응답이 배열 또는 { result: [...] } 둘 다 처리
+          const priceArr = Array.isArray(rawPriceData)
+            ? (rawPriceData as Array<{ symbol: string; lastPrice: string | number }>)
+            : ((rawPriceData as { result?: Array<{ symbol: string; lastPrice: string | number }> })?.result ?? []);
           const priceMap: PriceMap = {};
-          for (const p of (priceBody as ApiEnvelope<Array<{ symbol: string; price: number }>>).data ?? []) {
-            priceMap[p.symbol] = p.price;
+          for (const p of priceArr) {
+            if (p && typeof p.symbol === "string") {
+              const n = Number(p.lastPrice);
+              if (Number.isFinite(n)) priceMap[p.symbol] = n;
+            }
           }
           setPrices(priceMap);
         }
