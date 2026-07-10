@@ -36,6 +36,7 @@ $ open https://toss-trader.vercel.app/
 | 💬 **Telegram confirm** — BUY/SELL은 Telegram inline button 사용자 명시 확인 후
 | 🗂️ **로컬 history** — kstost/stock 원본 방식 (1 record = 1 JSON 파일). Vercel에서 readonly 시 silent
 | 🧪 **e2e 자동화** — Playwright (chromium + webkit) + GitHub Actions. Vercel preview URL 자동 검증
+| ☁️ **외부 storage (v1.3)** — S3/R2 호환 (AWS SigV4 직접 구현, 의존성 0). STORAGE_PROVIDER=local/s3 env 분기
 | 🛡️ **안전 가드 6종** — `safety.ts` (DRY_RUN + 422 가드 + 422 retry + confirmHighValue + Telegram confirm + 토큰 길이 검증)
 
 ## 🎮 조작법
@@ -361,16 +362,17 @@ toss-trader/
 
 - [x] `npm run build` 0 에러 (2026-07-10 검증, 1387ms)
 - [x] `npm run lint` 0 errors, 0 warnings
-- [x] `npm run test` **124/124 PASS** (format 39 + settings 19 + safety 25 + telegram 13 + history 12 + stocks 14)
+- [x] `npm run test` **132/132 PASS** (format 39 + settings 19 + storage 8 + safety 25 + telegram 15 + history 12 + stocks 14)
 - [x] `npm run test:e2e` **22/22 PASS** (chromium 11 + webkit 11) — Playwright e2e + Vercel preview URL
 - [x] GitHub Actions e2e — PR마다 + main push마다 자동 실행
 - [x] v0.3 자기 검증 — LLM 호출 0줄 (Vercel 코드)
+- [x] **v1.3 외부 storage** — STORAGE_PROVIDER=local/s3 (S3/R2 호환) — Vercel 영구 저장
 - [ ] `safety.ts` dry-run 가드 — `DRY_RUN=true`에서 주문 endpoint 호출 0회
 - [ ] 토큰 길이 검증 — `tossinvest.env` chmod 600 + 길이 검증
 - [ ] LLM 호출 0줄 — `grep -rn "openai\|nim\|anthropic" lib/ app/ components/` 모두 0건 (Vercel 코드)
 - [ ] 토스 422 가드 — 5종 코드 자동 인식 + 사용자 안내
 - [ ] Telegram inline button — 사용자 confirm 없이 실행 0회
-- [ ] history 1 record = 1 JSON (kstost 호환)
+- [ ] history 영구 저장 (v1.3 S3 활성화 시) — `STORAGE_PROVIDER=s3` + S3 버킷 생성
 
 ### 📝 프롬프트 이력
 
@@ -391,6 +393,7 @@ toss-trader/
 - **v1.1.5 (2026-07-10)**: 매도 시 보유 종목 quantity/avgPrice 자동 채움. lib/format.ts: findHoldingBySymbol + getSellableQuantity. 매도 클릭 시 holdings 매칭 → 수량 자동
 - **v1.2 (2026-07-10)**: Playwright e2e (chromium + webkit 22/22 PASS) + GitHub Actions. Vercel preview URL 자동 검증. test/e2e 4 spec 파일. 실계좌 영향 zero (mock). .github/workflows/e2e.yml
 - **v1.2.1 (2026-07-10)**: README + RELEASE_NOTES v1.2 갱신. e2e 뱃지 + 로컬 실행 가이드 (npm run test:e2e, --ui) + 다음 로드맵 (v1.3 외부 storage, v2.0 실계좌)
+- **v1.3 (2026-07-10)**: 외부 history storage (S3/R2 호환). lib/storage/{provider,local,s3,index}.ts. AWS SigV4 직접 구현 (의존성 0). STORAGE_PROVIDER=local/s3 env 분기. AWS S3 + Cloudflare R2 같은 API. .env.example STORAGE_PROVIDER/S3_* 6개 env 키 추가. 132/132 unit + 22/22 e2e + Playwright + GitHub Actions
 - **v0.9 (2026-07-10)**: 7단계 — Vercel 배포 (vercel.json: framework=nextjs, regions=[icn1], functions maxDuration=10) + .env.example (TOSS_* / TELEGRAM_* / DRY_RUN 7개 env 키) + README 비개발자용 env 셋업 가이드 (Production/Preview/Development 3개 환경). 자주 막히는 곳 11개로 확장 (Deploy/401/history-readonly/telegram-send-failed 등 추가)
 
 ### 🤝 원본 크레딧
