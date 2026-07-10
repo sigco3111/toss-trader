@@ -28,13 +28,15 @@ interface OrderButtonProps {
   symbolName?: string;
   currentPrice: number;
   onSymbolChange?: (symbol: string, name: string, price: number) => void;
+  confirmMode: "telegram" | "auto" | "off";
 }
 
-interface PendingOrder {
+export interface PendingOrder {
   orderId: string;
-  expiresAt: string;
   devFallback: boolean;
+  expiresAt: string;
   message: string;
+  mode?: "telegram" | "auto" | "off"; // v1.1.1
 }
 
 interface OrderResult {
@@ -49,6 +51,7 @@ export function OrderButton({
   symbolName: initialName,
   currentPrice: initialPrice,
   onSymbolChange,
+  confirmMode,
 }: OrderButtonProps) {
   const [symbol, setSymbol] = useState<string>(initialSymbol);
   const [symbolName, setSymbolName] = useState<string>(initialName ?? "");
@@ -79,14 +82,20 @@ export function OrderButton({
       const res = await fetch("/api/telegram/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ symbol, side, quantity, price }),
+        body: JSON.stringify({
+          symbol,
+          side,
+          quantity,
+          price,
+          confirmMode, // v1.1.1
+        }),
       });
       const data = await res.json();
       if (data.ok) {
         setPending(data as PendingOrder);
         setShowModal(false);
-        // dev fallback은 즉시 confirm, 실제 봇은 사용자 click 대기
-        if (data.devFallback) {
+        // v1.1.1: auto 모드는 confirm 폴링 불필요 (즉시 confirmed)
+        if (data.mode === "auto" || data.devFallback) {
           startPolling(data.orderId);
         }
       } else {

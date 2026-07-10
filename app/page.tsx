@@ -12,6 +12,8 @@ import { useState } from "react";
 import { Portfolio } from "@/components/Portfolio";
 import { OrderButton } from "@/components/OrderButton";
 import { History } from "@/components/History";
+import { ConfirmModeToggle } from "@/components/ConfirmModeToggle";
+import type { TelegramConfirmMode } from "@/lib/settings";
 
 type Tab = "dashboard" | "history";
 
@@ -20,6 +22,7 @@ export default function Home() {
   const [selectedSymbol, setSelectedSymbol] = useState<string>("005930");
   const [selectedSymbolName, setSelectedSymbolName] = useState<string>("삼성전자");
   const [selectedPrice, setSelectedPrice] = useState<number>(70000);
+  const [confirmMode, setConfirmMode] = useState<TelegramConfirmMode>("telegram");
 
   const handleSymbolChange = (symbol: string, name: string, price: number): void => {
     setSelectedSymbol(symbol);
@@ -86,14 +89,16 @@ export default function Home() {
         {tab === "dashboard" && (
           <section className="mb-6">
             <h2 className="text-lg font-semibold mb-3">📊 포트폴리오 + 주문 (선택: {selectedSymbolName} {selectedSymbol})</h2>
-            <div className="grid lg:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-3 gap-4">
               <Portfolio accountSeq={1} symbolFilter={selectedSymbol} />
               <OrderButton
                 symbol={selectedSymbol}
                 symbolName={selectedSymbolName}
                 currentPrice={selectedPrice}
                 onSymbolChange={handleSymbolChange}
+                confirmMode={confirmMode}
               />
+              <ConfirmModeToggle value={confirmMode} onChange={setConfirmMode} />
             </div>
           </section>
         )}

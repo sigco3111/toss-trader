@@ -87,10 +87,14 @@ export interface SendResult {
   devFallback: boolean;
   expiresAt: string;
   message: string;
+  mode: "telegram" | "auto" | "off"; // v1.1.1: 추가
 }
 
 // ─── sendOrderConfirm ────────────────────────────────────────────
-export async function sendOrderConfirm(req: OrderRequest): Promise<SendResult> {
+export async function sendOrderConfirm(
+  req: OrderRequest,
+  mode: "telegram" | "auto" | "off" = "telegram"
+): Promise<SendResult> {
   const orderId = generateOrderId();
   const now = Date.now();
   const ttlSec = getConfirmTtlSec();
@@ -111,7 +115,36 @@ export async function sendOrderConfirm(req: OrderRequest): Promise<SendResult> {
   pendingStore.set(orderId, pending);
   cleanupExpired();
 
-  // dev fallback: 봇 미설정 시 자동 confirm (가짜 응답)
+  // ── 모드별 분기 (v1.1.1) ──
+  if (mode === "off") {
+    // 비활성화 모드: confirm 자체 안 함 → store에서 제거 (호출자가 가드 5에서 막힘)
+    pendingStore.delete(orderId);
+    return {
+      ok: false,
+      orderId,
+      devFallback: false,
+      expiresAt: new Date(expiresAt).toISOString(),
+      message: "TELEGRAM_CONFIRM_MODE=off 모드. confirm 비활성화. paper 거래만 가능.",
+      mode: "off",
+    };
+  }
+
+  if (mode === "auto") {
+    // 자동 confirm: 즉시 status=confirmed
+    pending.status = "confirmed";
+    return {
+      ok: true,
+      orderId,
+      devFallback: false,
+      expiresAt: new Date(expiresAt).toISOString(),
+      message:
+        "TELEGRAM_CONFIRM_MODE=auto 모드. 사용자 confirm 없이 즉시 confirmed. dev/test 전용.",
+      mode: "auto",
+    };
+  }
+
+  // mode === "telegram" (기본)
+  // dev fallback: 봇 미설정 시 자동 confirm
   if (isDevFallback()) {
     return {
       ok: true,
@@ -120,6 +153,7 @@ export async function sendOrderConfirm(req: OrderRequest): Promise<SendResult> {
       expiresAt: new Date(expiresAt).toISOString(),
       message:
         "TOSS_TELEGRAM_BOT_TOKEN 또는 TELEGRAM_CHAT_ID 미설정. dev fallback: 자동 confirm. 실사용 시 둘 다 설정 필요.",
+      mode: "telegram",
     };
   }
 
@@ -173,6 +207,7 @@ export async function sendOrderConfirm(req: OrderRequest): Promise<SendResult> {
     devFallback: false,
     expiresAt: new Date(expiresAt).toISOString(),
     message: "Telegram 메시지 발송됨. 사용자 confirm 대기 중.",
+    mode: "telegram",
   };
 }
 
