@@ -25,6 +25,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { StockSearch } from "@/components/StockSearch";
 import type {
   AgentRecommendation,
   Currency,
@@ -469,31 +470,29 @@ export default function Home() {
                   placeholder={envAvailable ? "비워두면 .env.local 사용" : undefined}
                 />
               </div>
-              <div className="grid grid-cols-[1fr_120px] gap-2">
-                <div className="space-y-2">
-                  <Label htmlFor="targetSymbol">분석 종목 (symbol)</Label>
-                  <Input
-                    id="targetSymbol"
-                    value={targetSymbol}
-                    onChange={(event) => setTargetSymbol(event.target.value)}
-                    placeholder="005930, NVDA, …"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="targetMarket">시장</Label>
-                  <select
-                    id="targetMarket"
-                    value={targetMarket}
-                    onChange={(event) =>
-                      setTargetMarket(event.target.value as "KR" | "US")
-                    }
-                    className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              <div className="space-y-2">
+                <Label>분석 종목</Label>
+                <StockSearch
+                  onSelect={(symbol, _name, market) => {
+                    setTargetSymbol(symbol);
+                    setTargetMarket(market);
+                  }}
+                  defaultSymbol="005930"
+                  defaultName="삼성전자"
+                  marketFilter={targetMarket}
+                />
+                <p className="text-xs text-muted-foreground">
+                  현재 선택:{" "}
+                  <span className="font-mono">{targetSymbol}</span> ({targetMarket})
+                  {" · "}
+                  <button
+                    type="button"
+                    className="underline"
+                    onClick={() => setTargetMarket(targetMarket === "KR" ? "US" : "KR")}
                   >
-                    <option value="KR">KR (국내)</option>
-                    <option value="US">US (미국)</option>
-                  </select>
-                </div>
+                    {targetMarket === "KR" ? "미국 마켓 종목 보기" : "국내 마켓 종목 보기"}
+                  </button>
+                </p>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="intervalSeconds">분석 간격 (초)</Label>
