@@ -1,26 +1,25 @@
 /**
- * lib/settings.ts — toss-trader 클라이언트 설정 (v1.1.2)
+ * lib/settings.ts — toss-trader 클라이언트 설정 (v1.1.4)
  *
  * Telegram confirm 모드 (런타임 사용자 토글):
  * - telegram: 메시지 발송 + [확인]/[취소] inline button (실전, 가장 안전)
- * - auto-paper: 메시지 안 보냄 + 즉시 confirmed (paper 거래만, dev/test)
- * - auto-live: 메시지 안 보냄 + UI 2차 confirm + 5초 카운트다운 (실계좌)
+ * - auto: 메시지 안 보냄, 즉시 confirmed (Telegram 봇 미설정 사용자)
  * - off: confirm 비활성화, paper 거래만 (가장 엄격)
  *
- * v1.1.2: auto를 auto-paper/auto-live 2개로 분화 (실계좌 안전 강화)
+ * v1.1.4: auto-live (2차 confirm + 5초) 제거. v1.1.1의 단순 3-모드 복귀.
+ *           사용자 편의 우선 (5초 대기/2차 confirm 없이 즉시 처리).
  *
  * 저장: localStorage (브라우저별). 서버 env (TELEGRAM_CONFIRM_MODE)는 기본값.
  *
  * v0.3 단순화: BYOK 폼 0 (auth/시크릿 안 다룸). UI 토글만 추가.
  */
 
-export type TelegramConfirmMode = "telegram" | "auto-paper" | "auto-live" | "off";
+export type TelegramConfirmMode = "telegram" | "auto" | "off";
 
 export const TELEGRAM_CONFIRM_MODES: ReadonlyArray<{
   value: TelegramConfirmMode;
   label: string;
   description: string;
-  warning?: string; // v1.1.2: 실계좌 경고
 }> = [
   {
     value: "telegram",
@@ -28,16 +27,9 @@ export const TELEGRAM_CONFIRM_MODES: ReadonlyArray<{
     description: "Telegram 봇 메시지 발송 → [확인]/[취소] inline button 클릭. 실전 안전.",
   },
   {
-    value: "auto-paper",
-    label: "자동 확인 (paper)",
-    description: "메시지 발송 안 함, 즉시 confirmed. paper 거래만 사용 시.",
-  },
-  {
-    value: "auto-live",
-    label: "자동 확인 (실계좌)",
-    description:
-      "메시지 발송 안 함, UI 2차 confirm + 5초 카운트다운. 실계좌 안전 강화.",
-    warning: "실계좌 — 모든 주문에 5초 대기 + 2차 confirm 필요",
+    value: "auto",
+    label: "자동 확인",
+    description: "메시지 발송 안 함, 즉시 confirmed. dev/test/봇 미설정/실계좌 즉시 처리.",
   },
   {
     value: "off",
@@ -76,5 +68,5 @@ export function getDefaultMode(): TelegramConfirmMode {
 }
 
 export function isValidMode(v: unknown): v is TelegramConfirmMode {
-  return v === "telegram" || v === "auto-paper" || v === "auto-live" || v === "off";
+  return v === "telegram" || v === "auto" || v === "off";
 }

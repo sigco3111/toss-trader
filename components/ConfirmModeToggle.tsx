@@ -1,9 +1,11 @@
 "use client";
 
 /**
- * components/ConfirmModeToggle.tsx — Telegram confirm 모드 UI (v1.1.1)
+ * components/ConfirmModeToggle.tsx — Telegram confirm 모드 UI (v1.1.4)
  *
  * 3개 옵션 (telegram/auto/off) + localStorage 저장.
+ * v1.1.4: auto-paper/auto-live 제거. 단순화. 5초/2차 confirm 없음.
+ *
  * 변경 시 즉시 부모에 알림 (onChange) → OrderButton이 다음 매수에 적용.
  */
 
@@ -54,9 +56,6 @@ export function ConfirmModeToggle({ value, onChange }: ConfirmModeToggleProps) {
       <div className="space-y-1.5">
         {TELEGRAM_CONFIRM_MODES.map((m) => {
           const selected = value === m.value;
-          // v1.1.2: auto-paper (dev/test) + auto-live (실계좌) 별도 뱃지
-          const isDevTest = m.value === "auto-paper";
-          const isLiveWarning = m.value === "auto-live";
           return (
             <label
               key={m.value}
@@ -77,23 +76,8 @@ export function ConfirmModeToggle({ value, onChange }: ConfirmModeToggleProps) {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm font-medium">{m.label}</span>
-                  {isDevTest && (
-                    <span className="text-xs px-1 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">
-                      dev/test
-                    </span>
-                  )}
-                  {isLiveWarning && (
-                    <span className="text-xs px-1 rounded bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300">
-                      실계좌
-                    </span>
-                  )}
                 </div>
                 <div className="text-xs text-zinc-500 dark:text-zinc-400">{m.description}</div>
-                {m.warning && (
-                  <div className="text-xs text-red-600 dark:text-red-400 mt-1">
-                    ⚠ {m.warning}
-                  </div>
-                )}
               </div>
             </label>
           );

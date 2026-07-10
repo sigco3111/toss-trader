@@ -39,12 +39,6 @@ function isDevFallback(): boolean {
   return !getBotToken() || !getChatId();
 }
 
-// v1.1.3: TOSS_TRADING_MODE 확인
-function isPaperMode(): boolean {
-  const v = process.env.TOSS_TRADING_MODE ?? "paper";
-  return v.toLowerCase() === "paper";
-}
-
 const TELEGRAM_API_BASE = "https://api.telegram.org";
 
 // ─── 콜백 매칭 in-memory store ───────────────────────────────────
@@ -85,7 +79,7 @@ export interface OrderRequest {
   quantity: number;
   price: number;
   accountSeq?: number;
-  doubleConfirmed?: boolean; // v1.1.2: auto-live 모드에서 2차 confirm 게이트
+  // v1.1.4: doubleConfirmed 필드 제거 (v1.1.2/v1.1.3에서만 사용)
 }
 
 export interface SendResult {
@@ -94,13 +88,13 @@ export interface SendResult {
   devFallback: boolean;
   expiresAt: string;
   message: string;
-  mode: "telegram" | "auto-paper" | "auto-live" | "off"; // v1.1.2
+  mode: "telegram" | "auto" | "off"; // v1.1.4 단순화 (auto-paper/auto-live 제거)
 }
 
 // ─── sendOrderConfirm ────────────────────────────────────────────
 export async function sendOrderConfirm(
   req: OrderRequest,
-  mode: "telegram" | "auto-paper" | "auto-live" | "off" = "telegram"
+  mode: "telegram" | "auto" | "off" = "telegram"
 ): Promise<SendResult> {
   const orderId = generateOrderId();
   const now = Date.now();
@@ -122,7 +116,7 @@ export async function sendOrderConfirm(
   pendingStore.set(orderId, pending);
   cleanupExpired();
 
-  // ── 모드별 분기 (v1.1.2) ──
+  // ── 모드별 분기 (v1.1.4 단순화: auto 단일) ──
   if (mode === "off") {
     // 비활성화 모드: confirm 자체 안 함 → store에서 제거
     pendingStore.delete(orderId);
@@ -136,8 +130,9 @@ export async function sendOrderConfirm(
     };
   }
 
-  if (mode === "auto-paper") {
-    // paper 자동 confirm: 즉시 status=confirmed
+  if (mode === "auto") {
+    // v1.1.4: auto 단일 (Telegram 메시지 안 보냄, 즉시 confirmed)
+    // v1.1.2/v1.1.3의 auto-paper/auto-live 단순화. 5초 대기/2차 confirm 없음.
     pending.status = "confirmed";
     return {
       ok: true,
@@ -145,50 +140,8 @@ export async function sendOrderConfirm(
       devFallback: false,
       expiresAt: new Date(expiresAt).toISOString(),
       message:
-        "TELEGRAM_CONFIRM_MODE=auto-paper 모드. paper 거래 즉시 confirmed.",
-      mode: "auto-paper",
-    };
-  }
-
-  if (mode === "auto-live") {
-    // v1.1.3: TOSS_TRADING_MODE=paper일 때는 auto-live 무시 (즉시 confirmed)
-    // → paper 거래에 2차 confirm 강제는 UX 과한 안전
-    if (isPaperMode()) {
-      pending.status = "confirmed";
-      return {
-        ok: true,
-        orderId,
-        devFallback: false,
-        expiresAt: new Date(expiresAt).toISOString(),
-        message:
-          "TOSS_TRADING_MODE=paper + auto-live. paper 거래는 즉시 confirmed (2차 confirm 면제).",
-        mode: "auto-live",
-      };
-    }
-    // 실계좌 자동 confirm: v1.1.2에서 doubleConfirmed=false로 pending 유지
-    // → 호출자가 2차 confirm 모달 후 doubleConfirmed=true로 재호출 또는
-    // → body에 doubleConfirmed 헤더/필드 포함 시 즉시 confirmed
-    if (req.doubleConfirmed) {
-      pending.status = "confirmed";
-      return {
-        ok: true,
-        orderId,
-        devFallback: false,
-        expiresAt: new Date(expiresAt).toISOString(),
-        message:
-          "TELEGRAM_CONFIRM_MODE=auto-live 모드. UI 2차 confirm 완료. 실계좌 confirmed.",
-        mode: "auto-live",
-      };
-    }
-    // doubleConfirmed 없으면 pending 유지 (호출자가 2차 confirm 모달 띄움)
-    return {
-      ok: false,
-      orderId,
-      devFallback: false,
-      expiresAt: new Date(expiresAt).toISOString(),
-      message:
-        "TELEGRAM_CONFIRM_MODE=auto-live 모드. UI 2차 confirm 필요 (doubleConfirmed=true).",
-      mode: "auto-live",
+        "TELEGRAM_CONFIRM_MODE=auto 모드. 메시지 발송 없이 즉시 confirmed. paper/dev/test/실계좌 즉시 처리.",
+      mode: "auto",
     };
   }
 

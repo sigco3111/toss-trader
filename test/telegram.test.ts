@@ -54,28 +54,17 @@ describe("sendOrderConfirm", () => {
     expect(r.mode).toBe("telegram");
   });
 
-  it("sendOrderConfirm auto-live + TOSS_TRADING_MODE=paper → 즉시 confirmed (2차 confirm 면제)", async () => {
-    process.env.TOSS_TRADING_MODE = "paper";
-    const r = await sendOrderConfirm(sampleOrder, "auto-live");
+  it("sendOrderConfirm auto → 즉시 confirmed (v1.1.4 단순화, 5초/2차 confirm 없음)", async () => {
+    const r = await sendOrderConfirm(sampleOrder, "auto");
     expect(r.ok).toBe(true);
-    expect(r.mode).toBe("auto-live");
-    expect(r.message).toContain("paper 거래는 즉시 confirmed");
+    expect(r.mode).toBe("auto");
+    expect(r.message).toContain("즉시 confirmed");
   });
 
-  it("sendOrderConfirm auto-live + TOSS_TRADING_MODE=live + doubleConfirmed=false → ok:false (2차 confirm 필요)", async () => {
-    process.env.TOSS_TRADING_MODE = "live";
-    const r = await sendOrderConfirm(sampleOrder, "auto-live");
+  it("sendOrderConfirm off → ok:false (가드 5에서 차단)", async () => {
+    const r = await sendOrderConfirm(sampleOrder, "off");
     expect(r.ok).toBe(false);
-    expect(r.mode).toBe("auto-live");
-    expect(r.message).toContain("2차 confirm 필요");
-  });
-
-  it("sendOrderConfirm auto-live + TOSS_TRADING_MODE=live + doubleConfirmed=true → 즉시 confirmed", async () => {
-    process.env.TOSS_TRADING_MODE = "live";
-    const r = await sendOrderConfirm({ ...sampleOrder, doubleConfirmed: true }, "auto-live");
-    expect(r.ok).toBe(true);
-    expect(r.mode).toBe("auto-live");
-    expect(r.message).toContain("UI 2차 confirm 완료");
+    expect(r.mode).toBe("off");
   });
 
   it("pending store에 orderId 저장됨 (dev fallback)", async () => {
