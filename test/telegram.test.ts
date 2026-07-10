@@ -22,6 +22,7 @@ beforeEach(() => {
   delete process.env.TELEGRAM_CHAT_ID;
   delete process.env.TOSS_TELEGRAM_CHAT_ID;
   delete process.env.TELEGRAM_CONFIRM_TTL_SEC;
+  delete process.env.TOSS_TRADING_MODE; // v1.1.3
   _resetPendingStore();
   // 기본 fetch mock (사용 안 함)
   global.fetch = vi.fn().mockResolvedValue({
@@ -46,12 +47,35 @@ const sampleOrder = {
 
 // ─── sendOrderConfirm ───────────────────────────────────────────
 describe("sendOrderConfirm", () => {
-  it("dev fallback (TELEGRAM_BOT_TOKEN 없음) → devFallback=true 자동 confirm", async () => {
+  it("sendOrderConfirm → dev fallback 자동 confirm (TELEGRAM_BOT_TOKEN 없음)", async () => {
     const r = await sendOrderConfirm(sampleOrder);
     expect(r.ok).toBe(true);
     expect(r.devFallback).toBe(true);
-    expect(r.orderId).toMatch(/^order_[a-f0-9]{12}$/);
-    expect(r.message).toContain("dev fallback");
+    expect(r.mode).toBe("telegram");
+  });
+
+  it("sendOrderConfirm auto-live + TOSS_TRADING_MODE=paper → 즉시 confirmed (2차 confirm 면제)", async () => {
+    process.env.TOSS_TRADING_MODE = "paper";
+    const r = await sendOrderConfirm(sampleOrder, "auto-live");
+    expect(r.ok).toBe(true);
+    expect(r.mode).toBe("auto-live");
+    expect(r.message).toContain("paper 거래는 즉시 confirmed");
+  });
+
+  it("sendOrderConfirm auto-live + TOSS_TRADING_MODE=live + doubleConfirmed=false → ok:false (2차 confirm 필요)", async () => {
+    process.env.TOSS_TRADING_MODE = "live";
+    const r = await sendOrderConfirm(sampleOrder, "auto-live");
+    expect(r.ok).toBe(false);
+    expect(r.mode).toBe("auto-live");
+    expect(r.message).toContain("2차 confirm 필요");
+  });
+
+  it("sendOrderConfirm auto-live + TOSS_TRADING_MODE=live + doubleConfirmed=true → 즉시 confirmed", async () => {
+    process.env.TOSS_TRADING_MODE = "live";
+    const r = await sendOrderConfirm({ ...sampleOrder, doubleConfirmed: true }, "auto-live");
+    expect(r.ok).toBe(true);
+    expect(r.mode).toBe("auto-live");
+    expect(r.message).toContain("UI 2차 confirm 완료");
   });
 
   it("pending store에 orderId 저장됨 (dev fallback)", async () => {

@@ -39,6 +39,12 @@ function isDevFallback(): boolean {
   return !getBotToken() || !getChatId();
 }
 
+// v1.1.3: TOSS_TRADING_MODE 확인
+function isPaperMode(): boolean {
+  const v = process.env.TOSS_TRADING_MODE ?? "paper";
+  return v.toLowerCase() === "paper";
+}
+
 const TELEGRAM_API_BASE = "https://api.telegram.org";
 
 // ─── 콜백 매칭 in-memory store ───────────────────────────────────
@@ -145,6 +151,20 @@ export async function sendOrderConfirm(
   }
 
   if (mode === "auto-live") {
+    // v1.1.3: TOSS_TRADING_MODE=paper일 때는 auto-live 무시 (즉시 confirmed)
+    // → paper 거래에 2차 confirm 강제는 UX 과한 안전
+    if (isPaperMode()) {
+      pending.status = "confirmed";
+      return {
+        ok: true,
+        orderId,
+        devFallback: false,
+        expiresAt: new Date(expiresAt).toISOString(),
+        message:
+          "TOSS_TRADING_MODE=paper + auto-live. paper 거래는 즉시 confirmed (2차 confirm 면제).",
+        mode: "auto-live",
+      };
+    }
     // 실계좌 자동 confirm: v1.1.2에서 doubleConfirmed=false로 pending 유지
     // → 호출자가 2차 confirm 모달 후 doubleConfirmed=true로 재호출 또는
     // → body에 doubleConfirmed 헤더/필드 포함 시 즉시 confirmed
