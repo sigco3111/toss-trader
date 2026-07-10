@@ -11,8 +11,15 @@
  */
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Loader2, RefreshCw, Search } from "lucide-react";
+import { Loader2, MoreVertical, RefreshCw, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import type { Market, StockMaster } from "@/lib/stocks";
 
 interface StockSearchProps {
@@ -21,9 +28,9 @@ interface StockSearchProps {
   defaultName?: string;
   marketFilter?: Market;
   /**
-   * Optional: when provided, a "🔄 새로고침" button appears next to the
-   * search input. Calls POST /api/stocks/refresh. Caller can use the
-   * returned `added` count to decide whether to show a toast.
+   * Optional: when provided, a "🔄 마스터 새로고침" item is enabled in the
+   * options menu. Caller can use the returned `added` count to decide
+   * whether to show a toast.
    */
   onRefresh?: () => Promise<{ added: number; total: number } | void> | void;
 }
@@ -163,22 +170,42 @@ export function StockSearch({
             autoComplete="off"
           />
         </div>
-        {onRefresh ? (
-          <button
-            type="button"
-            onClick={handleRefresh}
-            disabled={refreshing}
-            title="인기 종목 ~200개의 메타(영문명/통화 등)를 토스 API에서 받아와 캐시를 갱신합니다."
-            className="inline-flex h-10 shrink-0 items-center gap-1.5 rounded-md border bg-card px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {refreshing ? (
-              <Loader2 className="h-3.5 w-3.5 animate-spin" />
-            ) : (
-              <RefreshCw className="h-3.5 w-3.5" />
-            )}
-            마스터 새로고침
-          </button>
-        ) : null}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
+              title="옵션"
+              aria-label="옵션 메뉴"
+              className="h-10 w-10 shrink-0"
+            >
+              <MoreVertical className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <DropdownMenuItem
+              onSelect={(e) => {
+                e.preventDefault();
+                void handleRefresh();
+              }}
+              disabled={!onRefresh || refreshing}
+              className="cursor-pointer"
+            >
+              {refreshing ? (
+                <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />
+              ) : (
+                <RefreshCw className="mr-2 h-3.5 w-3.5" />
+              )}
+              마스터 새로고침
+              {!onRefresh ? (
+                <span className="ml-auto text-[10px] text-muted-foreground">
+                  (시작 필요)
+                </span>
+              ) : null}
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
       {refreshMsg ? (
