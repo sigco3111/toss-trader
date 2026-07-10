@@ -213,9 +213,10 @@ bunx oh-my-opencode@latest install --no-tui \
 - v1.1.4: Telegram confirm 3-모드 UI 토글 (lib/settings.ts + ConfirmModeToggle) ✅
 - v1.1.5: 매도 시 holdings 자동 채움 (lib/format.ts: findHoldingBySymbol) ✅
 - v1.2: Playwright e2e (chromium + webkit 22/22) + GitHub Actions ✅
-- **v1.3: 외부 history storage (S3/R2 호환) — lib/storage/{provider,local,s3,index}.ts, AWS SigV4 직접 구현 (의존성 0)** ✅
+- v1.3: 외부 storage (S3/R2 호환) — lib/storage/{provider,local,s3,index}.ts, AWS SigV4 직접 구현 (의존성 0) ✅
+- **v1.4: 캔들 차트 (순수 SVG, 의존성 0) — lib/candles.ts + components/CandleChart.tsx + CandlePanel.tsx** ✅
 
-각 단계마다 `npm run test` (vitest 132/132) + `npm run test:e2e` (Playwright 22/22) 모두 그린 유지.
+각 단계마다 `npm run test` (vitest 142/142) + `npm run test:e2e` (Playwright 26/26) 모두 그린 유지.
 
 ## 📚 참고 자료
 
