@@ -208,10 +208,13 @@ bunx oh-my-opencode@latest install --no-tui \
 - 4단계: `lib/telegram.ts` + `app/api/telegram/{send,callback}/route.ts` + `components/OrderButton.tsx` ✅
 - 5단계: `components/Portfolio.tsx` + `lib/format.ts` + `app/page.tsx` v0.3 ✅
 - 6단계: `lib/history.ts` + `lib/types.ts` + `app/api/history/route.ts` + `components/OrderButton.tsx` history write ✅
-- **7단계: Vercel 배포** (vercel.json + .env.example) ✅
-- 8단계: e2e 테스트 (Vercel preview URL)
+- 7단계: Vercel 배포 (vercel.json + .env.example) ✅
+- v1.1: 종목 검색 자동완성 (StockSearch + 31개 마스터) ✅
+- v1.1.4: Telegram confirm 3-모드 UI 토글 (lib/settings.ts + ConfirmModeToggle) ✅
+- v1.1.5: 매도 시 holdings 자동 채움 (lib/format.ts: findHoldingBySymbol) ✅
+- **v1.2: Playwright e2e (chromium + webkit 22/22) + GitHub Actions** ✅
 
-각 단계마다 `npm run test` 그린 유지.
+각 단계마다 `npm run test` (vitest 124/124) + `npm run test:e2e` (Playwright 22/22) 모두 그린 유지.
 
 ## 📚 참고 자료
 

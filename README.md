@@ -1,6 +1,6 @@
 # 🤖 toss-trader
 
-> **v1.0 공개 (2026-07-10)** — [RELEASE_NOTES.md](RELEASE_NOTES.md) | 토스증권 Open API 기반 투자 어시스턴트
+> **v1.2 공개 (2026-07-10)** — [RELEASE_NOTES.md](RELEASE_NOTES.md) | **Playwright e2e 22/22 PASS** ✅
 > **Paper trading 기본값, 실계좌는 명시적 사용자 확인 후**
 > **스택**: Next.js 16.2.10 (App Router) + React 19.2.4 + TypeScript 5 + Tailwind CSS 4 + ESLint 9 (2026-07-10 보일러플레이트 검증 완료)
 > **v0.4 단순화**: Notion 이력 제거 + kstost/stock 원본 history.ts 방식 (로컬 JSON)
@@ -30,12 +30,13 @@ $ open https://toss-trader.vercel.app/
 
 ## ✨ 주요 특징
 
-- 🔒 **시크릿 격리** — 토스 client_id/secret은 본인 PC의 `~/.hermes/secrets/tossinvest.env` (chmod 600), toss-trader 코드 내 보관 0
-- 📝 **Paper trading 기본값** — `DRY_RUN=true` 기본, 실계좌는 Telegram 사용자 confirm 후만 활성
-- 🧠 **LLM 단일화** — 본인 PC의 OpenCode 글로벌 디폴트(`minimax/MiniMax-M3`) 한 가지. 모델 변경 = OpenCode 설정에서만
-- 💬 **Telegram confirm** — BUY/SELL은 Telegram inline button 사용자 명시 확인 후
-- 🗂️ **로컬 history** — kstost/stock 원본 방식 (1 record = 1 JSON 파일). Vercel에서 readonly 시 silent
-- 🛡️ **안전 가드 6종** — `safety.ts` (DRY_RUN + 422 가드 + 422 retry + confirmHighValue + Telegram confirm + 토큰 길이 검증)
+| 🔒 **시크릿 격리** — 토스 client_id/secret은 본인 PC의 `~/.hermes/secrets/tossinvest.env` (chmod 600), toss-trader 코드 내 보관 0
+| 📝 **Paper trading 기본값** — `DRY_RUN=true` 기본, 실계좌는 Telegram 사용자 confirm 후만 활성
+| 🧠 **LLM 단일화** — 본인 PC의 OpenCode 글로벌 디폴트(`minimax/MiniMax-M3`) 한 가지. 모델 변경 = OpenCode 설정에서만
+| 💬 **Telegram confirm** — BUY/SELL은 Telegram inline button 사용자 명시 확인 후
+| 🗂️ **로컬 history** — kstost/stock 원본 방식 (1 record = 1 JSON 파일). Vercel에서 readonly 시 silent
+| 🧪 **e2e 자동화** — Playwright (chromium + webkit) + GitHub Actions. Vercel preview URL 자동 검증
+| 🛡️ **안전 가드 6종** — `safety.ts` (DRY_RUN + 422 가드 + 422 retry + confirmHighValue + Telegram confirm + 토큰 길이 검증)
 
 ## 🎮 조작법
 
@@ -225,12 +226,13 @@ bunx oh-my-opencode@latest install --no-tui \
 
 #### 3) toss-trader에서 OpenCode의 역할
 
-| 차원 | Vercel (사용자 분석) | OpenCode (오빠 코딩) |
-|---|---|---|
-| LLM 호출 | ❌ 코드 0줄 | ⭕ 오빠 PC TUI/exec |
-| 모델 | — | 미니맥스 M3 (글로벌 디폴트) |
-| 목적 | — | Next.js 컴포넌트/로직 자동 생성 |
-| 시크릿 | Vercel env (Telegram만) | `~/.config/opencode/opencode.json` 또는 `/connect` |
+| 차원 | Vercel (사용자 분석) | OpenCode (오빠 코딩) | OpenCode 글로벌 디폴트 (v1.2) |
+|---|---|---|---|
+| LLM 호출 | ❌ 코드 0줄 | ⭕ 오빠 PC TUI/exec | 미니맥스 M3 (v1.1.4 단순화) |
+| 모델 | — | 미니맥스 M3 (글로벌 디폴트) | — |
+| 목적 | — | Next.js 컴포넌트/로직 자동 생성 | — |
+| e2e 검증 | GitHub Actions (chromium + webkit) | — | — |
+| 시크릿 | Vercel env (Telegram만) | `~/.config/opencode/opencode.json` 또는 `/connect` | — |
 
 > v0.3 단순화: "Vercel에서 LLM 호출" 행 자체가 ❌. 토스 Open API relay + history + Telegram 알림만.
 
@@ -357,9 +359,12 @@ toss-trader/
 
 ### 🔬 검증
 
-- [x] `npm run build` 0 에러 (2026-07-10 검증, 1131ms)
+- [x] `npm run build` 0 에러 (2026-07-10 검증, 1387ms)
 - [x] `npm run lint` 0 errors, 0 warnings
-- [x] `npm run test` 81/81 PASS (format 31 + safety 25 + telegram 13 + history 12)
+- [x] `npm run test` **124/124 PASS** (format 39 + settings 19 + safety 25 + telegram 13 + history 12 + stocks 14)
+- [x] `npm run test:e2e` **22/22 PASS** (chromium 11 + webkit 11) — Playwright e2e + Vercel preview URL
+- [x] GitHub Actions e2e — PR마다 + main push마다 자동 실행
+- [x] v0.3 자기 검증 — LLM 호출 0줄 (Vercel 코드)
 - [ ] `safety.ts` dry-run 가드 — `DRY_RUN=true`에서 주문 endpoint 호출 0회
 - [ ] 토큰 길이 검증 — `tossinvest.env` chmod 600 + 길이 검증
 - [ ] LLM 호출 0줄 — `grep -rn "openai\|nim\|anthropic" lib/ app/ components/` 모두 0건 (Vercel 코드)
@@ -378,6 +383,14 @@ toss-trader/
 - **v0.6 (2026-07-10)**: README 비개발자용 가이드 5단계 추가
 - **v0.7 (2026-07-10)**: 2~5단계 — 토스 Open API relay + 6대 안전 가드 + Telegram confirm + OrderButton + Portfolio
 - **v0.8 (2026-07-10)**: 6단계 — Notion 제거 + kstost/stock 원본 history.ts 방식 (로컬 JSON, 1 record = 1 파일). lib/history.ts + lib/types.ts + app/api/history/route.ts 신규, @notionhq/client 의존성 제거. OrderButton이 매수/매도 결과 시 자동 history 기록
+- **v1.1 (2026-07-10)**: 종목 검색 자동완성 — 토스 API에 search endpoint 없어서 정적 마스터 31개 (KOSPI 시총 상위) + 클라이언트 사이드 fuzzy 검색. lib/stocks.ts + components/StockSearch.tsx. Portfolio/OrderButton 동적 symbolFilter
+- **v1.1.1 (2026-07-10)**: Telegram confirm 3-모드 UI 토글 (telegram/auto/off) + localStorage 저장. lib/settings.ts + components/ConfirmModeToggle.tsx. 1분 모드 전환
+- **v1.1.2 (취소됨)**: auto-paper/auto-live 4-모드 (5초 대기 + 2차 confirm). 사용자 편의 반대 → v1.1.4에서 단순화
+- **v1.1.3 (취소됨)**: TOSS_TRADING_MODE=paper 시 auto-live 즉시 confirmed. v1.1.4 단순화로 불필요
+- **v1.1.4 (2026-07-10)**: auto 단일 단순화 (3-모드 복귀, 5초/2차 confirm 제거). 사용자 편의 우선. lib/settings.ts + DoubleConfirmModal.tsx 삭제
+- **v1.1.5 (2026-07-10)**: 매도 시 보유 종목 quantity/avgPrice 자동 채움. lib/format.ts: findHoldingBySymbol + getSellableQuantity. 매도 클릭 시 holdings 매칭 → 수량 자동
+- **v1.2 (2026-07-10)**: Playwright e2e (chromium + webkit 22/22 PASS) + GitHub Actions. Vercel preview URL 자동 검증. test/e2e 4 spec 파일. 실계좌 영향 zero (mock). .github/workflows/e2e.yml
+- **v1.2.1 (2026-07-10)**: README + RELEASE_NOTES v1.2 갱신. e2e 뱃지 + 로컬 실행 가이드 (npm run test:e2e, --ui) + 다음 로드맵 (v1.3 외부 storage, v2.0 실계좌)
 - **v0.9 (2026-07-10)**: 7단계 — Vercel 배포 (vercel.json: framework=nextjs, regions=[icn1], functions maxDuration=10) + .env.example (TOSS_* / TELEGRAM_* / DRY_RUN 7개 env 키) + README 비개발자용 env 셋업 가이드 (Production/Preview/Development 3개 환경). 자주 막히는 곳 11개로 확장 (Deploy/401/history-readonly/telegram-send-failed 등 추가)
 
 ### 🤝 원본 크레딧
