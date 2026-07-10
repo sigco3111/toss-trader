@@ -19,6 +19,7 @@
 
 import { useState } from "react";
 import type { OrderHistoryRecord } from "@/lib/types";
+import { StockSearch } from "@/components/StockSearch";
 
 type Side = "BUY" | "SELL";
 
@@ -26,6 +27,7 @@ interface OrderButtonProps {
   symbol: string;
   symbolName?: string;
   currentPrice: number;
+  onSymbolChange?: (symbol: string, name: string, price: number) => void;
 }
 
 interface PendingOrder {
@@ -42,15 +44,30 @@ interface OrderResult {
   message?: string;
 }
 
-export function OrderButton({ symbol, symbolName, currentPrice }: OrderButtonProps) {
+export function OrderButton({
+  symbol: initialSymbol,
+  symbolName: initialName,
+  currentPrice: initialPrice,
+  onSymbolChange,
+}: OrderButtonProps) {
+  const [symbol, setSymbol] = useState<string>(initialSymbol);
+  const [symbolName, setSymbolName] = useState<string>(initialName ?? "");
   const [side, setSide] = useState<Side>("BUY");
-  const [price, setPrice] = useState<number>(currentPrice);
+  const [price, setPrice] = useState<number>(initialPrice);
   const [quantity, setQuantity] = useState<number>(10);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [pending, setPending] = useState<PendingOrder | null>(null);
   const [result, setResult] = useState<OrderResult | null>(null);
   const [sending, setSending] = useState<boolean>(false);
   const [polling, setPolling] = useState<boolean>(false);
+
+  // 종목 선택 시 currentPrice 업데이트 + 부모(Home)에 알림
+  const handleStockSelect = (newSymbol: string, newName: string, newPrice: number): void => {
+    setSymbol(newSymbol);
+    setSymbolName(newName);
+    if (newPrice > 0) setPrice(newPrice);
+    onSymbolChange?.(newSymbol, newName, newPrice);
+  };
 
   const totalAmount = price * quantity;
 
@@ -176,6 +193,15 @@ export function OrderButton({ symbol, symbolName, currentPrice }: OrderButtonPro
   // ── 4. 모달 안의 UI ──
   return (
     <div className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-4 bg-white dark:bg-zinc-950">
+      {/* 종목 선택 */}
+      <div className="mb-3">
+        <StockSearch
+          onSelect={handleStockSelect}
+          defaultSymbol={symbol}
+          defaultName={symbolName}
+        />
+      </div>
+
       <div className="flex gap-2 mb-3">
         <button
           type="button"
@@ -203,17 +229,11 @@ export function OrderButton({ symbol, symbolName, currentPrice }: OrderButtonPro
 
       <div className="text-sm space-y-2 mb-3">
         <div className="flex justify-between">
-          <span className="text-zinc-500">종목</span>
-          <span className="font-mono">
-            {symbol} {symbolName && <span className="text-zinc-500">({symbolName})</span>}
-          </span>
+          <span className="text-zinc-500">현재가 (자동)</span>
+          <span className="font-mono font-semibold text-lg">{price.toLocaleString()}원</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-zinc-500">현재가</span>
-          <span className="font-mono">{currentPrice.toLocaleString()}원</span>
-        </div>
-        <div className="flex justify-between">
-          <label htmlFor="price" className="text-zinc-500">주문가</label>
+          <label htmlFor="price" className="text-zinc-500">주문가 (수정 가능)</label>
           <input
             id="price"
             type="number"

@@ -51,7 +51,13 @@ type Status = "idle" | "loading" | "success" | "error";
 
 const POLL_INTERVAL_MS = 10_000;
 
-export function Portfolio({ accountSeq = 1 }: { accountSeq?: number }) {
+export function Portfolio({
+  accountSeq = 1,
+  symbolFilter,
+}: {
+  accountSeq?: number;
+  symbolFilter?: string;
+}) {
   const [holdings, setHoldings] = useState<HoldingItem[]>([]);
   const [prices, setPrices] = useState<PriceMap>({});
   const [status, setStatus] = useState<Status>("idle");
@@ -136,7 +142,11 @@ export function Portfolio({ accountSeq = 1 }: { accountSeq?: number }) {
   }, [fetchData]);
 
   // ── 요약 계산 ──
-  const summary = holdings.reduce(
+  // symbolFilter 있으면 매칭 종목만 강조
+  const filteredHoldings = symbolFilter
+    ? holdings.filter((h) => h.symbol === symbolFilter)
+    : holdings;
+  const summary = filteredHoldings.reduce(
     (acc, h) => {
       const currentPrice = prices[h.symbol] ?? h.avgPrice;
       const evalAmount = calcEvalAmount(currentPrice, h.quantity);

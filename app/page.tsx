@@ -17,6 +17,15 @@ type Tab = "dashboard" | "history";
 
 export default function Home() {
   const [tab, setTab] = useState<Tab>("dashboard");
+  const [selectedSymbol, setSelectedSymbol] = useState<string>("005930");
+  const [selectedSymbolName, setSelectedSymbolName] = useState<string>("삼성전자");
+  const [selectedPrice, setSelectedPrice] = useState<number>(70000);
+
+  const handleSymbolChange = (symbol: string, name: string, price: number): void => {
+    setSelectedSymbol(symbol);
+    setSelectedSymbolName(name);
+    if (price > 0) setSelectedPrice(price);
+  };
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
@@ -76,18 +85,23 @@ export default function Home() {
         {/* 탭 컨텐츠 */}
         {tab === "dashboard" && (
           <section className="mb-6">
-            <h2 className="text-lg font-semibold mb-3">📊 포트폴리오 + 주문 (데모: 삼성전자 005930)</h2>
+            <h2 className="text-lg font-semibold mb-3">📊 포트폴리오 + 주문 (선택: {selectedSymbolName} {selectedSymbol})</h2>
             <div className="grid lg:grid-cols-2 gap-4">
-              <Portfolio accountSeq={1} />
-              <OrderButton symbol="005930" symbolName="삼성전자" currentPrice={70000} />
+              <Portfolio accountSeq={1} symbolFilter={selectedSymbol} />
+              <OrderButton
+                symbol={selectedSymbol}
+                symbolName={selectedSymbolName}
+                currentPrice={selectedPrice}
+                onSymbolChange={handleSymbolChange}
+              />
             </div>
           </section>
         )}
 
         {tab === "history" && (
           <section className="mb-6">
-            <h2 className="text-lg font-semibold mb-3">📋 매수/매도/분석/스냅샷 이력</h2>
-            <History symbolFilter="005930" />
+            <h2 className="text-lg font-semibold mb-3">📋 {selectedSymbolName} ({selectedSymbol}) 이력</h2>
+            <History symbolFilter={selectedSymbol} />
           </section>
         )}
 
