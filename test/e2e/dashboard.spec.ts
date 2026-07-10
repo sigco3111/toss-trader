@@ -56,6 +56,24 @@ test.describe("Dashboard", () => {
   });
 
   test("History 탭 클릭 시 이력 화면 표시", async ({ page }) => {
+    // v1.3.1: storage.spec.ts mock이 S3 available로 변경됨.
+    // 이 테스트는 빈 이력 화면 (readonly) 검증 → 별도 mock
+    await page.route("**/api/history**", async (route) => {
+      if (route.request().method() === "GET") {
+        await route.fulfill({
+          status: 200,
+          contentType: "application/json",
+          body: JSON.stringify({
+            availability: "readonly",
+            count: 0,
+            records: [],
+            servedAt: new Date().toISOString(),
+          }),
+        });
+      } else {
+        await route.continue();
+      }
+    });
     await page.goto("/");
 
     // History 탭 클릭

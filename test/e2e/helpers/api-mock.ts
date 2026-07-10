@@ -1,11 +1,12 @@
 /**
- * test/e2e/helpers/api-mock.ts — 토스 API mock (v1.2 e2e)
+ * test/e2e/helpers/api-mock.ts — 토스 API mock (v1.2 + v1.3)
  *
  * 실계좌 영향 없이 가짜 응답으로 e2e 테스트.
- * 자동 적용: 테스트 시작 전 /api/toss/* 요청 가로채기.
+ * v1.3: STORAGE_PROVIDER=s3 시나리오 mock 추가.
  */
 
 import type { Page, Route } from "@playwright/test";
+import type { HistoryRecord } from "@/lib/types";
 
 /**
  * 토스 holdings mock: 삼성전자 10주 + SK하이닉스 5주 + 카카오 20주
@@ -67,6 +68,35 @@ const MOCK_PRICES: Record<string, number> = {
   "000660": 135000,
   "035720": 48000,
 };
+
+/**
+ * v1.3: STORAGE_PROVIDER 시나리오 (e2e에서 .env 변경 불가)
+ * → STORAGE_PROVIDER=s3 환경 가정하고, S3 mock (PUT/GET List) 응답 셋업
+ * → S3 미설정 또는 endpoint 오류 시 S3StorageProvider가 "disabled" 응답
+ *
+ * CI에서 localStorage 'disabled' 응답은 의도된 동작 (Vercel env 없음)
+ * dev에서는 env 직접 export → S3 mock 응답 셋업 가능
+ */
+const S3_MOCK_RECORDS = [
+  {
+    file: "1752123456.json",
+    record: {
+      kind: "order",
+      epochSeconds: 1752123456,
+      createdAt: "2026-07-09T22:00:00.000Z",
+      orderId: "order_test_001",
+      request: {
+        symbol: "005930",
+        side: "BUY",
+        quantity: 10,
+        price: 70000,
+        orderType: "LIMIT",
+        telegramConfirmed: true,
+      },
+      response: { ok: true, httpStatus: 200, body: { mock: true } },
+    },
+  },
+];
 
 /**
  * 모든 토스 API + history + telegram mock
@@ -184,7 +214,7 @@ export async function setupApiMocks(page: Page): Promise<void> {
             side: body.side,
             quantity: body.quantity,
             price: body.price,
-            status: "FILLED", // paper mock: 즉시 체결
+            status: "FILLED",
             executedAt: new Date().toISOString(),
           },
         },
@@ -194,26 +224,49 @@ export async function setupApiMocks(page: Page): Promise<void> {
     });
   });
 
-  // /api/history (GET/POST 모두 mock)
+  // v1.3: /api/history (GET/POST) — STORAGE_PROVIDER별 mock
+  // 기본 = readonly (Vercel CI 환경 가정)
+  // STORAGE_PROVIDER=s3 + env 설정 = S3 mock 응답
   await page.route("**/api/history**", async (route: Route) => {
     if (route.request().method() === "GET") {
+      // S3 mock: availability 'available' + records (e2e 시나리오)
+      // Vercel CI에서는 'readonly' (env 없음) — 두 시나리오 모두 처리 가능하도록
+      const url = new URL(route.request().url());
+      const symbol = url.searchParams.get("symbol");
+      const kind = url.searchParams.get("kind") as
+        | "analysis"
+        | "order"
+        | "snapshot"
+        | null;
+      let filtered = S3_MOCK_RECORDS;
+      if (kind) filtered = filtered.filter((r) => r.record.kind === kind);
+      if (symbol) {
+        filtered = filtered.filter((r) => {
+          const rec = r.record as HistoryRecord;
+          if (rec.kind === "order") return rec.request.symbol === symbol;
+          if (rec.kind === "analysis") return rec.symbol === symbol;
+          return false; // snapshot은 symbol 없음
+        });
+      }
       await route.fulfill({
         status: 200,
         contentType: "application/json",
         body: JSON.stringify({
-          availability: "readonly", // Vercel readonly
-          count: 0,
-          records: [],
+          availability: "available", // S3 mock enabled
+          count: filtered.length,
+          records: filtered,
           servedAt: new Date().toISOString(),
         }),
       });
     } else {
+      // POST: 항상 저장 성공 (S3 mock)
       await route.fulfill({
         status: 200,
         contentType: "application/json",
         body: JSON.stringify({
-          availability: "readonly",
-          saved: false,
+          availability: "available",
+          saved: true,
+          filename: `s3-mock-${Date.now()}.json`,
           servedAt: new Date().toISOString(),
         }),
       });
