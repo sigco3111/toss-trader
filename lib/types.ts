@@ -33,6 +33,12 @@ export type SessionState = {
   secretKey: string;
   instructions: string;
   intervalSeconds: number;
+  /**
+   * Symbol the user wants the agent to focus on. Persists across analyses;
+   * the UI may also override it per-call.
+   */
+  targetSymbol: string;
+  targetMarket: Market;
   latestRecommendation: AgentRecommendation | null;
   latestHistoryFile: string | null;
 };
@@ -42,6 +48,9 @@ export type AnalysisHistoryRecord = {
   epochSeconds: number;
   createdAt: string;
   sessionId: string;
+  /** Which symbol/market this analysis was scoped to. */
+  symbol: string;
+  market: Market;
   recommendation: AgentRecommendation;
   rawAssistantMessage: string;
   diagnostics: {
@@ -49,6 +58,8 @@ export type AnalysisHistoryRecord = {
     stdout: string;
     stderr: string;
   };
+  /** Per-call market snapshot that was attached to the prompt. */
+  context?: import("@/lib/market-context").MarketContext;
 };
 
 export type OrderHistoryRecord = {

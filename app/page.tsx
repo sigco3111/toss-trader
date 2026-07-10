@@ -117,6 +117,8 @@ export default function Home() {
   const [instructions, setInstructions] = useState(defaultInstructions);
   const [intervalSeconds, setIntervalSeconds] = useState(60);
   const [envAvailable, setEnvAvailable] = useState(false);
+  const [targetSymbol, setTargetSymbol] = useState("005930");
+  const [targetMarket, setTargetMarket] = useState<"KR" | "US">("KR");
   const [session, setSession] = useState<SessionView | null>(null);
   const [recommendation, setRecommendation] =
     useState<AgentRecommendation | null>(null);
@@ -321,6 +323,8 @@ export default function Home() {
         secretKey,
         instructions,
         intervalSeconds,
+        targetSymbol,
+        targetMarket,
       }),
     });
     const body = (await response.json()) as {
@@ -464,6 +468,32 @@ export default function Home() {
                   autoComplete="off"
                   placeholder={envAvailable ? "비워두면 .env.local 사용" : undefined}
                 />
+              </div>
+              <div className="grid grid-cols-[1fr_120px] gap-2">
+                <div className="space-y-2">
+                  <Label htmlFor="targetSymbol">분석 종목 (symbol)</Label>
+                  <Input
+                    id="targetSymbol"
+                    value={targetSymbol}
+                    onChange={(event) => setTargetSymbol(event.target.value)}
+                    placeholder="005930, NVDA, …"
+                    autoComplete="off"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="targetMarket">시장</Label>
+                  <select
+                    id="targetMarket"
+                    value={targetMarket}
+                    onChange={(event) =>
+                      setTargetMarket(event.target.value as "KR" | "US")
+                    }
+                    className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    <option value="KR">KR (국내)</option>
+                    <option value="US">US (미국)</option>
+                  </select>
+                </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="intervalSeconds">분석 간격 (초)</Label>

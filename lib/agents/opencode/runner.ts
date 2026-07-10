@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import type { SessionState } from "@/lib/types";
+import type { MarketContext } from "@/lib/market-context";
 import {
   apiDocsPath,
   buildPrompt,
@@ -45,8 +46,9 @@ function isTextEvent(value: unknown): value is OpencodeTextEvent {
 
 export async function runOpencodeInvestmentAgent(
   session: SessionState,
+  context?: MarketContext | null,
 ): Promise<AgentRunResult> {
-  const prompt = buildPrompt(session);
+  const prompt = buildPrompt(session, context);
 
   // --format json: emit one JSON event per line. We only need the last `text` event.
   // --auto:        auto-approve tools not explicitly denied.

@@ -38,3 +38,7 @@ Thumbs.db
 playwright-report/
 test-results/
 coverage/
+
+# opencode session cache
+.omo/
+.codegraph/

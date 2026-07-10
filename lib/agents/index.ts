@@ -1,4 +1,5 @@
 import type { SessionState } from "@/lib/types";
+import type { MarketContext } from "@/lib/market-context";
 import { runOpencodeInvestmentAgent } from "@/lib/agents/opencode/runner";
 import type { AgentRunResult } from "@/lib/agents/shared";
 
@@ -25,10 +26,11 @@ export function getActiveAgentKind(): AgentKind {
 
 export async function runInvestmentAgent(
   session: SessionState,
+  context?: MarketContext | null,
   kind: AgentKind = defaultKind,
 ): Promise<AgentRunResult> {
   if (kind === "opencode") {
-    return runOpencodeInvestmentAgent(session);
+    return runOpencodeInvestmentAgent(session, context);
   }
   if (kind === "codex") {
     throw new Error(

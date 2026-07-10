@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createSession, getSession, redactSession } from "@/lib/session-store";
+import type { Market } from "@/lib/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -53,6 +54,8 @@ export async function POST(request: Request) {
     secretKey?: string;
     instructions?: string;
     intervalSeconds?: number;
+    targetSymbol?: string;
+    targetMarket?: Market;
   };
 
   const resolved = resolveCredentials({
@@ -75,6 +78,20 @@ export async function POST(request: Request) {
     );
   }
 
+  const targetSymbol = (body.targetSymbol || "").trim();
+  if (!targetSymbol) {
+    return NextResponse.json(
+      {
+        error:
+          "분석 대상 종목(symbol)이 필요합니다. 예: 005930 (삼성전자), NVDA 등.",
+      },
+      { status: 400 },
+    );
+  }
+
+  const targetMarket: Market =
+    body.targetMarket === "US" ? "US" : "KR";
+
   const intervalSeconds = Math.max(
     30,
     Math.min(3600, Number(body.intervalSeconds || 60)),
@@ -85,6 +102,8 @@ export async function POST(request: Request) {
     secretKey: resolved.secretKey,
     instructions: body.instructions || "",
     intervalSeconds,
+    targetSymbol,
+    targetMarket,
   });
 
   return NextResponse.json({

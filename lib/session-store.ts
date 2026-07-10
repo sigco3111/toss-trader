@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import type { AgentRecommendation, SessionState } from "@/lib/types";
+import type { AgentRecommendation, Market, SessionState } from "@/lib/types";
 
 declare global {
   var __tossinvestAgentSession: SessionState | undefined;
@@ -10,6 +10,8 @@ export function createSession(input: {
   secretKey: string;
   instructions: string;
   intervalSeconds: number;
+  targetSymbol: string;
+  targetMarket: Market;
 }) {
   const session: SessionState = {
     id: crypto.randomUUID(),
@@ -18,6 +20,8 @@ export function createSession(input: {
     secretKey: input.secretKey,
     instructions: input.instructions,
     intervalSeconds: input.intervalSeconds,
+    targetSymbol: input.targetSymbol,
+    targetMarket: input.targetMarket,
     latestRecommendation: null,
     latestHistoryFile: null,
   };
@@ -50,6 +54,8 @@ export function redactSession(session: SessionState) {
     createdAt: session.createdAt,
     instructions: session.instructions,
     intervalSeconds: session.intervalSeconds,
+    targetSymbol: session.targetSymbol,
+    targetMarket: session.targetMarket,
     latestRecommendation: session.latestRecommendation,
     latestHistoryFile: session.latestHistoryFile,
   };
