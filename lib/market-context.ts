@@ -92,11 +92,10 @@ export async function collectMarketContext(
   // Public market endpoints (no accountSeq needed).
   const publicRequests: Promise<Settled>[] = [
     run("price", () =>
-      tossFetchAuthed(`/api/v1/prices?symbol=${encodeURIComponent(symbol)}`, {
-        apiKey: session.apiKey,
-        secretKey: session.secretKey,
-        accountSeq,
-      }),
+      tossFetchAuthed(
+        `/api/v1/prices?symbols=${encodeURIComponent(symbol)}`,
+        { apiKey: session.apiKey, secretKey: session.secretKey, accountSeq },
+      ),
     ),
     run("orderbook", () =>
       tossFetchAuthed(`/api/v1/orderbook?symbol=${encodeURIComponent(symbol)}`, {
@@ -120,16 +119,17 @@ export async function collectMarketContext(
     ),
     run("candles", () =>
       tossFetchAuthed(
-        `/api/v1/candles?symbol=${encodeURIComponent(symbol)}&interval=1D&count=20`,
+        // interval is enum: "1m" | "1d" (lowercase). Use 1d for daily candles
+        // which is what the agent needs for swing decisions.
+        `/api/v1/candles?symbol=${encodeURIComponent(symbol)}&interval=1d&count=20`,
         { apiKey: session.apiKey, secretKey: session.secretKey, accountSeq },
       ),
     ),
     run("stockInfo", () =>
-      tossFetchAuthed(`/api/v1/stocks?symbol=${encodeURIComponent(symbol)}`, {
-        apiKey: session.apiKey,
-        secretKey: session.secretKey,
-        accountSeq,
-      }),
+      tossFetchAuthed(
+        `/api/v1/stocks?symbols=${encodeURIComponent(symbol)}`,
+        { apiKey: session.apiKey, secretKey: session.secretKey, accountSeq },
+      ),
     ),
     run("warnings", () =>
       tossFetchAuthed(
@@ -145,11 +145,10 @@ export async function collectMarketContext(
       }),
     ),
     run("exchangeRate", () =>
-      tossFetchAuthed("/api/v1/exchange-rate", {
-        apiKey: session.apiKey,
-        secretKey: session.secretKey,
-        accountSeq,
-      }),
+      tossFetchAuthed(
+        "/api/v1/exchange-rate?baseCurrency=USD&quoteCurrency=KRW",
+        { apiKey: session.apiKey, secretKey: session.secretKey, accountSeq },
+      ),
     ),
   ];
 
@@ -163,11 +162,11 @@ export async function collectMarketContext(
       }),
     ),
     run("buyingPower", () =>
-      tossFetchAuthed("/api/v1/buying-power", {
-        apiKey: session.apiKey,
-        secretKey: session.secretKey,
-        accountSeq,
-      }),
+      tossFetchAuthed(
+        // currency=KRW for the domestic market. US market would need currency=USD.
+        `/api/v1/buying-power?currency=${market === "US" ? "USD" : "KRW"}`,
+        { apiKey: session.apiKey, secretKey: session.secretKey, accountSeq },
+      ),
     ),
     run("sellableQuantity", () =>
       tossFetchAuthed(
