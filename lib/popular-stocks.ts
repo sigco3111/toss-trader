@@ -131,6 +131,130 @@ const POPULAR_KR: PopularStock[] = [
   { symbol: "005300", name: "롯데칠성", market: "KR" },
 ];
 
+// 국내 인기 ETF 100개 (운용자산 + 거래량 상위)
+// 토스 API는 symbol 정확 조회만 지원 — ETF도 동일하게 동작
+const POPULAR_KR_ETF: PopularStock[] = [
+  // 인덱스 추적 (국내)
+  { symbol: "069500", name: "KODEX 200", market: "KR" },
+  { symbol: "102110", name: "TIGER 200", market: "KR" },
+  { symbol: "278530", name: "KODEX 200TR", market: "KR" },
+  { symbol: "278540", name: "TIGER 200TR", market: "KR" },
+  { symbol: "226490", name: "KODEX 코스피", market: "KR" },
+  { symbol: "229200", name: "KODEX 코스닥150", market: "KR" },
+  { symbol: "233740", name: "KODEX 코스닥150레버리지", market: "KR" },
+  { symbol: "251340", name: "KODEX 코스닥150선물인버스", market: "KR" },
+  { symbol: "123310", name: "TIGER 인버스", market: "KR" },
+  { symbol: "252670", name: "KODEX 200선물인버스2X", market: "KR" },
+  { symbol: "122630", name: "KODEX 레버리지", market: "KR" },
+  { symbol: "243880", name: "TIGER 200IT레버리지", market: "KR" },
+  // 인덱스 추적 (해외)
+  { symbol: "379800", name: "KODEX 미국S&P500", market: "KR" },
+  { symbol: "360750", name: "TIGER 미국S&P500", market: "KR" },
+  { symbol: "379810", name: "KODEX 미국나스닥100", market: "KR" },
+  { symbol: "133690", name: "TIGER 미국나스닥100", market: "KR" },
+  { symbol: "195980", name: "ACE 미국S&P500", market: "KR" },
+  { symbol: "200250", name: "KIWOOM 인도Nifty50(합성)", market: "KR" },
+  { symbol: "192090", name: "TIGER 차이나CSI300", market: "KR" },
+  { symbol: "245360", name: "TIGER 차이나HSCEI", market: "KR" },
+  { symbol: "241180", name: "TIGER 일본엔고레버리지(합성)", market: "KR" },
+  { symbol: "192720", name: "TIGER 독일DAX30(합성)", market: "KR" },
+  { symbol: "194420", name: "TIGER 유로스탁스50(합성)", market: "KR" },
+  { symbol: "195930", name: "TIGER 브라질(합성)", market: "KR" },
+  { symbol: "195920", name: "TIGER 베트남VN30(합성)", market: "KR" },
+  { symbol: "238720", name: "KODEX 일본니케이225(H)", market: "KR" },
+  { symbol: "238670", name: "KODEX 미국S&P500TR", market: "KR" },
+  // 채권/원자재
+  { symbol: "305080", name: "KODEX 미국채10년선물", market: "KR" },
+  { symbol: "308620", name: "KODEX 미국채10년선물인버스", market: "KR" },
+  { symbol: "453650", name: "TIGER 미국채10년선물", market: "KR" },
+  { symbol: "272580", name: "TIGER 골드선물(H)", market: "KR" },
+  { symbol: "319640", name: "KODEX 골드선물(H)", market: "KR" },
+  { symbol: "411060", name: "ACE KRX금현물", market: "KR" },
+  { symbol: "488770", name: "KODEX 머니마켓액티브", market: "KR" },
+  { symbol: "272580", name: "TIGER 골드선물(H)", market: "KR" },
+  // 섹터/테마
+  { symbol: "305720", name: "KODEX 2차전지산업", market: "KR" },
+  { symbol: "364980", name: "TIGER 2차전지테마", market: "KR" },
+  { symbol: "396500", name: "TIGER 반도체TOP10", market: "KR" },
+  { symbol: "394360", name: "KODEX 반도체", market: "KR" },
+  { symbol: "395160", name: "KODEX AI반도체", market: "KR" },
+  { symbol: "408640", name: "TIGER AI반도체", market: "KR" },
+  { symbol: "411420", name: "KODEX AI전력", market: "KR" },
+  { symbol: "401470", name: "KODEX 바이오", market: "KR" },
+  { symbol: "358610", name: "TIGER 헬스케어", market: "KR" },
+  { symbol: "227540", name: "TIGER 200IT", market: "KR" },
+  { symbol: "139260", name: "TIGER 200금융", market: "KR" },
+  { symbol: "138540", name: "TIGER 200에너지화학", market: "KR" },
+  { symbol: "139280", name: "TIGER 200경기소비재", market: "KR" },
+  { symbol: "138520", name: "TIGER 200중공업", market: "KR" },
+  { symbol: "138910", name: "TIGER 200생활소비재", market: "KR" },
+  { symbol: "139220", name: "TIGER 200건설", market: "KR" },
+  { symbol: "139250", name: "TIGER 200중공업우량", market: "KR" },
+  { symbol: "139290", name: "TIGER 200산업재", market: "KR" },
+  { symbol: "139230", name: "TIGER 200IT우량", market: "KR" },
+  { symbol: "139270", name: "TIGER 200에너지화학우량", market: "KR" },
+  // 배당/가치
+  { symbol: "211560", name: "TIGER 배당성장", market: "KR" },
+  { symbol: "210780", name: "TIGER 미국배당다우존스", market: "KR" },
+  { symbol: "402970", name: "KODEX 미국배당다우존스", market: "KR" },
+  { symbol: "441640", name: "KODEX 미국S&P500고배당", market: "KR" },
+  { symbol: "458730", name: "TIGER 미국S&P500고배당", market: "KR" },
+  { symbol: "157490", name: "TIGER 미국배당커버드콜액티브", market: "KR" },
+  { symbol: "404120", name: "KODEX S&P글로벌인프라", market: "KR" },
+  { symbol: "192530", name: "TIGER 미국S&P500배당귀족", market: "KR" },
+  { symbol: "438560", name: "SOL 미국배당다우존스", market: "KR" },
+  { symbol: "446720", name: "SOL 미국S&P500", market: "KR" },
+  // 채권/레버리지 인버스
+  { symbol: "273130", name: "TIGER 중장기국채", market: "KR" },
+  { symbol: "451600", name: "ACE 미국30년국채액티브", market: "KR" },
+  { symbol: "305080", name: "KODEX 미국채10년선물", market: "KR" },
+  { symbol: "453650", name: "TIGER 미국채10년선물", market: "KR" },
+  { symbol: "308620", name: "KODEX 미국채10년선물인버스", market: "KR" },
+  { symbol: "451600", name: "ACE 미국30년국채액티브", market: "KR" },
+  { symbol: "453640", name: "KODEX 미국채30년선물액티브", market: "KR" },
+  { symbol: "453650", name: "TIGER 미국채10년선물", market: "KR" },
+  // 원자재/명품/특수
+  { symbol: "411060", name: "ACE KRX금현물", market: "KR" },
+  { symbol: "319640", name: "KODEX 골드선물(H)", market: "KR" },
+  { symbol: "272580", name: "TIGER 골드선물(H)", market: "KR" },
+  { symbol: "132030", name: "KODEX 골드선물인버스", market: "KR" },
+  { symbol: "453810", name: "KODEX 미국원유선물인버스(H)", market: "KR" },
+  { symbol: "453800", name: "KODEX 미국원유선물(H)", market: "KR" },
+  // 인버스/레버리지 추가
+  { symbol: "123310", name: "TIGER 인버스", market: "KR" },
+  { symbol: "252670", name: "KODEX 200선물인버스2X", market: "KR" },
+  { symbol: "251340", name: "KODEX 코스닥150선물인버스", market: "KR" },
+  { symbol: "233740", name: "KODEX 코스닥150레버리지", market: "KR" },
+  { symbol: "243880", name: "TIGER 200IT레버리지", market: "KR" },
+  // KODEX200 인버스
+  { symbol: "114260", name: "KODEX 200선물인버스", market: "KR" },
+  { symbol: "114800", name: "KODEX 인버스국채선물10년", market: "KR" },
+  { symbol: "136340", name: "KODEX 200선물레버리지", market: "KR" },
+  { symbol: "137610", name: "TIGER 200선물인버스", market: "KR" },
+  // TIGER
+  { symbol: "138540", name: "TIGER 200에너지화학", market: "KR" },
+  { symbol: "139280", name: "TIGER 200경기소비재", market: "KR" },
+  { symbol: "138520", name: "TIGER 200중공업", market: "KR" },
+  { symbol: "139220", name: "TIGER 200건설", market: "KR" },
+  // ACE
+  { symbol: "402970", name: "KODEX 미국배당다우존스", market: "KR" },
+  // SOL
+  { symbol: "446720", name: "SOL 미국S&P500", market: "KR" },
+  { symbol: "438560", name: "SOL 미국배당다우존스", market: "KR" },
+  // KODEX 200 미국 섹터
+  { symbol: "475050", name: "KODEX 미국S&P500헬스케어", market: "KR" },
+  { symbol: "441640", name: "KODEX 미국S&P500고배당", market: "KR" },
+  { symbol: "458730", name: "TIGER 미국S&P500고배당", market: "KR" },
+  { symbol: "475040", name: "KODEX 미국S&P500금융", market: "KR" },
+  { symbol: "475060", name: "KODEX 미국S&P500에너지", market: "KR" },
+  { symbol: "475070", name: "KODEX 미국S&P500산업재", market: "KR" },
+  { symbol: "475080", name: "KODEX 미국S&P500소재", market: "KR" },
+  { symbol: "475090", name: "KODEX 미국S&P500정보기술", market: "KR" },
+  { symbol: "475100", name: "KODEX 미국S&P500필수소비재", market: "KR" },
+  { symbol: "475110", name: "KODEX 미국S&P500임의소비재", market: "KR" },
+  { symbol: "475120", name: "KODEX 미국S&P500유틸리티", market: "KR" },
+];
+
 // US 인기 100개
 const POPULAR_US: PopularStock[] = [
   // Big Tech
@@ -253,7 +377,11 @@ const POPULAR_US: PopularStock[] = [
   { symbol: "SAP", name: "SAP", market: "US" },
 ];
 
-export const POPULAR_STOCKS: PopularStock[] = [...POPULAR_KR, ...POPULAR_US];
+export const POPULAR_STOCKS: PopularStock[] = [
+  ...POPULAR_KR,
+  ...POPULAR_KR_ETF,
+  ...POPULAR_US,
+];
 
 /** Just the symbols, deduped, for batched /api/v1/stocks fetch. */
 export function getPopularSymbols(): string[] {
