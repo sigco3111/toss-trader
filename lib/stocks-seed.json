@@ -19230,11 +19230,6 @@
 "market": "US"
 },
 {
-"symbol": "LLY",
-"name": "Eli Lilly",
-"market": "US"
-},
-{
 "symbol": "WDAY",
 "name": "Workday",
 "market": "US"
@@ -19282,11 +19277,6 @@
 {
 "symbol": "MDB",
 "name": "MongoDB",
-"market": "US"
-},
-{
-"symbol": "NET",
-"name": "Cloudflare",
 "market": "US"
 },
 {
@@ -19402,11 +19392,6 @@
 {
 "symbol": "INCY",
 "name": "Incyte",
-"market": "US"
-},
-{
-"symbol": "BIIB",
-"name": "Biogen",
 "market": "US"
 },
 {
@@ -19765,8 +19750,6443 @@
 "market": "US"
 },
 {
-"symbol": "TGT",
-"name": "Target",
+"symbol": "AAAP",
+"name": "Pacer Barings CLO Market Flex ETF",
+"market": "US"
+},
+{
+"symbol": "AADR",
+"name": "AdvisorShares Dorsey Wright ADR ETF",
+"market": "US"
+},
+{
+"symbol": "AAEQ",
+"name": "Alpha Architect US Equity 2 ETF",
+"market": "US"
+},
+{
+"symbol": "AALG",
+"name": "Leverage Shares 2X Long AAL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AAPB",
+"name": "GraniteShares 2x Long AAPL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AAPD",
+"name": "Direxion Daily AAPL Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "AAPU",
+"name": "Direxion Daily AAPL Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "AAUS",
+"name": "Alpha Architect US Equity ETF",
+"market": "US"
+},
+{
+"symbol": "AAVM",
+"name": "Alpha Architect Global Factor Equity ETF",
+"market": "US"
+},
+{
+"symbol": "AAXJ",
+"name": "iShares MSCI All Country Asia ex Japan ETF",
+"market": "US"
+},
+{
+"symbol": "ABCS",
+"name": "Alpha Blue Capital US Small-Mid Cap Dynamic ETF",
+"market": "US"
+},
+{
+"symbol": "ABI",
+"name": "VictoryShares Pioneer Asset-Based Income ETF",
+"market": "US"
+},
+{
+"symbol": "ABIG",
+"name": "Argent Large Cap ETF",
+"market": "US"
+},
+{
+"symbol": "ABNG",
+"name": "Leverage Shares 2x Long ABNB Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ACEP",
+"name": "ARS Core Equity Portfolio ETF",
+"market": "US"
+},
+{
+"symbol": "ACWI",
+"name": "iShares MSCI ACWI ETF",
+"market": "US"
+},
+{
+"symbol": "ACWX",
+"name": "iShares MSCI ACWI ex U.S. ETF",
+"market": "US"
+},
+{
+"symbol": "ADBG",
+"name": "Leverage Shares 2X Long ADBE Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AFOS",
+"name": "ARS Focused Opportunity Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "AFSC",
+"name": "abrdn Focused U.S. Small Cap Active ETF",
+"market": "US"
+},
+{
+"symbol": "AGEM",
+"name": "abrdn Emerging Markets Dividend Active ETF",
+"market": "US"
+},
+{
+"symbol": "AGGA",
+"name": "EA Astoria Dynamic Core US Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "AGIX",
+"name": "KraneShares Public-Private AI & Technology ETF",
+"market": "US"
+},
+{
+"symbol": "AGMI",
+"name": "Themes Silver Miners ETF",
+"market": "US"
+},
+{
+"symbol": "AGNG",
+"name": "Global X Aging Population ETF",
+"market": "US"
+},
+{
+"symbol": "AHD",
+"name": "GraniteShares Autocallable HOOD ETF",
+"market": "US"
+},
+{
+"symbol": "AIA",
+"name": "iShares Asia 50 ETF",
+"market": "US"
+},
+{
+"symbol": "AIFD",
+"name": "TCW Artificial Intelligence ETF",
+"market": "US"
+},
+{
+"symbol": "AIMS",
+"name": "Acuitas Small Cap Active ETF",
+"market": "US"
+},
+{
+"symbol": "AIPI",
+"name": "REX AI Equity Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "AIPO",
+"name": "Defiance AI & Power Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "AIQ",
+"name": "Global X Artificial Intelligence & Technology ETF",
+"market": "US"
+},
+{
+"symbol": "AIRR",
+"name": "First Trust RBA American Industrial Renaissance ETF",
+"market": "US"
+},
+{
+"symbol": "AIX",
+"name": "Defiance US 100 Tech AI Moat ETF",
+"market": "US"
+},
+{
+"symbol": "ALBG",
+"name": "Leverage Shares 2X Long ALB Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ALIL",
+"name": "Argent Focused Small Cap ETF",
+"market": "US"
+},
+{
+"symbol": "ALLW",
+"name": "State Street Bridgewater All Weather ETF",
+"market": "US"
+},
+{
+"symbol": "ALTY",
+"name": "Global X Alternative Income ETF",
+"market": "US"
+},
+{
+"symbol": "AMA",
+"name": "Defiance Daily Target 2X Long AMAT ETF",
+"market": "US"
+},
+{
+"symbol": "AMDD",
+"name": "Direxion Daily AMD Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "AMDG",
+"name": "Leverage Shares 2X Long AMD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AMDL",
+"name": "GraniteShares 2x Long AMD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AMEI",
+"name": "Amana Equity Income ETF",
+"market": "US"
+},
+{
+"symbol": "AMEM",
+"name": "Amana Developing World ETF",
+"market": "US"
+},
+{
+"symbol": "AMGR",
+"name": "Amana Growth ETF",
+"market": "US"
+},
+{
+"symbol": "AMID",
+"name": "Argent Mid Cap ETF",
+"market": "US"
+},
+{
+"symbol": "AMUN",
+"name": "abrdn Ultra Short Municipal Income Active ETF",
+"market": "US"
+},
+{
+"symbol": "AMUU",
+"name": "Direxion Daily AMD Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "AMYY",
+"name": "GraniteShares YieldBOOST AMD ETF",
+"market": "US"
+},
+{
+"symbol": "AMZD",
+"name": "Direxion Daily AMZN Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "AMZU",
+"name": "Direxion Daily AMZN Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "AMZZ",
+"name": "GraniteShares 2x Long AMZN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ANEL",
+"name": "Defiance Daily Target 2x Long ANET ETF",
+"market": "US"
+},
+{
+"symbol": "ANGL",
+"name": "VanEck Fallen Angel High Yield Bond ETF",
+"market": "US"
+},
+{
+"symbol": "ANV",
+"name": "GraniteShares Autocallable NVDA ETF",
+"market": "US"
+},
+{
+"symbol": "AOHY",
+"name": "Angel Oak High Yield Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "AOTG",
+"name": "AOT Growth and Innovation ETF",
+"market": "US"
+},
+{
+"symbol": "APPX",
+"name": "Tradr 2X Long APP Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AQLG",
+"name": "HCM Large Cap Growth ETF",
+"market": "US"
+},
+{
+"symbol": "AQWA",
+"name": "Global X Clean Water ETF",
+"market": "US"
+},
+{
+"symbol": "ARMG",
+"name": "Leverage Shares 2X Long ARM Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ARMY",
+"name": "Tema International Defense ETF",
+"market": "US"
+},
+{
+"symbol": "ARVR",
+"name": "First Trust Indxx Metaverse ETF",
+"market": "US"
+},
+{
+"symbol": "ASCI",
+"name": "abrdn International Small Cap Active ETF",
+"market": "US"
+},
+{
+"symbol": "ASD",
+"name": "Defiance Autism Impact ETF",
+"market": "US"
+},
+{
+"symbol": "ASEC",
+"name": "American Century Securitized Credit ETF",
+"market": "US"
+},
+{
+"symbol": "ASMG",
+"name": "Leverage Shares 2X Long ASML Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ASMU",
+"name": "Direxion Daily ASML Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "ATC",
+"name": "GraniteShares Autocallable COIN ETF",
+"market": "US"
+},
+{
+"symbol": "AUMI",
+"name": "Themes Gold Miners ETF",
+"market": "US"
+},
+{
+"symbol": "AVGB",
+"name": "Avantis Credit ETF",
+"market": "US"
+},
+{
+"symbol": "AVGG",
+"name": "Leverage Shares 2X Long AVGO Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AVGU",
+"name": "GraniteShares 2x Long AVGO Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AVGX",
+"name": "Defiance Daily Target 2X Long AVGO ETF",
+"market": "US"
+},
+{
+"symbol": "AVL",
+"name": "Direxion Daily AVGO Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "AVOS",
+"name": "Avos Global Equities ETF",
+"market": "US"
+},
+{
+"symbol": "AVS",
+"name": "Direxion Daily AVGO Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "AVUQ",
+"name": "Avantis U.S. Quality ETF",
+"market": "US"
+},
+{
+"symbol": "AVXC",
+"name": "Avantis Emerging Markets ex-China Equity ETF",
+"market": "US"
+},
+{
+"symbol": "AVXX",
+"name": "Defiance Daily Target 2x Long AVAV ETF",
+"market": "US"
+},
+{
+"symbol": "AXPG",
+"name": "Leverage Shares 2x Long AXP Daily ETF",
+"market": "US"
+},
+{
+"symbol": "AZYY",
+"name": "GraniteShares YieldBoost AMZN ETF",
+"market": "US"
+},
+{
+"symbol": "BABU",
+"name": "Direxion Daily BABA Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "BABX",
+"name": "GraniteShares 2x Long BABA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BAFE",
+"name": "Brown Advisory Flexible Equity ETF",
+"market": "US"
+},
+{
+"symbol": "BAIG",
+"name": "Leverage Shares 2X Long BBAI Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BAIV",
+"name": "Brown Advisory International Value Select ETF",
+"market": "US"
+},
+{
+"symbol": "BALQ",
+"name": "iShares Nasdaq Premium Income Active ETF",
+"market": "US"
+},
+{
+"symbol": "BASG",
+"name": "Brown Advisory Sustainable Growth ETF",
+"market": "US"
+},
+{
+"symbol": "BASV",
+"name": "Brown Advisory Sustainable Value ETF",
+"market": "US"
+},
+{
+"symbol": "BBB",
+"name": "CYBER HORNET S&P 500 and Bitcoin 75/25 Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "BBH",
+"name": "VanEck Biotech ETF",
+"market": "US"
+},
+{
+"symbol": "BBYY",
+"name": "GraniteShares YieldBOOST BABA ETF",
+"market": "US"
+},
+{
+"symbol": "BCFN",
+"name": "Baron Financials ETF",
+"market": "US"
+},
+{
+"symbol": "BCLO",
+"name": "iShares BBB-B CLO Active ETF",
+"market": "US"
+},
+{
+"symbol": "BCTK",
+"name": "Baron Technology ETF",
+"market": "US"
+},
+{
+"symbol": "BDGS",
+"name": "Bridges Capital Tactical ETF",
+"market": "US"
+},
+{
+"symbol": "BDVL",
+"name": "iShares Disciplined Volatility Equity Active ETF",
+"market": "US"
+},
+{
+"symbol": "BDYN",
+"name": "iShares Dynamic Equity Active ETF",
+"market": "US"
+},
+{
+"symbol": "BEDY",
+"name": "BNY Mellon Enhanced Dividend and Income ETF",
+"market": "US"
+},
+{
+"symbol": "BEEX",
+"name": "The Beehive ETF",
+"market": "US"
+},
+{
+"symbol": "BEEZ",
+"name": "Honeytree U.S. Equity ETF",
+"market": "US"
+},
+{
+"symbol": "BEG",
+"name": "Leverage Shares 2x Long BE Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BELT",
+"name": "iShares U.S. Select Equity Active ETF",
+"market": "US"
+},
+{
+"symbol": "BESO",
+"name": "GSR Crypto Core3 ETF",
+"market": "US"
+},
+{
+"symbol": "BFLX",
+"name": "iShares Flexible Equity Active ETF",
+"market": "US"
+},
+{
+"symbol": "BGCG",
+"name": "Baillie Gifford International Concentrated Growth ETF",
+"market": "US"
+},
+{
+"symbol": "BGEG",
+"name": "Baillie Gifford Emerging Markets ETF",
+"market": "US"
+},
+{
+"symbol": "BGGG",
+"name": "Baillie Gifford Long Term Global Growth ETF",
+"market": "US"
+},
+{
+"symbol": "BGIA",
+"name": "Baillie Gifford International Alpha ETF",
+"market": "US"
+},
+{
+"symbol": "BGRN",
+"name": "iShares USD Green Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BGRO",
+"name": "iShares Large Cap Growth Active ETF",
+"market": "US"
+},
+{
+"symbol": "BHDG",
+"name": "Nicholas Bitcoin Tail ETF",
+"market": "US"
+},
+{
+"symbol": "BIDG",
+"name": "Leverage Shares 2X Long BIDU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BIOY",
+"name": "GraniteShares YieldBOOST Biotech ETF",
+"market": "US"
+},
+{
+"symbol": "BITA",
+"name": "iShares Bitcoin Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "BITS",
+"name": "Global X Blockchain & Bitcoin Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "BKCH",
+"name": "Global X Blockchain ETF",
+"market": "US"
+},
+{
+"symbol": "BKMI",
+"name": "BNY Mellon Municipal Intermediate ETF",
+"market": "US"
+},
+{
+"symbol": "BKMS",
+"name": "BNY Mellon Municipal Short Duration ETF",
+"market": "US"
+},
+{
+"symbol": "BLCN",
+"name": "Siren NexGen Economy ETF",
+"market": "US"
+},
+{
+"symbol": "BLCR",
+"name": "iShares Large Cap Core Active ETF",
+"market": "US"
+},
+{
+"symbol": "BLSG",
+"name": "Leverage Shares 2X Long BLSH Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BMNG",
+"name": "Leverage Shares 2X Long BMNR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BMOP",
+"name": "BNY Mellon Municipal Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "BND",
+"name": "Vanguard Total Bond Market ETF",
+"market": "US"
+},
+{
+"symbol": "BNDP",
+"name": "Vanguard Core-Plus Bond Index ETF",
+"market": "US"
+},
+{
+"symbol": "BNDW",
+"name": "Vanguard Total World Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BNDX",
+"name": "Vanguard Total International Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BOEG",
+"name": "Leverage Shares 2X Long BA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "BOEU",
+"name": "Direxion Daily BA Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "BOTT",
+"name": "Themes Humanoid Robotics ETF",
+"market": "US"
+},
+{
+"symbol": "BOTZ",
+"name": "Global X Robotics & Artificial Intelligence ETF",
+"market": "US"
+},
+{
+"symbol": "BREM",
+"name": "iShares Emerging Markets Bond Active ETF",
+"market": "US"
+},
+{
+"symbol": "BRES",
+"name": "Burney U.S. Equity Select ETF",
+"market": "US"
+},
+{
+"symbol": "BRHY",
+"name": "iShares High Yield Active ETF",
+"market": "US"
+},
+{
+"symbol": "BRKU",
+"name": "Direxion Daily BRKB Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "BRNY",
+"name": "Burney U.S. Factor Rotation ETF",
+"market": "US"
+},
+{
+"symbol": "BRRR",
+"name": "Coinshares Bitcoin ETF",
+"market": "US"
+},
+{
+"symbol": "BRTR",
+"name": "iShares Total Return Active ETF",
+"market": "US"
+},
+{
+"symbol": "BSCA",
+"name": "Invesco BulletShares 2036 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCQ",
+"name": "Invesco BulletShares 2026 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCR",
+"name": "Invesco BulletShares 2027 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCS",
+"name": "Invesco BulletShares 2028 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCT",
+"name": "Invesco BulletShares 2029 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCU",
+"name": "Invesco BulletShares 2030 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCV",
+"name": "Invesco BulletShares 2031 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCW",
+"name": "Invesco BulletShares 2032 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCX",
+"name": "Invesco BulletShares 2033 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCY",
+"name": "Invesco BulletShares 2034 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSCZ",
+"name": "Invesco BulletShares 2035 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSGR",
+"name": "Invesco BulletShares 2027 Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSGT",
+"name": "Invesco BulletShares 2029 Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJQ",
+"name": "Invesco BulletShares 2026 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJR",
+"name": "Invesco BulletShares 2027 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJS",
+"name": "Invesco BulletShares 2028 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJT",
+"name": "Invesco BulletShares 2029 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJU",
+"name": "Invesco BulletShares 2030 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJV",
+"name": "Invesco BulletShares 2031 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJW",
+"name": "Invesco BulletShares 2032 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJX",
+"name": "Invesco BulletShares 2033 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSJY",
+"name": "Invesco BulletShares 2034 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMQ",
+"name": "Invesco BulletShares 2026 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMR",
+"name": "Invesco BulletShares 2027 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMS",
+"name": "Invesco BulletShares 2028 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMT",
+"name": "Invesco BulletShares 2029 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMU",
+"name": "Invesco BulletShares 2030 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMV",
+"name": "Invesco BulletShares 2031 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMW",
+"name": "Invesco BulletShares 2032 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMY",
+"name": "Invesco BulletShares 2034 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSMZ",
+"name": "Invesco BulletShares 2035 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSSX",
+"name": "Invesco BulletShares 2033 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSTS",
+"name": "Invesco BulletShares 2028 Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSTU",
+"name": "Invesco BulletShares 2030 Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSTV",
+"name": "Invesco BulletShares 2031 Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BSVO",
+"name": "EA Bridgeway Omni Small-Cap Value ETF",
+"market": "US"
+},
+{
+"symbol": "BTF",
+"name": "CoinShares Bitcoin and Ether ETF",
+"market": "US"
+},
+{
+"symbol": "BTGD",
+"name": "STKd 100% Bitcoin & 100% Gold ETF",
+"market": "US"
+},
+{
+"symbol": "BUFC",
+"name": "AB Conservative Buffer ETF",
+"market": "US"
+},
+{
+"symbol": "BUFI",
+"name": "AB International Buffer ETF",
+"market": "US"
+},
+{
+"symbol": "BUFM",
+"name": "AB Moderate Buffer ETF",
+"market": "US"
+},
+{
+"symbol": "BUG",
+"name": "Global X Cybersecurity ETF",
+"market": "US"
+},
+{
+"symbol": "BULD",
+"name": "Pacer BlueStar Engineering the Future ETF",
+"market": "US"
+},
+{
+"symbol": "BULG",
+"name": "Leverage Shares 2X Long BULL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CAFG",
+"name": "Pacer US Small Cap Cash Cows Growth Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "CAIQ",
+"name": "Calamos Nasdaq Autocallable Income ETF",
+"market": "US"
+},
+{
+"symbol": "CALI",
+"name": "iShares Short-Term California Muni Active ETF",
+"market": "US"
+},
+{
+"symbol": "CANC",
+"name": "Tema Oncology ETF",
+"market": "US"
+},
+{
+"symbol": "CANQ",
+"name": "Calamos Nasdaq Equity & Income ETF",
+"market": "US"
+},
+{
+"symbol": "CARY",
+"name": "Angel Oak Income ETF",
+"market": "US"
+},
+{
+"symbol": "CARZ",
+"name": "First Trust S-Network Future Vehicles & Technology ETF",
+"market": "US"
+},
+{
+"symbol": "CATH",
+"name": "Global X S&P 500 Catholic Values ETF",
+"market": "US"
+},
+{
+"symbol": "CCFE",
+"name": "Concourse Capital Focused Equity ETF",
+"market": "US"
+},
+{
+"symbol": "CCNR",
+"name": "ALPS/CoreCommodity Natural Resources ETF",
+"market": "US"
+},
+{
+"symbol": "CCSB",
+"name": "Carbon Collective Short Duration Green Bond ETF",
+"market": "US"
+},
+{
+"symbol": "CCSO",
+"name": "Carbon Collective Climate Solutions U.S. Equity ETF",
+"market": "US"
+},
+{
+"symbol": "CDC",
+"name": "VictoryShares US EQ Income Enhanced Volatility Wtd ETF",
+"market": "US"
+},
+{
+"symbol": "CDIG",
+"name": "City Different Investments Global Equity ETF",
+"market": "US"
+},
+{
+"symbol": "CDL",
+"name": "VictoryShares US Large Cap High Div Volatility Wtd ETF",
+"market": "US"
+},
+{
+"symbol": "CEFA",
+"name": "Global X S&P Catholic Values Developed ex-U.S. ETF",
+"market": "US"
+},
+{
+"symbol": "CEPI",
+"name": "REX Crypto Equity Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "CFA",
+"name": "VictoryShares US 500 Volatility Wtd ETF",
+"market": "US"
+},
+{
+"symbol": "CFO",
+"name": "VictoryShares US 500 Enhanced Volatility Wtd ETF",
+"market": "US"
+},
+{
+"symbol": "CHGX",
+"name": "Stance Sustainable Beta ETF",
+"market": "US"
+},
+{
+"symbol": "CHPS",
+"name": "Xtrackers Semiconductor Select Equity ETF",
+"market": "US"
+},
+{
+"symbol": "CHPX",
+"name": "Global X AI Semiconductor & Quantum ETF",
+"market": "US"
+},
+{
+"symbol": "CHRI",
+"name": "Global X S&P 500 Christian Values ETF",
+"market": "US"
+},
+{
+"symbol": "CIBR",
+"name": "First Trust NASDAQ Cybersecurity ETF",
+"market": "US"
+},
+{
+"symbol": "CIFG",
+"name": "Leverage Shares 2X Long CIFR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CLOA",
+"name": "iShares AAA CLO Active ETF",
+"market": "US"
+},
+{
+"symbol": "CLOD",
+"name": "Themes Cloud Computing ETF",
+"market": "US"
+},
+{
+"symbol": "CLOU",
+"name": "Global X Cloud Computing ETF",
+"market": "US"
+},
+{
+"symbol": "CLSM",
+"name": "ETC Cabana Target Leading Sector Moderate ETF",
+"market": "US"
+},
+{
+"symbol": "CMBO",
+"name": "Wayfinder Dynamic U.S. Interest Rate ETF",
+"market": "US"
+},
+{
+"symbol": "CMGG",
+"name": "Leverage Shares 2X Long CMG Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CNCG",
+"name": "Leverage Shares 2X Long CNC Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CNQQ",
+"name": "Rayliant-ChinaAMC Transformative China Tech ETF",
+"market": "US"
+},
+{
+"symbol": "COIG",
+"name": "Leverage Shares 2X Long COIN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "COMT",
+"name": "iShares GSCI Commodity Dynamic Roll Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "CONI",
+"name": "GraniteShares 2x Short COIN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CONL",
+"name": "GraniteShares 2x Long COIN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CONX",
+"name": "Direxion Daily COIN Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "COPJ",
+"name": "Sprott Junior Copper Miners ETF",
+"market": "US"
+},
+{
+"symbol": "COPP",
+"name": "Sprott Copper Miners ETF",
+"market": "US"
+},
+{
+"symbol": "CORO",
+"name": "iShares International Country Rotation Active ETF",
+"market": "US"
+},
+{
+"symbol": "COTG",
+"name": "Leverage Shares 2X Long COST Daily ETF",
+"market": "US"
+},
+{
+"symbol": "COWG",
+"name": "Pacer US Large Cap Cash Cows Growth Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "COWS",
+"name": "Amplify Cash Flow Dividend Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "COYY",
+"name": "GraniteShares YieldBOOST COIN ETF",
+"market": "US"
+},
+{
+"symbol": "CPAG",
+"name": "F/m Compoundr U.S. Aggregate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "CPHY",
+"name": "F/m Compoundr High Yield Bond ETF",
+"market": "US"
+},
+{
+"symbol": "CPLS",
+"name": "AB Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "CRCG",
+"name": "Leverage Shares 2X Long CRCL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CRMG",
+"name": "Leverage Shares 2X Long CRM Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CRMU",
+"name": "Leverage Shares 2x Long CRML Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CRWG",
+"name": "Leverage Shares 2X Long CRWV Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CRWL",
+"name": "GraniteShares 2x Long CRWD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "CRY",
+"name": "GraniteShares YieldBOOST CRCL ETF",
+"market": "US"
+},
+{
+"symbol": "CSB",
+"name": "VictoryShares US Small Cap High Div Volatility Wtd ETF",
+"market": "US"
+},
+{
+"symbol": "CSCL",
+"name": "Direxion Daily CSCO Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "CSCS",
+"name": "Direxion Daily CSCO Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "CSEN",
+"name": "Cohen & Steers Future of Energy Active ETF",
+"market": "US"
+},
+{
+"symbol": "CTEC",
+"name": "Global X ClimateTech ETF",
+"market": "US"
+},
+{
+"symbol": "CUSD",
+"name": "CrossingBridge Ultra-Short Duration ETF",
+"market": "US"
+},
+{
+"symbol": "CWY",
+"name": "GraniteShares YieldBOOST CRWV ETF",
+"market": "US"
+},
+{
+"symbol": "CZAR",
+"name": "Themes Natural Monopoly ETF",
+"market": "US"
+},
+{
+"symbol": "DADS",
+"name": "Digital Asset Debt Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "DAK",
+"name": "Dakota Active Equity ETF",
+"market": "US"
+},
+{
+"symbol": "DALI",
+"name": "First Trust Dorsey Wright DALI Equity ETF",
+"market": "US"
+},
+{
+"symbol": "DAPP",
+"name": "VanEck Digital Transformation ETF",
+"market": "US"
+},
+{
+"symbol": "DAX",
+"name": "Global X DAX Germany ETF",
+"market": "US"
+},
+{
+"symbol": "DDIV",
+"name": "First Trust Dorsey Wright Momentum & Dividend ETF",
+"market": "US"
+},
+{
+"symbol": "DECO",
+"name": "State Street Galaxy Digital Asset Ecosystem ETF",
+"market": "US"
+},
+{
+"symbol": "DEMZ",
+"name": "Democratic Large Cap Core ETF",
+"market": "US"
+},
+{
+"symbol": "DFGP",
+"name": "Dimensional Global Core Plus Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "DFGX",
+"name": "Dimensional International Core Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "DGCB",
+"name": "Dimensional Global Credit ETF",
+"market": "US"
+},
+{
+"symbol": "DGLO",
+"name": "First Trust RBA Deglobalization ETF",
+"market": "US"
+},
+{
+"symbol": "DIME",
+"name": "CoinShares Altcoins ETF",
+"market": "US"
+},
+{
+"symbol": "DINE",
+"name": "Simplify Tax Aware Diversified Income Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "DIVD",
+"name": "Altrius Global Dividend ETF",
+"market": "US"
+},
+{
+"symbol": "DKNX",
+"name": "Defiance Daily Target 2X Long DKNG ETF",
+"market": "US"
+},
+{
+"symbol": "DLLL",
+"name": "GraniteShares 2x Long DELL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "DMXF",
+"name": "iShares ESG Advanced MSCI EAFE ETF",
+"market": "US"
+},
+{
+"symbol": "DNNG",
+"name": "Leverage Shares 2x Long DNN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "DRIV",
+"name": "Global X Autonomous & Electric Vehicles ETF",
+"market": "US"
+},
+{
+"symbol": "DRNZ",
+"name": "REX Drone ETF",
+"market": "US"
+},
+{
+"symbol": "DTCR",
+"name": "Global X Data Center & Digital Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "DUKH",
+"name": "Ocean Park High Income ETF",
+"market": "US"
+},
+{
+"symbol": "DUKX",
+"name": "Ocean Park International ETF",
+"market": "US"
+},
+{
+"symbol": "DUOG",
+"name": "Leverage Shares 2X Long DUOL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "DUSG",
+"name": "U.S. Small Cap Growth Portfolio: ETF Class Shares",
+"market": "US"
+},
+{
+"symbol": "DVAL",
+"name": "BrandywineGLOBAL-Dynamic US Large Cap Value ETF",
+"market": "US"
+},
+{
+"symbol": "DVGR",
+"name": "DAC 3D Dividend Growth ETF",
+"market": "US"
+},
+{
+"symbol": "DVIN",
+"name": "WEBs Industrials XLI Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVLU",
+"name": "First Trust Dorsey Wright Momentum & Value ETF",
+"market": "US"
+},
+{
+"symbol": "DVOL",
+"name": "First Trust Dorsey Wright Momentum & Low Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVQQ",
+"name": "WEBs QQQ Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVRE",
+"name": "WEBs Real Estate XLRE Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVSP",
+"name": "WEBs SPY Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVUT",
+"name": "WEBs Utilities XLU Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXB",
+"name": "WEBs Materials XLB Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXC",
+"name": "WEBs Communication Services XLC Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXE",
+"name": "WEBs Energy XLE Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXF",
+"name": "WEBs Financial XLF Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXK",
+"name": "WEBs Technology XLK Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXP",
+"name": "WEBs Consumer Staples XLP Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXV",
+"name": "WEBs Health Care XLV Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVXY",
+"name": "WEBs Consumer Discretionary XLY Defined Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "DVY",
+"name": "iShares Select Dividend ETF",
+"market": "US"
+},
+{
+"symbol": "DWAS",
+"name": "Invesco Dorsey Wright SmallCap Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "DWAW",
+"name": "AdvisorShares Dorsey Wright FSM All Cap World ETF",
+"market": "US"
+},
+{
+"symbol": "DWSH",
+"name": "AdvisorShares Dorsey Wright Short ETF",
+"market": "US"
+},
+{
+"symbol": "DWUS",
+"name": "AdvisorShares Dorsey Wright FSM US Core ETF",
+"market": "US"
+},
+{
+"symbol": "DYFI",
+"name": "IDX Dynamic Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "DYNB",
+"name": "Hartford Dynamic Bond ETF",
+"market": "US"
+},
+{
+"symbol": "DYTA",
+"name": "SGI Dynamic Tactical ETF",
+"market": "US"
+},
+{
+"symbol": "EART",
+"name": "Global X Rare Earth & Critical Materials ETF",
+"market": "US"
+},
+{
+"symbol": "EASY",
+"name": "Liberty One Defensive Dividend Growth ETF",
+"market": "US"
+},
+{
+"symbol": "EBI",
+"name": "Longview Advantage ETF",
+"market": "US"
+},
+{
+"symbol": "EBIZ",
+"name": "Global X E-commerce ETF",
+"market": "US"
+},
+{
+"symbol": "ECOW",
+"name": "Pacer Emerging Markets Cash Cows 100 ETF",
+"market": "US"
+},
+{
+"symbol": "EEE",
+"name": "CYBER HORNET S&P 500 and Ethereum 75/25 Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "EEMA",
+"name": "iShares MSCI Emerging Markets Asia ETF",
+"market": "US"
+},
+{
+"symbol": "EFAS",
+"name": "Global X MSCI SuperDividend EAFE ETF",
+"market": "US"
+},
+{
+"symbol": "EFRA",
+"name": "iShares Environmental Infrastructure and Industrials ETF",
+"market": "US"
+},
+{
+"symbol": "EGGQ",
+"name": "NestYield Visionary ETF",
+"market": "US"
+},
+{
+"symbol": "EHLS",
+"name": "Even Herd Long Short ETF",
+"market": "US"
+},
+{
+"symbol": "EKG",
+"name": "First Trust Nasdaq Lux Digital Health Solutions ETF",
+"market": "US"
+},
+{
+"symbol": "ELFY",
+"name": "ALPS Electrification Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "ELIL",
+"name": "Direxion Daily LLY Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "EMB",
+"name": "iShares J.P. Morgan USD Emerging Markets Bond ETF",
+"market": "US"
+},
+{
+"symbol": "EMEM",
+"name": "Sophus Capital Emerging Market ETF",
+"market": "US"
+},
+{
+"symbol": "EMEQ",
+"name": "Nomura Focused Emerging Markets Equity ETF",
+"market": "US"
+},
+{
+"symbol": "EMIF",
+"name": "iShares Emerging Markets Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "EMSC",
+"name": "Sophus Capital Emerging Market Small Cap ETF",
+"market": "US"
+},
+{
+"symbol": "EMXC",
+"name": "iShares MSCI Emerging Markets ex China ETF",
+"market": "US"
+},
+{
+"symbol": "EMXF",
+"name": "iShares ESG Advanced MSCI EM ETF",
+"market": "US"
+},
+{
+"symbol": "ENDW",
+"name": "Cambria Endowment Style ETF",
+"market": "US"
+},
+{
+"symbol": "ENHI",
+"name": "iShares Enhanced International Active ETF",
+"market": "US"
+},
+{
+"symbol": "ENHU",
+"name": "iShares Enhanced Large Cap Core Active ETF",
+"market": "US"
+},
+{
+"symbol": "ENZL",
+"name": "iShares MSCI New Zealand ETF",
+"market": "US"
+},
+{
+"symbol": "EQRR",
+"name": "ProShares Equities for Rising Rates ETF",
+"market": "US"
+},
+{
+"symbol": "ERET",
+"name": "iShares Environmentally Aware Real Estate ETF",
+"market": "US"
+},
+{
+"symbol": "ESGD",
+"name": "iShares ESG Aware MSCI EAFE ETF",
+"market": "US"
+},
+{
+"symbol": "ESGE",
+"name": "iShares ESG Aware MSCI EM ETF",
+"market": "US"
+},
+{
+"symbol": "ESGU",
+"name": "iShares ESG Aware MSCI USA ETF",
+"market": "US"
+},
+{
+"symbol": "ESMV",
+"name": "iShares ESG Optimized MSCI USA Min Vol Factor ETF",
+"market": "US"
+},
+{
+"symbol": "ESN",
+"name": "Essential 40 Stock ETF",
+"market": "US"
+},
+{
+"symbol": "ESPO",
+"name": "VanEck Video Gaming and eSports ETF",
+"market": "US"
+},
+{
+"symbol": "ETEC",
+"name": "iShares Breakthrough Environmental Solutions ETF",
+"market": "US"
+},
+{
+"symbol": "ETHA",
+"name": "iShares Ethereum Trust ETF",
+"market": "US"
+},
+{
+"symbol": "ETHB",
+"name": "iShares Staked Ethereum Trust ETF",
+"market": "US"
+},
+{
+"symbol": "EUFN",
+"name": "iShares MSCI Europe Financials ETF",
+"market": "US"
+},
+{
+"symbol": "EVMT",
+"name": "Invesco Electric Vehicle Metals Commodity Strategy No K-1 ETF",
+"market": "US"
+},
+{
+"symbol": "EVPF",
+"name": "Eaton Vance Preferred Securities and Income ETF",
+"market": "US"
+},
+{
+"symbol": "EVSD",
+"name": "Eaton Vance Short Duration Income ETF",
+"market": "US"
+},
+{
+"symbol": "EVYM",
+"name": "Eaton Vance High Income Municipal ETF",
+"market": "US"
+},
+{
+"symbol": "EWJV",
+"name": "iShares MSCI Japan Value ETF",
+"market": "US"
+},
+{
+"symbol": "EWZS",
+"name": "iShares MSCI Brazil Small-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "EXUS",
+"name": "Nomura Focused International Core ETF",
+"market": "US"
+},
+{
+"symbol": "EYEG",
+"name": "AB Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "EZMO",
+"name": "AlphaDroid Broad Markets Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "EZRO",
+"name": "AlphaDroid Defensive Sector Rotation ETF",
+"market": "US"
+},
+{
+"symbol": "FAAA",
+"name": "Fidelity AAA CLO ETF",
+"market": "US"
+},
+{
+"symbol": "FAAR",
+"name": "First Trust Alternative Absolute Return Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "FALN",
+"name": "iShares Fallen Angels USD Bond ETF",
+"market": "US"
+},
+{
+"symbol": "FBL",
+"name": "GraniteShares 2x Long META Daily ETF",
+"market": "US"
+},
+{
+"symbol": "FBOT",
+"name": "Fidelity Disruptive Automation ETF",
+"market": "US"
+},
+{
+"symbol": "FBYY",
+"name": "GraniteShares YieldBOOST META ETF",
+"market": "US"
+},
+{
+"symbol": "FCAL",
+"name": "First Trust California Municipal High income ETF",
+"market": "US"
+},
+{
+"symbol": "FCEF",
+"name": "First Trust Income Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "FCLO",
+"name": "Fidelity CLO ETF",
+"market": "US"
+},
+{
+"symbol": "FCTE",
+"name": "SMI 3Fourteen Full-Cycle Trend ETF",
+"market": "US"
+},
+{
+"symbol": "FCVT",
+"name": "First Trust SSI Strategic Convertible Securities ETF",
+"market": "US"
+},
+{
+"symbol": "FCXG",
+"name": "Leverage Shares 2x Long FCX Daily ETF",
+"market": "US"
+},
+{
+"symbol": "FDCF",
+"name": "Fidelity Disruptive Communications ETF",
+"market": "US"
+},
+{
+"symbol": "FDFF",
+"name": "Fidelity Disruptive Finance ETF",
+"market": "US"
+},
+{
+"symbol": "FDIF",
+"name": "Fidelity Disruptors ETF",
+"market": "US"
+},
+{
+"symbol": "FDIG",
+"name": "Fidelity Crypto Industry and Digital Payments ETF",
+"market": "US"
+},
+{
+"symbol": "FDIQ",
+"name": "Invesco Bloomberg Financial Data Providers ETF",
+"market": "US"
+},
+{
+"symbol": "FDIV",
+"name": "MarketDesk Focused U.S. Dividend ETF",
+"market": "US"
+},
+{
+"symbol": "FDNI",
+"name": "First Trust Dow Jones International Internet ETF",
+"market": "US"
+},
+{
+"symbol": "FDRS",
+"name": "Founder-Led ETF",
+"market": "US"
+},
+{
+"symbol": "FDRX",
+"name": "Founder-Led 2X Daily ETF",
+"market": "US"
+},
+{
+"symbol": "FDTX",
+"name": "Fidelity Disruptive Technology ETF",
+"market": "US"
+},
+{
+"symbol": "FEMB",
+"name": "First Trust Emerging Markets Local Currency Bond ETF",
+"market": "US"
+},
+{
+"symbol": "FEPI",
+"name": "REX FANG & Innovation Equity Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "FEUZ",
+"name": "First Trust Eurozone AlphaDEX ETF",
+"market": "US"
+},
+{
+"symbol": "FFUT",
+"name": "Fidelity Managed Futures ETF",
+"market": "US"
+},
+{
+"symbol": "FGSI",
+"name": "FT Vest Growth Strength & Target Income ETF",
+"market": "US"
+},
+{
+"symbol": "FICS",
+"name": "First Trust International Developed Capital Strength ETF",
+"market": "US"
+},
+{
+"symbol": "FID",
+"name": "First Trust S&P International Dividend Aristocrats ETF",
+"market": "US"
+},
+{
+"symbol": "FIGG",
+"name": "Leverage Shares 2x Long FIG Daily ETF",
+"market": "US"
+},
+{
+"symbol": "FIMU",
+"name": "Fidelity Intermediate Municipal Income ETF",
+"market": "US"
+},
+{
+"symbol": "FINX",
+"name": "Global X FinTech ETF",
+"market": "US"
+},
+{
+"symbol": "FINY",
+"name": "GraniteShares YieldBOOST Financials ETF",
+"market": "US"
+},
+{
+"symbol": "FIXD",
+"name": "First Trust Smith Opportunistic Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "FIYY",
+"name": "GraniteShares YieldBOOST 20Y Treasuries ETF",
+"market": "US"
+},
+{
+"symbol": "FLDB",
+"name": "Fidelity Low Duration Bond ETF",
+"market": "US"
+},
+{
+"symbol": "FMB",
+"name": "First Trust Managed Municipal ETF",
+"market": "US"
+},
+{
+"symbol": "FMED",
+"name": "Fidelity Disruptive Medicine ETF",
+"market": "US"
+},
+{
+"symbol": "FMET",
+"name": "Fidelity Metaverse ETF",
+"market": "US"
+},
+{
+"symbol": "FMHI",
+"name": "First Trust Municipal High Income ETF",
+"market": "US"
+},
+{
+"symbol": "FMTM",
+"name": "MarketDesk Focused U.S. Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "FMUB",
+"name": "Fidelity Municipal Bond Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "FMUN",
+"name": "Fidelity Systematic Municipal Bond Index ETF",
+"market": "US"
+},
+{
+"symbol": "FPXE",
+"name": "First Trust IPOX Europe Equity Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "FPXI",
+"name": "First Trust International Equity Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "FREI",
+"name": "Fidelity Real Estate Income ETF",
+"market": "US"
+},
+{
+"symbol": "FRWD",
+"name": "Nomura Transformational Technologies ETF",
+"market": "US"
+},
+{
+"symbol": "FSCS",
+"name": "First Trust SMID Capital Strength ETF",
+"market": "US"
+},
+{
+"symbol": "FSGS",
+"name": "First Trust SMID Growth Strength ETF",
+"market": "US"
+},
+{
+"symbol": "FSTB",
+"name": "Fidelity Short-Term Bond ETF",
+"market": "US"
+},
+{
+"symbol": "FTAG",
+"name": "First Trust Indxx Global Agriculture ETF",
+"market": "US"
+},
+{
+"symbol": "FTCS",
+"name": "First Trust Capital Strength ETF",
+"market": "US"
+},
+{
+"symbol": "FTDS",
+"name": "First Trust Dividend Strength ETF",
+"market": "US"
+},
+{
+"symbol": "FTGS",
+"name": "First Trust Growth Strength ETF",
+"market": "US"
+},
+{
+"symbol": "FTHI",
+"name": "First Trust BuyWrite Income ETF",
+"market": "US"
+},
+{
+"symbol": "FTQI",
+"name": "First Trust Nasdaq BuyWrite Income ETF",
+"market": "US"
+},
+{
+"symbol": "FTRI",
+"name": "First Trust Indxx Global Natural Resources Income ETF",
+"market": "US"
+},
+{
+"symbol": "FTSM",
+"name": "First Trust Enhanced Short Maturity ETF",
+"market": "US"
+},
+{
+"symbol": "FTXG",
+"name": "First Trust Nasdaq Food & Beverage ETF",
+"market": "US"
+},
+{
+"symbol": "FTXH",
+"name": "First Trust Nasdaq Pharmaceuticals ETF",
+"market": "US"
+},
+{
+"symbol": "FTXL",
+"name": "First Trust Nasdaq Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "FTXN",
+"name": "First Trust Nasdaq Oil & Gas ETF",
+"market": "US"
+},
+{
+"symbol": "FTXO",
+"name": "First Trust Nasdaq Bank ETF",
+"market": "US"
+},
+{
+"symbol": "FTXR",
+"name": "First Trust Nasdaq Transportation ETF",
+"market": "US"
+},
+{
+"symbol": "FUTG",
+"name": "Leverage Shares 2x Long FUTU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "FV",
+"name": "First Trust Dorsey Wright Focus 5 ETF",
+"market": "US"
+},
+{
+"symbol": "FVC",
+"name": "First Trust Dorsey Wright Dynamic Focus 5 ETF",
+"market": "US"
+},
+{
+"symbol": "GARY",
+"name": "Mango Growth ETF",
+"market": "US"
+},
+{
+"symbol": "GAVA",
+"name": "Grayscale Avalanche Staking ETF",
+"market": "US"
+},
+{
+"symbol": "GBUG",
+"name": "Sprott Active Gold & Silver Miners ETF",
+"market": "US"
+},
+{
+"symbol": "GEME",
+"name": "Pacific North of South EM Equity Active ETF",
+"market": "US"
+},
+{
+"symbol": "GEMG",
+"name": "Leverage Shares 2X Long GEMI Daily ETF",
+"market": "US"
+},
+{
+"symbol": "GENZ",
+"name": "VanEck Digital Native Economy ETF",
+"market": "US"
+},
+{
+"symbol": "GEQ",
+"name": "Cambria Global EW 2 ETF",
+"market": "US"
+},
+{
+"symbol": "GEVG",
+"name": "Leverage Shares 2X Long GEV Daily ETF",
+"market": "US"
+},
+{
+"symbol": "GEW",
+"name": "Cambria Global EW ETF",
+"market": "US"
+},
+{
+"symbol": "GFGF",
+"name": "Guru Favorite Stocks ETF",
+"market": "US"
+},
+{
+"symbol": "GFLW",
+"name": "VictoryShares Free Cash Flow Growth ETF",
+"market": "US"
+},
+{
+"symbol": "GGLL",
+"name": "Direxion Daily GOOGL Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "GGLS",
+"name": "Direxion Daily GOOGL Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "GIEQ",
+"name": "Goldman Sachs Data Enhanced International Equity ETF",
+"market": "US"
+},
+{
+"symbol": "GIND",
+"name": "Goldman Sachs India Equity ETF",
+"market": "US"
+},
+{
+"symbol": "GINX",
+"name": "SGI Enhanced Global Income ETF",
+"market": "US"
+},
+{
+"symbol": "GKAT",
+"name": "Scharf Global Opportunity ETF",
+"market": "US"
+},
+{
+"symbol": "GLCR",
+"name": "GlacierShares Nasdaq Iceland ETF",
+"market": "US"
+},
+{
+"symbol": "GLDB",
+"name": "IDX Alternative FIAT ETF",
+"market": "US"
+},
+{
+"symbol": "GLDI",
+"name": "ETRACS Gold Shares Covered Call ETNs due February 2, 2033",
+"market": "US"
+},
+{
+"symbol": "GLGG",
+"name": "Leverage Shares 2X Long GLXY Daily ETF",
+"market": "US"
+},
+{
+"symbol": "GLOW",
+"name": "VictoryShares WestEnd Global Equity ETF",
+"market": "US"
+},
+{
+"symbol": "GLWG",
+"name": "Leverage Shares 2X Long GLW Daily ETF",
+"market": "US"
+},
+{
+"symbol": "GNMA",
+"name": "iShares GNMA Bond ETF",
+"market": "US"
+},
+{
+"symbol": "GNOM",
+"name": "Global X Genomics & Biotechnology ETF",
+"market": "US"
+},
+{
+"symbol": "GOLI",
+"name": "Defiance Gold Enhanced Options Income ETF",
+"market": "US"
+},
+{
+"symbol": "GOU",
+"name": "GraniteShares 2x Long GOOGL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "GOVI",
+"name": "Invesco Equal Weight 0-30 Year Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "GPIQ",
+"name": "Goldman Sachs Nasdaq-100 Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "GPIX",
+"name": "Goldman Sachs S&P 500 Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "GPRF",
+"name": "Goldman Sachs Access U.S. Preferred Stock and Hybrid Securities ETF",
+"market": "US"
+},
+{
+"symbol": "GPT",
+"name": "Intelligent Alpha Atlas ETF",
+"market": "US"
+},
+{
+"symbol": "GQQQ",
+"name": "Astoria US Quality Growth Kings ETF",
+"market": "US"
+},
+{
+"symbol": "GRAG",
+"name": "Leverage Shares 2X Long GRAB Daily ETF",
+"market": "US"
+},
+{
+"symbol": "GRIN",
+"name": "VictoryShares International Free Cash Flow Growth ETF",
+"market": "US"
+},
+{
+"symbol": "GRW",
+"name": "TCW Durable Growth ETF",
+"market": "US"
+},
+{
+"symbol": "GSGO",
+"name": "Goldman Sachs Growth Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "GSIB",
+"name": "Themes Global Systemically Important Banks ETF",
+"market": "US"
+},
+{
+"symbol": "GTOP",
+"name": "Goldman Sachs Technology Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "GTOQ",
+"name": "Invesco High Yield Systematic Bond ETF",
+"market": "US"
+},
+{
+"symbol": "GTPE",
+"name": "Goldman Sachs MSCI World Private Equity Return Tracker ETF",
+"market": "US"
+},
+{
+"symbol": "GUSE",
+"name": "Goldman Sachs Enhanced U.S. Equity ETF",
+"market": "US"
+},
+{
+"symbol": "GVLE",
+"name": "Goldman Sachs Value Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "GXDW",
+"name": "Global X Dorsey Wright Thematic ETF",
+"market": "US"
+},
+{
+"symbol": "HBDC",
+"name": "Hilton BDC Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "HBR",
+"name": "Canary HBAR ETF",
+"market": "US"
+},
+{
+"symbol": "HCOW",
+"name": "Amplify COWS Covered Call ETF",
+"market": "US"
+},
+{
+"symbol": "HEAL",
+"name": "Global X HealthTech ETF",
+"market": "US"
+},
+{
+"symbol": "HECO",
+"name": "State Street Galaxy Hedged Digital Asset Ecosystem ETF",
+"market": "US"
+},
+{
+"symbol": "HEQQ",
+"name": "JPMorgan Nasdaq Hedged Equity Laddered Overlay ETF",
+"market": "US"
+},
+{
+"symbol": "HERD",
+"name": "Pacer Cash Cows Fund of Funds ETF",
+"market": "US"
+},
+{
+"symbol": "HERO",
+"name": "Global X Video Games & Esports ETF",
+"market": "US"
+},
+{
+"symbol": "HFSP",
+"name": "TradersAI Large Cap Equity & Cash ETF",
+"market": "US"
+},
+{
+"symbol": "HIDE",
+"name": "Alpha Architect High Inflation and Deflation ETF",
+"market": "US"
+},
+{
+"symbol": "HIMZ",
+"name": "Defiance Daily Target 2X Long HIMS ETF",
+"market": "US"
+},
+{
+"symbol": "HIS",
+"name": "Humilis US Focused Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "HISF",
+"name": "First Trust High Income Strategic Focus ETF",
+"market": "US"
+},
+{
+"symbol": "HLAL",
+"name": "Wahed FTSE USA Shariah ETF",
+"market": "US"
+},
+{
+"symbol": "HMYY",
+"name": "GraniteShares YieldBoost HIMS ETF",
+"market": "US"
+},
+{
+"symbol": "HNDL",
+"name": "Strategy Shares Nasdaq 7HANDL Index ETF",
+"market": "US"
+},
+{
+"symbol": "HODU",
+"name": "Direxion Daily HOOD Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "HOOG",
+"name": "Leverage Shares 2X Long HOOD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "HOOX",
+"name": "Defiance Daily Target 2X Long HOOD ETF",
+"market": "US"
+},
+{
+"symbol": "HOYY",
+"name": "GraniteShares YieldBOOST HOOD ETF",
+"market": "US"
+},
+{
+"symbol": "HQGO",
+"name": "Hartford US Quality Growth ETF",
+"market": "US"
+},
+{
+"symbol": "HRTS",
+"name": "Tema Heart & Health ETF",
+"market": "US"
+},
+{
+"symbol": "HUTG",
+"name": "Leverage Shares 2X Long HUT Daily ETF",
+"market": "US"
+},
+{
+"symbol": "HWAY",
+"name": "Themes US Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "HYBI",
+"name": "NEOS Enhanced Income Credit Select ETF",
+"market": "US"
+},
+{
+"symbol": "HYDR",
+"name": "Global X Hydrogen ETF",
+"market": "US"
+},
+{
+"symbol": "HYLS",
+"name": "First Trust Tactical High Yield ETF",
+"market": "US"
+},
+{
+"symbol": "HYP",
+"name": "Golden Eagle Dynamic Hypergrowth ETF",
+"market": "US"
+},
+{
+"symbol": "HYPG",
+"name": "Grayscale Hyperliquid Staking ETF",
+"market": "US"
+},
+{
+"symbol": "HYXF",
+"name": "iShares ESG Advanced High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IALT",
+"name": "iShares Systematic Alternatives Active ETF",
+"market": "US"
+},
+{
+"symbol": "IBAT",
+"name": "iShares Energy Storage & Materials ETF",
+"market": "US"
+},
+{
+"symbol": "IBB",
+"name": "iShares Biotechnology ETF",
+"market": "US"
+},
+{
+"symbol": "IBBQ",
+"name": "Invesco Nasdaq Biotechnology ETF",
+"market": "US"
+},
+{
+"symbol": "IBGA",
+"name": "iShares iBonds Dec 2044 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBGB",
+"name": "iShares iBonds Dec 2045 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBGC",
+"name": "iShares iBonds Dec 2046 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBGK",
+"name": "iShares iBonds Dec 2054 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBGL",
+"name": "iShares iBonds Dec 2055 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBGM",
+"name": "iShares iBonds Dec 2056 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBIT",
+"name": "iShares Bitcoin Trust ETF",
+"market": "US"
+},
+{
+"symbol": "IBOT",
+"name": "VanEck Robotics ETF",
+"market": "US"
+},
+{
+"symbol": "IBTG",
+"name": "iShares iBonds Dec 2026 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTH",
+"name": "iShares iBonds Dec 2027 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTI",
+"name": "iShares iBonds Dec 2028 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTJ",
+"name": "iShares iBonds Dec 2029 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTK",
+"name": "iShares iBonds Dec 2030 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTL",
+"name": "iShares iBonds Dec 2031 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTM",
+"name": "iShares iBonds Dec 2032 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTO",
+"name": "iShares iBonds Dec 2033 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTP",
+"name": "iShares iBonds Dec 2034 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTQ",
+"name": "iShares iBonds Dec 2035 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "IBTR",
+"name": "iShares iBonds Dec 2036 Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "ICLN",
+"name": "iShares Global Clean Energy ETF",
+"market": "US"
+},
+{
+"symbol": "ICOP",
+"name": "iShares Copper and Metals Mining ETF",
+"market": "US"
+},
+{
+"symbol": "IDEF",
+"name": "iShares Defense Industrials Active ETF",
+"market": "US"
+},
+{
+"symbol": "IDVY",
+"name": "First Trust International Rising Dividend Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "IEF",
+"name": "iShares 7-10 Year Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IEI",
+"name": "iShares 3-7 Year Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IEUS",
+"name": "iShares MSCI Europe Small-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "IFGL",
+"name": "iShares International Developed Real Estate ETF",
+"market": "US"
+},
+{
+"symbol": "IFLO",
+"name": "VictoryShares International Free Cash Flow ETF",
+"market": "US"
+},
+{
+"symbol": "IFV",
+"name": "First Trust Dorsey Wright International Focus 5 ETF",
+"market": "US"
+},
+{
+"symbol": "IGF",
+"name": "iShares Global Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "IGIB",
+"name": "iShares 5-10 Year Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IGOV",
+"name": "iShares International Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IGSB",
+"name": "iShares 1-5 Year Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IJT",
+"name": "iShares S&P SmallCap 600 Growth ETF",
+"market": "US"
+},
+{
+"symbol": "ILIT",
+"name": "iShares Lithium Miners and Producers ETF",
+"market": "US"
+},
+{
+"symbol": "IMCV",
+"name": "iShares Morningstar Mid-Cap Value ETF",
+"market": "US"
+},
+{
+"symbol": "IMOM",
+"name": "Alpha Architect International Quantitative Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "IND",
+"name": "Xtrackers Nifty 500 India ETF",
+"market": "US"
+},
+{
+"symbol": "INDQ",
+"name": "Pacer ActiveAlpha India Quality ETF",
+"market": "US"
+},
+{
+"symbol": "INDY",
+"name": "iShares India 50 ETF",
+"market": "US"
+},
+{
+"symbol": "INRO",
+"name": "iShares U.S. Industry Rotation Active ETF",
+"market": "US"
+},
+{
+"symbol": "INTW",
+"name": "GraniteShares 2x Long INTC Daily ETF",
+"market": "US"
+},
+{
+"symbol": "IONL",
+"name": "GraniteShares 2x Long IONQ Daily ETF",
+"market": "US"
+},
+{
+"symbol": "IONX",
+"name": "Defiance Daily Target 2X Long IONQ ETF",
+"market": "US"
+},
+{
+"symbol": "IONZ",
+"name": "Defiance Daily Target 2x Short IONQ ETF",
+"market": "US"
+},
+{
+"symbol": "IOYY",
+"name": "GraniteShares YieldBOOST IONQ ETF",
+"market": "US"
+},
+{
+"symbol": "IPKW",
+"name": "Invesco International BuyBack Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "IQQQ",
+"name": "ProShares Nasdaq-100 High Income ETF",
+"market": "US"
+},
+{
+"symbol": "IREG",
+"name": "Leverage Shares 2X Long IREN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ISHG",
+"name": "iShares 1-3 Year International Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "ISHP",
+"name": "First Trust S-Network E-Commerce ETF",
+"market": "US"
+},
+{
+"symbol": "ISTB",
+"name": "iShares Core 1-5 Year USD Bond ETF",
+"market": "US"
+},
+{
+"symbol": "ISTM",
+"name": "iShares Strategic Metals ETF",
+"market": "US"
+},
+{
+"symbol": "ISUL",
+"name": "GraniteShares 2x Long ISRG Daily ETF",
+"market": "US"
+},
+{
+"symbol": "IUS",
+"name": "Invesco RAFI Strategic US ETF",
+"market": "US"
+},
+{
+"symbol": "IUSB",
+"name": "iShares Core Universal USD Bond ETF",
+"market": "US"
+},
+{
+"symbol": "IUSG",
+"name": "iShares Core S&P U.S. Growth ETF",
+"market": "US"
+},
+{
+"symbol": "IUSV",
+"name": "iShares Core S&P U.S. Value ETF",
+"market": "US"
+},
+{
+"symbol": "IVAL",
+"name": "Alpha Architect International Quantitative Value ETF",
+"market": "US"
+},
+{
+"symbol": "IVSI",
+"name": "Applied Finance IVS International Large ETF",
+"market": "US"
+},
+{
+"symbol": "IVSS",
+"name": "Applied Finance IVS US SMID ETF",
+"market": "US"
+},
+{
+"symbol": "IVSX",
+"name": "Applied Finance IVS International SMID ETF",
+"market": "US"
+},
+{
+"symbol": "IXUS",
+"name": "iShares Core MSCI Total International Stock ETF",
+"market": "US"
+},
+{
+"symbol": "JAPN",
+"name": "Horizon Kinetics Japan Owner Operator ETF",
+"market": "US"
+},
+{
+"symbol": "JDOC",
+"name": "JPMorgan Healthcare Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "JEMA",
+"name": "JPMorgan ActiveBuilders Emerging Markets Equity ETF",
+"market": "US"
+},
+{
+"symbol": "JEPQ",
+"name": "JPMorgan Nasdaq Equity Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "JGLO",
+"name": "JPMorgan Global Select Equity ETF",
+"market": "US"
+},
+{
+"symbol": "JHAI",
+"name": "Janus Henderson Global Artificial Intelligence ETF",
+"market": "US"
+},
+{
+"symbol": "JIVE",
+"name": "JPMorgan International Value ETF",
+"market": "US"
+},
+{
+"symbol": "JMID",
+"name": "Janus Henderson Mid Cap Growth Alpha ETF",
+"market": "US"
+},
+{
+"symbol": "JOYT",
+"name": "JPMorgan Equity and Options Total Return ETF",
+"market": "US"
+},
+{
+"symbol": "JPEF",
+"name": "JPMorgan Equity Focus ETF",
+"market": "US"
+},
+{
+"symbol": "JPFP",
+"name": "JPMorgan Managed Futures Plus ETF",
+"market": "US"
+},
+{
+"symbol": "JPY",
+"name": "Lazard Japanese Equity ETF",
+"market": "US"
+},
+{
+"symbol": "JSMD",
+"name": "Janus Henderson Small/Mid Cap Growth Alpha ETF",
+"market": "US"
+},
+{
+"symbol": "JSML",
+"name": "Janus Henderson Small Cap Growth Alpha ETF",
+"market": "US"
+},
+{
+"symbol": "JTEK",
+"name": "JPMorgan U.S. Tech Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "KAT",
+"name": "Scharf ETF",
+"market": "US"
+},
+{
+"symbol": "KBAB",
+"name": "KraneShares 2x Long BABA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "KBDU",
+"name": "KraneShares 2x Long BIDU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "KBWB",
+"name": "Invesco KBW Bank ETF",
+"market": "US"
+},
+{
+"symbol": "KBWD",
+"name": "Invesco KBW High Dividend Yield Financial ETF",
+"market": "US"
+},
+{
+"symbol": "KBWP",
+"name": "Invesco KBW Property & Casualty Insurance ETF",
+"market": "US"
+},
+{
+"symbol": "KBWY",
+"name": "Invesco KBW Premium Yield Equity REIT ETF",
+"market": "US"
+},
+{
+"symbol": "KEAT",
+"name": "Keating Active ETF",
+"market": "US"
+},
+{
+"symbol": "KIQQ",
+"name": "KraneShares InspereX Nasdaq Dynamic Buffered High Income Index ETF",
+"market": "US"
+},
+{
+"symbol": "KJD",
+"name": "KraneShares 2x Long JD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "KLAG",
+"name": "Leverage Shares 2x Long KLAC Daily ETF",
+"market": "US"
+},
+{
+"symbol": "KMLI",
+"name": "KraneShares 2x Long MELI Daily ETF",
+"market": "US"
+},
+{
+"symbol": "KNGZ",
+"name": "First Trust S&P 500 Diversified Dividend Aristocrats ETF",
+"market": "US"
+},
+{
+"symbol": "KOID",
+"name": "KraneShares Global Humanoid Robotics and Physical AI Index ETF",
+"market": "US"
+},
+{
+"symbol": "KPDD",
+"name": "KraneShares 2x Long PDD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "KQQQ",
+"name": "Kurv Technology Titans Select ETF",
+"market": "US"
+},
+{
+"symbol": "KRMA",
+"name": "Global X Conscious Companies ETF",
+"market": "US"
+},
+{
+"symbol": "KROP",
+"name": "Global X AgTech & Food Innovation ETF",
+"market": "US"
+},
+{
+"symbol": "LACG",
+"name": "Leverage Shares 2X Long LAC Daily ETF",
+"market": "US"
+},
+{
+"symbol": "LCDL",
+"name": "GraniteShares 2x Long LCID Daily ETF",
+"market": "US"
+},
+{
+"symbol": "LCDS",
+"name": "JPMorgan Fundamental Data Science Large Core ETF",
+"market": "US"
+},
+{
+"symbol": "LDEM",
+"name": "iShares ESG MSCI EM Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "LDRX",
+"name": "SGI Enhanced Market Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "LDSF",
+"name": "First Trust Low Duration Strategic Focus ETF",
+"market": "US"
+},
+{
+"symbol": "LEGR",
+"name": "First Trust Indxx Innovative Transaction & Process ETF",
+"market": "US"
+},
+{
+"symbol": "LEND",
+"name": "SEI High Yield Bond & Alternative Credit ETF",
+"market": "US"
+},
+{
+"symbol": "LEXI",
+"name": "Alexis Practical Tactical ETF",
+"market": "US"
+},
+{
+"symbol": "LFSC",
+"name": "F/m Emerald Life Sciences Innovation ETF",
+"market": "US"
+},
+{
+"symbol": "LGCF",
+"name": "Themes US Cash Flow Champions ETF",
+"market": "US"
+},
+{
+"symbol": "LGRO",
+"name": "Level Four Large Cap Growth Active ETF",
+"market": "US"
+},
+{
+"symbol": "LINT",
+"name": "Direxion Daily INTC Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "LITP",
+"name": "Sprott Lithium Miners ETF",
+"market": "US"
+},
+{
+"symbol": "LMBS",
+"name": "First Trust Low Duration Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "LMNX",
+"name": "Defiance Daily Target 2x Long LMND ETF",
+"market": "US"
+},
+{
+"symbol": "LMTL",
+"name": "Direxion Daily LMT Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "LOGO",
+"name": "Alpha Brands Consumption Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "LOTI",
+"name": "Liberty One Tactical Income ETF",
+"market": "US"
+},
+{
+"symbol": "LQ",
+"name": "Simplify Tax Aware Alternatives ETF",
+"market": "US"
+},
+{
+"symbol": "LRGE",
+"name": "ClearBridge Large Cap Growth Select ETF",
+"market": "US"
+},
+{
+"symbol": "LRND",
+"name": "NYLI U.S. Large Cap R&D Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "LTCC",
+"name": "Canary Litecoin ETF",
+"market": "US"
+},
+{
+"symbol": "LULG",
+"name": "Leverage Shares 2X Long LULU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "LVDS",
+"name": "JPMorgan Fundamental Data Science Large Value ETF",
+"market": "US"
+},
+{
+"symbol": "LVHD",
+"name": "Franklin U.S. Low Volatility High Dividend Index ETF",
+"market": "US"
+},
+{
+"symbol": "LVIG",
+"name": "Longview Advantage Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "MAAY",
+"name": "GraniteShares YieldBOOST MARA ETF",
+"market": "US"
+},
+{
+"symbol": "MATE",
+"name": "Man Active Trend Enhanced ETF",
+"market": "US"
+},
+{
+"symbol": "MAXI",
+"name": "Simplify Bitcoin Strategy PLUS Income ETF",
+"market": "US"
+},
+{
+"symbol": "MBB",
+"name": "iShares MBS ETF",
+"market": "US"
+},
+{
+"symbol": "MBS",
+"name": "Angel Oak Mortgage-Backed Securities ETF",
+"market": "US"
+},
+{
+"symbol": "MCDS",
+"name": "JPMorgan Fundamental Data Science Mid Core ETF",
+"market": "US"
+},
+{
+"symbol": "MCHI",
+"name": "iShares MSCI China ETF",
+"market": "US"
+},
+{
+"symbol": "MCHS",
+"name": "Matthews China Innovators Active ETF",
+"market": "US"
+},
+{
+"symbol": "MEDX",
+"name": "Horizon Kinetics Medical ETF",
+"market": "US"
+},
+{
+"symbol": "MEMA",
+"name": "Man Active Emerging Markets Alternative ETF",
+"market": "US"
+},
+{
+"symbol": "MEMS",
+"name": "Matthews Emerging Markets Discovery Active ETF",
+"market": "US"
+},
+{
+"symbol": "METD",
+"name": "Direxion Daily META Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "METL",
+"name": "Sprott Active Metals & Miners ETF",
+"market": "US"
+},
+{
+"symbol": "METU",
+"name": "Direxion Daily META Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "MFIG",
+"name": "Motley Fool Innovative Growth ETF",
+"market": "US"
+},
+{
+"symbol": "MFLX",
+"name": "First Trust Flexible Municipal High Income ETF",
+"market": "US"
+},
+{
+"symbol": "MFMO",
+"name": "Motley Fool Momentum Factor ETF",
+"market": "US"
+},
+{
+"symbol": "MFVL",
+"name": "Motley Fool Value Factor ETF",
+"market": "US"
+},
+{
+"symbol": "MILN",
+"name": "Global X Millennial Consumer ETF",
+"market": "US"
+},
+{
+"symbol": "MKAM",
+"name": "MKAM ETF",
+"market": "US"
+},
+{
+"symbol": "MNVT",
+"name": "Moonvest ETF",
+"market": "US"
+},
+{
+"symbol": "MNZL",
+"name": "Manzil Russell Halal USA Broad Market ETF",
+"market": "US"
+},
+{
+"symbol": "MODL",
+"name": "VictoryShares WestEnd U.S. Sector ETF",
+"market": "US"
+},
+{
+"symbol": "MOOD",
+"name": "Relative Sentiment Tactical Allocation ETF",
+"market": "US"
+},
+{
+"symbol": "MPG",
+"name": "Leverage Shares 2X Long MP Daily ETF",
+"market": "US"
+},
+{
+"symbol": "MQQQ",
+"name": "Tradr 2X Long Innovation 100 Monthly ETF",
+"market": "US"
+},
+{
+"symbol": "MRA",
+"name": "GraniteShares Autocallable MARA ETF",
+"market": "US"
+},
+{
+"symbol": "MRAL",
+"name": "GraniteShares 2x Long MARA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "MRVU",
+"name": "Direxion Daily MRVL Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "MSFD",
+"name": "Direxion Daily MSFT Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "MSFL",
+"name": "GraniteShares 2x Long MSFT Daily ETF",
+"market": "US"
+},
+{
+"symbol": "MSFU",
+"name": "Direxion Daily MSFT Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "MSR",
+"name": "GraniteShares Autocallable MSTR ETF",
+"market": "US"
+},
+{
+"symbol": "MST",
+"name": "Defiance Leveraged Long + Income MSTR ETF",
+"market": "US"
+},
+{
+"symbol": "MSTP",
+"name": "GraniteShares 2x Long MSTR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "MSTX",
+"name": "Defiance Daily Target 2x Long MSTR ETF",
+"market": "US"
+},
+{
+"symbol": "MTYY",
+"name": "GraniteShares YieldBOOST MSTR ETF",
+"market": "US"
+},
+{
+"symbol": "MUD",
+"name": "Direxion Daily MU Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "MULL",
+"name": "GraniteShares 2x Long MU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "MULT",
+"name": "Franklin Multisector Income ETF",
+"market": "US"
+},
+{
+"symbol": "MUU",
+"name": "Direxion Daily MU Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "MUYY",
+"name": "GraniteShares YieldBOOST MU ETF",
+"market": "US"
+},
+{
+"symbol": "MVLL",
+"name": "GraniteShares 2x Long MRVL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "MYCF",
+"name": "State Street My2026 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCG",
+"name": "State Street My2027 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCH",
+"name": "State Street My2028 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCI",
+"name": "State Street My2029 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCJ",
+"name": "State Street My2030 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCK",
+"name": "State Street My2031 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCL",
+"name": "State Street My2032 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCM",
+"name": "State Street My2033 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCN",
+"name": "State Street My2034 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYCO",
+"name": "State Street My2035 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYHA",
+"name": "State Street My2027 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYHB",
+"name": "State Street My2028 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYHC",
+"name": "State Street My2029 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYHD",
+"name": "State Street My2030 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYHE",
+"name": "State Street My2031 High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYMF",
+"name": "State Street My2026 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYMG",
+"name": "State Street My2027 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYMH",
+"name": "State Street My2028 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYMI",
+"name": "State Street My2029 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYMJ",
+"name": "State Street My2030 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MYMK",
+"name": "State Street My2031 Municipal Bond ETF",
+"market": "US"
+},
+{
+"symbol": "NATO",
+"name": "Themes Transatlantic Defense ETF",
+"market": "US"
+},
+{
+"symbol": "NBIG",
+"name": "Leverage Shares 2X Long NBIS Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NBIL",
+"name": "GraniteShares 2x Long NBIS Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NCIQ",
+"name": "Hashdex Nasdaq CME Crypto Index ETF",
+"market": "US"
+},
+{
+"symbol": "NCPB",
+"name": "Nuveen Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "NDAA",
+"name": "Ned Davis Research 360 Dynamic Allocation ETF",
+"market": "US"
+},
+{
+"symbol": "NEMG",
+"name": "Leverage Shares 2x Long NEM Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NETG",
+"name": "Leverage Shares 2X Long NET Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NEWZ",
+"name": "StockSnips AI-Powered Sentiment US All Cap ETF",
+"market": "US"
+},
+{
+"symbol": "NFRX",
+"name": "Harrison Street Infrastructure Active ETF",
+"market": "US"
+},
+{
+"symbol": "NFTY",
+"name": "First Trust India Nifty 50 Equal Weight ETF",
+"market": "US"
+},
+{
+"symbol": "NFXL",
+"name": "Direxion Daily NFLX Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "NFXS",
+"name": "Direxion Daily NFLX Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "NGHT",
+"name": "Nicholas Bitcoin and Treasuries AfterDark ETF",
+"market": "US"
+},
+{
+"symbol": "NIKL",
+"name": "Sprott Nickel Miners ETF",
+"market": "US"
+},
+{
+"symbol": "NIOG",
+"name": "Leverage Shares 2X Long NIO Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NIXT",
+"name": "Research Affiliates Deletions ETF",
+"market": "US"
+},
+{
+"symbol": "NOWL",
+"name": "GraniteShares 2x Long NOW Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NPFI",
+"name": "Nuveen Preferred and Income ETF",
+"market": "US"
+},
+{
+"symbol": "NRES",
+"name": "Xtrackers RREEF Global Natural Resources ETF",
+"market": "US"
+},
+{
+"symbol": "NSI",
+"name": "National Security Emerging Markets Index ETF",
+"market": "US"
+},
+{
+"symbol": "NUG",
+"name": "Leverage Shares 2X Long NU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NUGY",
+"name": "GraniteShares YieldBOOST Gold Miners ETF",
+"market": "US"
+},
+{
+"symbol": "NUIF",
+"name": "Nuveen US Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "NUSB",
+"name": "Nuveen Ultra Short Income ETF",
+"market": "US"
+},
+{
+"symbol": "NVD",
+"name": "GraniteShares 2x Short NVDA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NVDD",
+"name": "Direxion Daily NVDA Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "NVDG",
+"name": "Leverage Shares 2X Long NVDA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NVDL",
+"name": "GraniteShares 2x Long NVDA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NVDS",
+"name": "Tradr 1.5X Short NVDA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "NVDU",
+"name": "Direxion Daily NVDA Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "NVPS",
+"name": "PurePlay Nvidia Ecosystem Picks & Shovels Index ETF",
+"market": "US"
+},
+{
+"symbol": "NVYY",
+"name": "GraniteShares YieldBOOST NVDA ETF",
+"market": "US"
+},
+{
+"symbol": "NXTG",
+"name": "First Trust Indxx NextG ETF",
+"market": "US"
+},
+{
+"symbol": "NZAC",
+"name": "State Street SPDR MSCI ACWI Climate Paris Aligned ETF",
+"market": "US"
+},
+{
+"symbol": "OBIL",
+"name": "US Treasury 12 Month Bill ETF",
+"market": "US"
+},
+{
+"symbol": "ODDS",
+"name": "Pacer BlueStar Digital Entertainment ETF",
+"market": "US"
+},
+{
+"symbol": "ODTE",
+"name": "VegaShares SPX NDX RTY Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "OKLL",
+"name": "Defiance Daily Target 2x Long OKLO ETF",
+"market": "US"
+},
+{
+"symbol": "OKTG",
+"name": "Leverage Shares 2X Long OKTA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ONDG",
+"name": "Leverage Shares 2X Long ONDS Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ONEQ",
+"name": "Fidelity Nasdaq Composite Index ETF",
+"market": "US"
+},
+{
+"symbol": "OPEG",
+"name": "Leverage Shares 2X Long OPEN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "OPTZ",
+"name": "Optimize Strategy Index ETF",
+"market": "US"
+},
+{
+"symbol": "ORBX",
+"name": "Global X Space Tech ETF",
+"market": "US"
+},
+{
+"symbol": "ORCS",
+"name": "Direxion Daily ORCL Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "ORCU",
+"name": "Direxion Daily ORCL Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "ORCX",
+"name": "Defiance Daily Target 2X Long ORCL ETF",
+"market": "US"
+},
+{
+"symbol": "ORLG",
+"name": "Leverage Shares 2X Long ORLY Daily ETF",
+"market": "US"
+},
+{
+"symbol": "ORR",
+"name": "Militia Long/Short Equity ETF",
+"market": "US"
+},
+{
+"symbol": "OSCG",
+"name": "Leverage Shares 2X Long OSCR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "OSCX",
+"name": "Defiance Daily Target 2x Long OSCR ETF",
+"market": "US"
+},
+{
+"symbol": "OTGL",
+"name": "OTG Latin America ETF",
+"market": "US"
+},
+{
+"symbol": "OZEM",
+"name": "Roundhill GLP-1 & Weight Loss ETF",
+"market": "US"
+},
+{
+"symbol": "PABD",
+"name": "iShares Paris-Aligned Climate Optimized MSCI World ex USA ETF",
+"market": "US"
+},
+{
+"symbol": "PABU",
+"name": "iShares Paris-Aligned Climate Optimized MSCI USA ETF",
+"market": "US"
+},
+{
+"symbol": "PALD",
+"name": "Direxion Daily PANW Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "PALU",
+"name": "Direxion Daily PANW Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "PANG",
+"name": "Leverage Shares 2X Long PANW Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PATN",
+"name": "Pacer Nasdaq International Patent Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "PBEU",
+"name": "Portfolio Building Block European Banks Index ETF",
+"market": "US"
+},
+{
+"symbol": "PBOG",
+"name": "Portfolio Building Block Integrated Oil and Gas and Exploration and Production Index ETF",
+"market": "US"
+},
+{
+"symbol": "PBPH",
+"name": "Portfolio Building Block World Pharma and Biotech Index ETF",
+"market": "US"
+},
+{
+"symbol": "PBQQ",
+"name": "PGIM Laddered Nasdaq-100 Buffer 12 ETF",
+"market": "US"
+},
+{
+"symbol": "PBRG",
+"name": "Leverage Shares 2X Long PBR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PBSC",
+"name": "Pacer Barings Secured Credit Flex ETF",
+"market": "US"
+},
+{
+"symbol": "PCMM",
+"name": "BondBloxx Private Credit CLO ETF",
+"market": "US"
+},
+{
+"symbol": "PDBA",
+"name": "Invesco Agriculture Commodity Strategy No K-1 ETF",
+"market": "US"
+},
+{
+"symbol": "PDBC",
+"name": "Invesco Optimum Yield Diversified Commodity Strategy No K-1 ETF",
+"market": "US"
+},
+{
+"symbol": "PDDL",
+"name": "GraniteShares 2x Long PDD Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PDP",
+"name": "Invesco Dorsey Wright Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PEPS",
+"name": "Parametric Equity Plus ETF",
+"market": "US"
+},
+{
+"symbol": "PEY",
+"name": "Invesco High Yield Equity Dividend Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "PEZ",
+"name": "Invesco Dorsey Wright Consumer Cyclicals Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PFDE",
+"name": "Pathfinder Disciplined US Equity ETF",
+"market": "US"
+},
+{
+"symbol": "PFF",
+"name": "iShares Preferred and Income Securities ETF",
+"market": "US"
+},
+{
+"symbol": "PFI",
+"name": "Invesco Dorsey Wright Financial Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PFM",
+"name": "Invesco Dividend Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "PFOE",
+"name": "Pathfinder Focused Opportunities ETF",
+"market": "US"
+},
+{
+"symbol": "PGJ",
+"name": "Invesco Golden Dragon China ETF",
+"market": "US"
+},
+{
+"symbol": "PHO",
+"name": "Invesco Water Resources ETF",
+"market": "US"
+},
+{
+"symbol": "PID",
+"name": "Invesco International Dividend Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "PIE",
+"name": "Invesco Dorsey Wright Emerging Markets Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PIO",
+"name": "Invesco Global Water ETF",
+"market": "US"
+},
+{
+"symbol": "PIZ",
+"name": "Invesco Dorsey Wright Developed Markets Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PKW",
+"name": "Invesco BuyBack Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "PLA",
+"name": "GraniteShares Autocallable PLTR ETF",
+"market": "US"
+},
+{
+"symbol": "PLTD",
+"name": "Direxion Daily PLTR Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "PLTG",
+"name": "Leverage Shares 2X Long PLTR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PLTU",
+"name": "Direxion Daily PLTR Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "PLTZ",
+"name": "Defiance Daily Target 2x Short PLTR ETF",
+"market": "US"
+},
+{
+"symbol": "PLUL",
+"name": "Leverage Shares 2X Long PLUG Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PLYY",
+"name": "GraniteShares YieldBOOST PLTR ETF",
+"market": "US"
+},
+{
+"symbol": "PNQI",
+"name": "Invesco Nasdaq Internet ETF",
+"market": "US"
+},
+{
+"symbol": "PPH",
+"name": "VanEck Pharmaceutical ETF",
+"market": "US"
+},
+{
+"symbol": "PPI",
+"name": "Astoria Real Assets ETF",
+"market": "US"
+},
+{
+"symbol": "PQAP",
+"name": "PGIM Nasdaq-100 Buffer 12 ETF - April",
+"market": "US"
+},
+{
+"symbol": "PQJA",
+"name": "PGIM Nasdaq-100 Buffer 12 ETF - January",
+"market": "US"
+},
+{
+"symbol": "PQJL",
+"name": "PGIM Nasdaq-100 Buffer 12 ETF - July",
+"market": "US"
+},
+{
+"symbol": "PQOC",
+"name": "PGIM Nasdaq-100 Buffer 12 ETF - October",
+"market": "US"
+},
+{
+"symbol": "PRFZ",
+"name": "Invesco RAFI US 1500 Small-Mid ETF",
+"market": "US"
+},
+{
+"symbol": "PRMR",
+"name": "PeakShares RMR Prime Equity ETF",
+"market": "US"
+},
+{
+"symbol": "PRN",
+"name": "Invesco Dorsey Wright Industrials Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PSC",
+"name": "Principal U.S. Small-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "PSCC",
+"name": "Invesco S&P SmallCap Consumer Staples ETF",
+"market": "US"
+},
+{
+"symbol": "PSCD",
+"name": "Invesco S&P SmallCap Consumer Discretionary ETF",
+"market": "US"
+},
+{
+"symbol": "PSCE",
+"name": "Invesco S&P SmallCap Energy ETF",
+"market": "US"
+},
+{
+"symbol": "PSCF",
+"name": "Invesco S&P SmallCap Financials ETF",
+"market": "US"
+},
+{
+"symbol": "PSCH",
+"name": "Invesco S&P SmallCap Health Care ETF",
+"market": "US"
+},
+{
+"symbol": "PSCI",
+"name": "Invesco S&P SmallCap Industrials ETF",
+"market": "US"
+},
+{
+"symbol": "PSCM",
+"name": "Invesco S&P SmallCap Materials ETF",
+"market": "US"
+},
+{
+"symbol": "PSCT",
+"name": "Invesco S&P SmallCap Information Technology ETF",
+"market": "US"
+},
+{
+"symbol": "PSCU",
+"name": "Invesco S&P SmallCap Utilities & Communication Services ETF",
+"market": "US"
+},
+{
+"symbol": "PSET",
+"name": "Principal Quality ETF",
+"market": "US"
+},
+{
+"symbol": "PSL",
+"name": "Invesco Dorsey Wright Consumer Staples Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PSTR",
+"name": "PeakShares Sector Rotation ETF",
+"market": "US"
+},
+{
+"symbol": "PSWD",
+"name": "Xtrackers Cybersecurity Select Equity ETF",
+"market": "US"
+},
+{
+"symbol": "PTF",
+"name": "Invesco Dorsey Wright Technology Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PTH",
+"name": "Invesco Dorsey Wright Healthcare Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PTIR",
+"name": "GraniteShares 2x Long PLTR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PTNQ",
+"name": "Pacer Trendpilot 100 ETF",
+"market": "US"
+},
+{
+"symbol": "PUI",
+"name": "Invesco Dorsey Wright Utilities Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PWRD",
+"name": "TCW Transform Systems ETF",
+"market": "US"
+},
+{
+"symbol": "PXI",
+"name": "Invesco Dorsey Wright Energy Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "PY",
+"name": "Principal Value ETF",
+"market": "US"
+},
+{
+"symbol": "PYPG",
+"name": "Leverage Shares 2X Long PYPL Daily ETF",
+"market": "US"
+},
+{
+"symbol": "PYZ",
+"name": "Invesco Dorsey Wright Basic Materials Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "QALT",
+"name": "SEI DBi Multi-Strategy Alternative ETF",
+"market": "US"
+},
+{
+"symbol": "QAT",
+"name": "iShares MSCI Qatar ETF",
+"market": "US"
+},
+{
+"symbol": "QB",
+"name": "ProShares Nasdaq-100 Dynamic Buffer ETF",
+"market": "US"
+},
+{
+"symbol": "QBIG",
+"name": "Invesco Top QQQ ETF",
+"market": "US"
+},
+{
+"symbol": "QBTZ",
+"name": "Defiance Daily Target 2x Short QBTS ETF",
+"market": "US"
+},
+{
+"symbol": "QBUF",
+"name": "Innovator Nasdaq-100 10 Buffer ETF Quarterly",
+"market": "US"
+},
+{
+"symbol": "QBY",
+"name": "GraniteShares YieldBoost QBTS ETF",
+"market": "US"
+},
+{
+"symbol": "QCLR",
+"name": "Global X NASDAQ 100 Collar 95-110 ETF",
+"market": "US"
+},
+{
+"symbol": "QCMD",
+"name": "Direxion Daily QCOM Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "QCML",
+"name": "GraniteShares 2x Long QCOM Daily ETF",
+"market": "US"
+},
+{
+"symbol": "QCMU",
+"name": "Direxion Daily QCOM Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "QDTY",
+"name": "YieldMax Nasdaq 100 0DTE Covered Call Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "QEW",
+"name": "Invesco QQQ Equal Weight ETF",
+"market": "US"
+},
+{
+"symbol": "QGRD",
+"name": "Horizon Nasdaq-100 Defined Risk ETF",
+"market": "US"
+},
+{
+"symbol": "QHDG",
+"name": "Innovator Hedged Nasdaq-100 ETF",
+"market": "US"
+},
+{
+"symbol": "QLDY",
+"name": "Defiance Nasdaq 100 LightningSpread Income ETF",
+"market": "US"
+},
+{
+"symbol": "QMOM",
+"name": "Alpha Architect U.S. Quantitative Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "QNDX",
+"name": "State Street SPDR Portfolio Nasdaq 100 ETF",
+"market": "US"
+},
+{
+"symbol": "QNXT",
+"name": "iShares Nasdaq-100 ex Top 30 ETF",
+"market": "US"
+},
+{
+"symbol": "QOWZ",
+"name": "Invesco Nasdaq Free Cash Flow Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "QPUX",
+"name": "Defiance 2X Daily Long Pure Quantum ETF",
+"market": "US"
+},
+{
+"symbol": "QQA",
+"name": "Invesco QQQ Income Advantage ETF",
+"market": "US"
+},
+{
+"symbol": "QQEW",
+"name": "First Trust Nasdaq-100 Select Equal Weight ETF",
+"market": "US"
+},
+{
+"symbol": "QQHG",
+"name": "Invesco QQQ Hedged Advantage ETF",
+"market": "US"
+},
+{
+"symbol": "QQLV",
+"name": "Invesco QQQ Low Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "QQMG",
+"name": "Invesco ESG NASDAQ 100 ETF",
+"market": "US"
+},
+{
+"symbol": "QQQA",
+"name": "ProShares Nasdaq-100 Dorsey Wright Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "QQQE",
+"name": "Direxion NASDAQ-100 Equal Weighted Index ETF",
+"market": "US"
+},
+{
+"symbol": "QQQG",
+"name": "Pacer Nasdaq 100 Top 50 Cash Cows Growth Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "QQQH",
+"name": "NEOS Nasdaq-100 Hedged Equity Income ETF",
+"market": "US"
+},
+{
+"symbol": "QQQI",
+"name": "NEOS Nasdaq 100 High Income ETF",
+"market": "US"
+},
+{
+"symbol": "QQQJ",
+"name": "Invesco NASDAQ Next Gen 100 ETF",
+"market": "US"
+},
+{
+"symbol": "QQQM",
+"name": "Invesco NASDAQ 100 ETF",
+"market": "US"
+},
+{
+"symbol": "QQQP",
+"name": "Tradr 2X Long Innovation 100 Quarterly ETF",
+"market": "US"
+},
+{
+"symbol": "QQQS",
+"name": "Invesco NASDAQ Future Gen 200 ETF",
+"market": "US"
+},
+{
+"symbol": "QQQT",
+"name": "Defiance Nasdaq 100 Income Target ETF",
+"market": "US"
+},
+{
+"symbol": "QQQY",
+"name": "Defiance Nasdaq 100 Weekly Distribution ETF",
+"market": "US"
+},
+{
+"symbol": "QQWZ",
+"name": "Pacer Cash COWZ 100-Nasdaq 100 Rotator ETF",
+"market": "US"
+},
+{
+"symbol": "QRMI",
+"name": "Global X NASDAQ 100 Risk Managed Income ETF",
+"market": "US"
+},
+{
+"symbol": "QSIX",
+"name": "Pacer Metaurus Nasdaq 100 Dividend Multiplier 600 ETF",
+"market": "US"
+},
+{
+"symbol": "QTOP",
+"name": "iShares Nasdaq Top 30 Stocks ETF",
+"market": "US"
+},
+{
+"symbol": "QTR",
+"name": "Global X NASDAQ 100 Tail Risk ETF",
+"market": "US"
+},
+{
+"symbol": "QTUM",
+"name": "Defiance Quantum ETF",
+"market": "US"
+},
+{
+"symbol": "QVAL",
+"name": "Alpha Architect U.S. Quantitative Value ETF",
+"market": "US"
+},
+{
+"symbol": "QVOL",
+"name": "Infrastructure Capital Nasdaq Option Income ETF",
+"market": "US"
+},
+{
+"symbol": "QXQ",
+"name": "SGI Enhanced Nasdaq-100 ETF",
+"market": "US"
+},
+{
+"symbol": "QYLD",
+"name": "Global X NASDAQ 100 Covered Call ETF",
+"market": "US"
+},
+{
+"symbol": "QYLG",
+"name": "Global X Nasdaq 100 Covered Call & Growth ETF",
+"market": "US"
+},
+{
+"symbol": "RAA",
+"name": "SMI 3Fourteen REAL Asset Allocation ETF",
+"market": "US"
+},
+{
+"symbol": "RAUS",
+"name": "RACWI US ETF",
+"market": "US"
+},
+{
+"symbol": "RBIL",
+"name": "F/m Ultrashort Treasury Inflation-Protected Security (TIPS) ETF",
+"market": "US"
+},
+{
+"symbol": "RCAX",
+"name": "Defiance Daily Target 2x Long RCAT ETF",
+"market": "US"
+},
+{
+"symbol": "RCGE",
+"name": "RockCreek Global Equality ETF",
+"market": "US"
+},
+{
+"symbol": "RDTL",
+"name": "GraniteShares 2x Long RDDT Daily ETF",
+"market": "US"
+},
+{
+"symbol": "RDTY",
+"name": "YieldMax R2000 0DTE Covered Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "RDVY",
+"name": "First Trust Rising Dividend Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "REAI",
+"name": "Intelligent Real Estate ETF",
+"market": "US"
+},
+{
+"symbol": "REIT",
+"name": "ALPS Active REIT ETF",
+"market": "US"
+},
+{
+"symbol": "REMG",
+"name": "Russell Investments Emerging Markets Equity ETF",
+"market": "US"
+},
+{
+"symbol": "REXC",
+"name": "Sprott Rare Earths Ex-China ETF",
+"market": "US"
+},
+{
+"symbol": "RFDI",
+"name": "First Trust RiverFront Dynamic Developed International ETF",
+"market": "US"
+},
+{
+"symbol": "RFEM",
+"name": "First Trust RiverFront Dynamic Emerging Markets ETF",
+"market": "US"
+},
+{
+"symbol": "RGLO",
+"name": "Russell Investments Global Equity ETF",
+"market": "US"
+},
+{
+"symbol": "RGTX",
+"name": "Defiance Daily Target 2X Long RGTI ETF",
+"market": "US"
+},
+{
+"symbol": "RGTZ",
+"name": "Defiance Daily Target 2x Short RGTI ETF",
+"market": "US"
+},
+{
+"symbol": "RGYY",
+"name": "GraniteShares YieldBoost RGTI ETF",
+"market": "US"
+},
+{
+"symbol": "RIFR",
+"name": "Russell Investments Global Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "RING",
+"name": "iShares MSCI Global Gold Miners ETF",
+"market": "US"
+},
+{
+"symbol": "RINT",
+"name": "Russell Investments International Developed Equity ETF",
+"market": "US"
+},
+{
+"symbol": "RKLX",
+"name": "Defiance Daily Target 2X Long RKLB ETF",
+"market": "US"
+},
+{
+"symbol": "RKLZ",
+"name": "Defiance Daily Target 2x Short RKLB ETF",
+"market": "US"
+},
+{
+"symbol": "RKNG",
+"name": "Defiance Retail Kings ETF",
+"market": "US"
+},
+{
+"symbol": "RNEM",
+"name": "Emerging Markets Equity Select ETF",
+"market": "US"
+},
+{
+"symbol": "RNIN",
+"name": "Bushido Capital US SMID Cap Equity ETF",
+"market": "US"
+},
+{
+"symbol": "RNRG",
+"name": "Global X Renewable Energy Producers ETF",
+"market": "US"
+},
+{
+"symbol": "ROBT",
+"name": "First Trust Nasdaq Artificial Intelligence and Robotics ETF",
+"market": "US"
+},
+{
+"symbol": "ROCQ",
+"name": "JPMorgan Nasdaq Equity Premium Yield ETF",
+"market": "US"
+},
+{
+"symbol": "ROCY",
+"name": "JPMorgan Equity Premium Yield ETF",
+"market": "US"
+},
+{
+"symbol": "ROE",
+"name": "Astoria US Equal Weight Quality Kings ETF",
+"market": "US"
+},
+{
+"symbol": "RTH",
+"name": "VanEck Retail ETF",
+"market": "US"
+},
+{
+"symbol": "RTXG",
+"name": "Leverage Shares 2X Long RTX Daily ETF",
+"market": "US"
+},
+{
+"symbol": "RTYY",
+"name": "GraniteShares YieldBoost RIOT ETF",
+"market": "US"
+},
+{
+"symbol": "RUNN",
+"name": "Running Oak Efficient Growth ETF",
+"market": "US"
+},
+{
+"symbol": "RUSC",
+"name": "Russell Investments U.S. Small Cap Equity ETF",
+"market": "US"
+},
+{
+"symbol": "RVNL",
+"name": "GraniteShares 2x Long RIVN Daily ETF",
+"market": "US"
+},
+{
+"symbol": "RWIN",
+"name": "Rayliant NxtGen Multifactor International Equity ETF",
+"market": "US"
+},
+{
+"symbol": "SARK",
+"name": "Tradr 1X Short Innovation Daily ETF",
+"market": "US"
+},
+{
+"symbol": "SATG",
+"name": "Leverage Shares 2X Long SATS Daily ETF",
+"market": "US"
+},
+{
+"symbol": "SBU",
+"name": "Leverage Shares 2X Long SBUX Daily ETF",
+"market": "US"
+},
+{
+"symbol": "SCA",
+"name": "GraniteShares Autocallable SMCI ETF",
+"market": "US"
+},
+{
+"symbol": "SCDS",
+"name": "JPMorgan Fundamental Data Science Small Core ETF",
+"market": "US"
+},
+{
+"symbol": "SCZ",
+"name": "iShares MSCI EAFE Small-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "SDG",
+"name": "iShares MSCI Global Sustainable Development Goals ETF",
+"market": "US"
+},
+{
+"symbol": "SDSI",
+"name": "American Century Short Duration Strategic Income ETF",
+"market": "US"
+},
+{
+"symbol": "SDTY",
+"name": "YieldMax S&P 500 0DTE Covered Call Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "SDVY",
+"name": "First Trust SMID Cap Rising Dividend Achievers ETF",
+"market": "US"
+},
+{
+"symbol": "SEEM",
+"name": "SEI Select Emerging Markets Equity ETF",
+"market": "US"
+},
+{
+"symbol": "SEIE",
+"name": "SEI Select International Equity ETF",
+"market": "US"
+},
+{
+"symbol": "SEIS",
+"name": "SEI Select Small Cap ETF",
+"market": "US"
+},
+{
+"symbol": "SEMY",
+"name": "GraniteShares YieldBOOST Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "SETM",
+"name": "Sprott Critical Materials ETF",
+"market": "US"
+},
+{
+"symbol": "SFLO",
+"name": "VictoryShares Small Cap Free Cash Flow ETF",
+"market": "US"
+},
+{
+"symbol": "SHPU",
+"name": "Direxion Daily SHOP Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "SHRY",
+"name": "First Trust Bloomberg Shareholder Yield ETF",
+"market": "US"
+},
+{
+"symbol": "SHY",
+"name": "iShares 1-3 Year Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "SJCP",
+"name": "SanJac Alpha Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "SJLD",
+"name": "SanJac Alpha Low Duration ETF",
+"market": "US"
+},
+{
+"symbol": "SKRE",
+"name": "Tuttle Capital Daily 2X Inverse Regional Banks ETF",
+"market": "US"
+},
+{
+"symbol": "SKYY",
+"name": "First Trust Cloud Computing ETF",
+"market": "US"
+},
+{
+"symbol": "SLQD",
+"name": "iShares 0-5 Year Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "SLVO",
+"name": "ETRACS Silver Shares Covered Call ETNs due April 21, 2033",
+"market": "US"
+},
+{
+"symbol": "SLVR",
+"name": "Sprott Silver Miners & Physical Silver ETF",
+"market": "US"
+},
+{
+"symbol": "SMCF",
+"name": "Themes US Small Cap Cash Flow Champions ETF",
+"market": "US"
+},
+{
+"symbol": "SMCL",
+"name": "GraniteShares 2x Long SMCI Daily ETF",
+"market": "US"
+},
+{
+"symbol": "SMCO",
+"name": "Hilton Small-MidCap Opportunity ETF",
+"market": "US"
+},
+{
+"symbol": "SMCX",
+"name": "Defiance Daily Target 2X Long SMCI ETF",
+"market": "US"
+},
+{
+"symbol": "SMCZ",
+"name": "Defiance Daily Target 2X Short SMCI ETF",
+"market": "US"
+},
+{
+"symbol": "SMH",
+"name": "VanEck Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "SMHC",
+"name": "VanEck China Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "SMHX",
+"name": "VanEck Fabless Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "SMOM",
+"name": "Symmetry Panoramic Sector Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "SMRI",
+"name": "Bushido Capital US Equity ETF",
+"market": "US"
+},
+{
+"symbol": "SMST",
+"name": "Defiance Daily Target 2x Short MSTR ETF",
+"market": "US"
+},
+{
+"symbol": "SMYY",
+"name": "GraniteShares YieldBOOST SMCI ETF",
+"market": "US"
+},
+{
+"symbol": "SNAG",
+"name": "Leverage Shares 2x Long SNAP Daily ETF",
+"market": "US"
+},
+{
+"symbol": "SNSR",
+"name": "Global X Internet of Things ETF",
+"market": "US"
+},
+{
+"symbol": "SOCL",
+"name": "Global X Social Media ETF",
+"market": "US"
+},
+{
+"symbol": "SOFA",
+"name": "Direxion Daily SOFI Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "SOFX",
+"name": "Defiance Daily Target 2X Long SOFI ETF",
+"market": "US"
+},
+{
+"symbol": "SOLC",
+"name": "Canary Marinade Solana ETF",
+"market": "US"
+},
+{
+"symbol": "SOLT",
+"name": "2x Solana ETF",
+"market": "US"
+},
+{
+"symbol": "SOLZ",
+"name": "Solana ETF",
+"market": "US"
+},
+{
+"symbol": "SOUX",
+"name": "Defiance Daily Target 2X Long SOUN ETF",
+"market": "US"
+},
+{
+"symbol": "SOXQ",
+"name": "Invesco PHLX Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "SPAM",
+"name": "Themes Cybersecurity ETF",
+"market": "US"
+},
+{
+"symbol": "SPAQ",
+"name": "Horizon Kinetics SPAC Active ETF",
+"market": "US"
+},
+{
+"symbol": "SPBC",
+"name": "Simplify US Equity PLUS Bitcoin Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "SPCK",
+"name": "SPAC and New Issue ETF",
+"market": "US"
+},
+{
+"symbol": "SPCT",
+"name": "Liberty One Spectrum ETF",
+"market": "US"
+},
+{
+"symbol": "SPIT",
+"name": "F/m Emerald Special Situations ETF",
+"market": "US"
+},
+{
+"symbol": "SPOG",
+"name": "Leverage Shares 2X Long SPOT Daily ETF",
+"market": "US"
+},
+{
+"symbol": "SPRX",
+"name": "Spear Alpha ETF",
+"market": "US"
+},
+{
+"symbol": "SPXD",
+"name": "Xtrackers S&P 500 Diversified Sector Weight ETF",
+"market": "US"
+},
+{
+"symbol": "SPYQ",
+"name": "Tradr 2X Long SPY Quarterly ETF",
+"market": "US"
+},
+{
+"symbol": "SQLV",
+"name": "Royce Quant Small-Cap Quality Value ETF",
+"market": "US"
+},
+{
+"symbol": "SQS",
+"name": "Sapient Quality Select ETF",
+"market": "US"
+},
+{
+"symbol": "SRET",
+"name": "Global X SuperDividend REIT ETF",
+"market": "US"
+},
+{
+"symbol": "SSS",
+"name": "CYBER HORNET S&P 500 and Solana 75/25 Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "STNC",
+"name": "Hennessy Sustainable ETF",
+"market": "US"
+},
+{
+"symbol": "SUIS",
+"name": "Canary Staked SUI ETF",
+"market": "US"
+},
+{
+"symbol": "SUPP",
+"name": "TCW Transform Supply Chain ETF",
+"market": "US"
+},
+{
+"symbol": "SUSB",
+"name": "iShares ESG Aware 1-5 Year USD Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "SUSC",
+"name": "iShares ESG Aware USD Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "SUSL",
+"name": "iShares ESG MSCI USA Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "SWP",
+"name": "SWP Growth & Income ETF",
+"market": "US"
+},
+{
+"symbol": "SYZ",
+"name": "Lazard US Systematic Small Cap Equity ETF",
+"market": "US"
+},
+{
+"symbol": "TARK",
+"name": "Tradr 2X Long Innovation ETF",
+"market": "US"
+},
+{
+"symbol": "TAX",
+"name": "Cambria Tax Aware ETF",
+"market": "US"
+},
+{
+"symbol": "TAXE",
+"name": "Intermediate Municipal Income ETF",
+"market": "US"
+},
+{
+"symbol": "TAXI",
+"name": "Northern Trust Intermediate Tax-Exempt Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TAXS",
+"name": "Northern Trust Short-Term Tax-Exempt Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TAXT",
+"name": "Northern Trust Tax-Exempt Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TCAN",
+"name": "21Shares Canton Network ETF",
+"market": "US"
+},
+{
+"symbol": "TCHI",
+"name": "iShares MSCI China Multisector Tech ETF",
+"market": "US"
+},
+{
+"symbol": "TDI",
+"name": "Touchstone Dynamic International ETF",
+"market": "US"
+},
+{
+"symbol": "TDOG",
+"name": "21shares Dogecoin ETF",
+"market": "US"
+},
+{
+"symbol": "TDOT",
+"name": "21shares Polkadot ETF",
+"market": "US"
+},
+{
+"symbol": "TDSB",
+"name": "ETC Cabana Target Beta ETF",
+"market": "US"
+},
+{
+"symbol": "TDSC",
+"name": "ETC Cabana Target Drawdown 10 ETF",
+"market": "US"
+},
+{
+"symbol": "TECY",
+"name": "GraniteShares YieldBOOST Technology ETF",
+"market": "US"
+},
+{
+"symbol": "TEKX",
+"name": "State Street Galaxy Transformative Tech Accelerators ETF",
+"market": "US"
+},
+{
+"symbol": "TEKY",
+"name": "Lazard Next Gen Technologies ETF",
+"market": "US"
+},
+{
+"symbol": "TERG",
+"name": "Leverage Shares 2X Long TER Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TEXN",
+"name": "iShares Texas Equity ETF",
+"market": "US"
+},
+{
+"symbol": "TEXX",
+"name": "Horizon Kinetics Texas ETF",
+"market": "US"
+},
+{
+"symbol": "TFNS",
+"name": "T. Rowe Price Financials ETF",
+"market": "US"
+},
+{
+"symbol": "THMZ",
+"name": "Lazard Equity Megatrends ETF",
+"market": "US"
+},
+{
+"symbol": "THRV",
+"name": "Prospera Income ETF",
+"market": "US"
+},
+{
+"symbol": "THYM",
+"name": "T. Rowe Price High Income Municipal ETF",
+"market": "US"
+},
+{
+"symbol": "THYP",
+"name": "21shares Hyperliquid ETF",
+"market": "US"
+},
+{
+"symbol": "TILC",
+"name": "Thrivent International Large Cap ETF",
+"market": "US"
+},
+{
+"symbol": "TISC",
+"name": "Thrivent International Small Cap ETF",
+"market": "US"
+},
+{
+"symbol": "TKNS",
+"name": "21Shares Active Crypto ETF",
+"market": "US"
+},
+{
+"symbol": "TLA",
+"name": "GraniteShares Autocallable TSLA ETF",
+"market": "US"
+},
+{
+"symbol": "TLG",
+"name": "Touchstone Large Company Growth ETF",
+"market": "US"
+},
+{
+"symbol": "TLT",
+"name": "iShares 20+ Year Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TMB",
+"name": "Thornburg Multi Sector Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TMED",
+"name": "T. Rowe Price Health Care ETF",
+"market": "US"
+},
+{
+"symbol": "TMNL",
+"name": "T. Rowe Price Long Municipal Income ETF",
+"market": "US"
+},
+{
+"symbol": "TMNS",
+"name": "T. Rowe Price Short Municipal Income ETF",
+"market": "US"
+},
+{
+"symbol": "TMSF",
+"name": "T. Rowe Price Multi-Sector Income ETF",
+"market": "US"
+},
+{
+"symbol": "TMYY",
+"name": "GraniteShares YieldBOOST TSM ETF",
+"market": "US"
+},
+{
+"symbol": "TNXT",
+"name": "T. Rowe Price Innovation Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "TPLS",
+"name": "Thornburg Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TQQY",
+"name": "GraniteShares YieldBOOST QQQ ETF",
+"market": "US"
+},
+{
+"symbol": "TRBF",
+"name": "Angel Oak Total Return ETF",
+"market": "US"
+},
+{
+"symbol": "TRUC",
+"name": "VanEck Communication Services TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TRUD",
+"name": "VanEck Consumer Discretionary TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TRUF",
+"name": "VanEck Financials TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TRUH",
+"name": "VanEck Healthcare TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TRUI",
+"name": "VanEck Industrials TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TRUO",
+"name": "VanEck Consumer Staples TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TRUT",
+"name": "VanEck Technology TruSector ETF",
+"market": "US"
+},
+{
+"symbol": "TSCM",
+"name": "TimesSquare Quality Mid Cap Growth ETF",
+"market": "US"
+},
+{
+"symbol": "TSDD",
+"name": "GraniteShares 2x Short TSLA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSEL",
+"name": "Touchstone Sands Capital US Select Growth ETF",
+"market": "US"
+},
+{
+"symbol": "TSL",
+"name": "GraniteShares 1.25x Long TSLA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSLG",
+"name": "Leverage Shares 2X Long TSLA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSLL",
+"name": "Direxion Daily TSLA Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "TSLQ",
+"name": "Tradr 2X Short TSLA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSLR",
+"name": "GraniteShares 2x Long TSLA Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSLS",
+"name": "Direxion Daily TSLA Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "TSMG",
+"name": "Leverage Shares 2X Long TSM Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSMU",
+"name": "GraniteShares 2x Long TSM Daily ETF",
+"market": "US"
+},
+{
+"symbol": "TSMX",
+"name": "Direxion Daily TSM Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "TSMZ",
+"name": "Direxion Daily TSM Bear 1X ETF",
+"market": "US"
+},
+{
+"symbol": "TSPY",
+"name": "TappAlpha S&P 500 Growth & Daily Income ETF",
+"market": "US"
+},
+{
+"symbol": "TSUI",
+"name": "21Shares Sui ETF",
+"market": "US"
+},
+{
+"symbol": "TSYX",
+"name": "TSPY Lift ETF",
+"market": "US"
+},
+{
+"symbol": "TSYY",
+"name": "GraniteShares YieldBOOST TSLA ETF",
+"market": "US"
+},
+{
+"symbol": "TTEQ",
+"name": "T. Rowe Price Technology ETF",
+"market": "US"
+},
+{
+"symbol": "TUG",
+"name": "STF Tactical Growth ETF",
+"market": "US"
+},
+{
+"symbol": "TUGN",
+"name": "STF Tactical Growth & Income ETF",
+"market": "US"
+},
+{
+"symbol": "TUR",
+"name": "iShares MSCI Turkey ETF",
+"market": "US"
+},
+{
+"symbol": "TURF",
+"name": "T. Rowe Price Natural Resources ETF",
+"market": "US"
+},
+{
+"symbol": "TXUE",
+"name": "Thornburg International Equity ETF",
+"market": "US"
+},
+{
+"symbol": "TXUG",
+"name": "Thornburg International Growth Fund ETF",
+"market": "US"
+},
+{
+"symbol": "TXXD",
+"name": "21Shares 2x Long Dogecoin ETF",
+"market": "US"
+},
+{
+"symbol": "TXXH",
+"name": "21Shares 2x Long HYPE ETF",
+"market": "US"
+},
+{
+"symbol": "TXXS",
+"name": "21Shares 2x Long Sui ETF",
+"market": "US"
+},
+{
+"symbol": "UAE",
+"name": "iShares MSCI UAE ETF",
+"market": "US"
+},
+{
+"symbol": "UBND",
+"name": "VictoryShares Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "UBRL",
+"name": "GraniteShares 2x Long UBER Daily ETF",
+"market": "US"
+},
+{
+"symbol": "UCRD",
+"name": "VictoryShares Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "UECG",
+"name": "Leverage Shares 2x Long UEC Daily ETF",
+"market": "US"
+},
+{
+"symbol": "UEVM",
+"name": "VictoryShares Emerging Markets Value Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "UFIV",
+"name": "US Treasury 5 Year Note ETF",
+"market": "US"
+},
+{
+"symbol": "UFO",
+"name": "Procure Space ETF",
+"market": "US"
+},
+{
+"symbol": "UFOX",
+"name": "Defiance Space and Connective Tech ETF",
+"market": "US"
+},
+{
+"symbol": "UITB",
+"name": "VictoryShares Core Intermediate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "UIVM",
+"name": "VictoryShares International Value Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "ULTI",
+"name": "REX IncomeMax Option Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "ULVM",
+"name": "VictoryShares US Value Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "UMMA",
+"name": "Wahed Dow Jones Islamic World ETF",
+"market": "US"
+},
+{
+"symbol": "UNHG",
+"name": "Leverage Shares 2X Long UNH Daily ETF",
+"market": "US"
+},
+{
+"symbol": "UPGR",
+"name": "Xtrackers US Green Infrastructure Select Equity ETF",
+"market": "US"
+},
+{
+"symbol": "UPSG",
+"name": "Leverage Shares 2X Long UPS Daily ETF",
+"market": "US"
+},
+{
+"symbol": "URNJ",
+"name": "Sprott Junior Uranium Miners ETF",
+"market": "US"
+},
+{
+"symbol": "USCL",
+"name": "iShares Climate Conscious & Transition MSCI USA ETF",
+"market": "US"
+},
+{
+"symbol": "USDX",
+"name": "SGI Enhanced Core ETF",
+"market": "US"
+},
+{
+"symbol": "USFI",
+"name": "BrandywineGLOBAL - U.S. Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "USGG",
+"name": "Leverage Shares 2X Long USAR Daily ETF",
+"market": "US"
+},
+{
+"symbol": "USIG",
+"name": "iShares Broad USD Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "USMC",
+"name": "Principal U.S. Mega-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "USOI",
+"name": "ETRACS Crude Oil Shares Covered Call ETNs due April 24, 2037",
+"market": "US"
+},
+{
+"symbol": "USOY",
+"name": "Defiance Oil Enhanced Options Income ETF",
+"market": "US"
+},
+{
+"symbol": "USRD",
+"name": "Themes US R&D Champions ETF",
+"market": "US"
+},
+{
+"symbol": "USTB",
+"name": "VictoryShares Short-Term Bond ETF",
+"market": "US"
+},
+{
+"symbol": "USVM",
+"name": "VictoryShares US Small Mid Cap Value Momentum ETF",
+"market": "US"
+},
+{
+"symbol": "USVN",
+"name": "US Treasury 7 Year Note ETF",
+"market": "US"
+},
+{
+"symbol": "USXF",
+"name": "iShares ESG Advanced MSCI USA ETF",
+"market": "US"
+},
+{
+"symbol": "UTEN",
+"name": "US Treasury 10 Year Note ETF",
+"market": "US"
+},
+{
+"symbol": "UTHY",
+"name": "US Treasury 30 Year Bond ETF",
+"market": "US"
+},
+{
+"symbol": "UTRE",
+"name": "US Treasury 3 Year Note ETF",
+"market": "US"
+},
+{
+"symbol": "UTWO",
+"name": "US Treasury 2 Year Note ETF",
+"market": "US"
+},
+{
+"symbol": "UTWY",
+"name": "US Treasury 20 Year Bond ETF",
+"market": "US"
+},
+{
+"symbol": "UUUG",
+"name": "Leverage Shares 2X Long UUUU Daily ETF",
+"market": "US"
+},
+{
+"symbol": "UYLD",
+"name": "Angel Oak UltraShort Income ETF",
+"market": "US"
+},
+{
+"symbol": "VALG",
+"name": "Leverage Shares 2X Long VALE Daily ETF",
+"market": "US"
+},
+{
+"symbol": "VAVX",
+"name": "VanEck Avalanche ETF",
+"market": "US"
+},
+{
+"symbol": "VBCA",
+"name": "Vanguard Target Maturity 2027 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCB",
+"name": "Vanguard Target Maturity 2028 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCC",
+"name": "Vanguard Target Maturity 2029 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCD",
+"name": "Vanguard Target Maturity 2030 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCE",
+"name": "Vanguard Target Maturity 2031 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCF",
+"name": "Vanguard Target Maturity 2032 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCG",
+"name": "Vanguard Target Maturity 2033 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCH",
+"name": "Vanguard Target Maturity 2034 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCI",
+"name": "Vanguard Target Maturity 2035 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBCJ",
+"name": "Vanguard Target Maturity 2036 Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VBIL",
+"name": "Vanguard 0-3 Month Treasury Bill ETF",
+"market": "US"
+},
+{
+"symbol": "VBNB",
+"name": "VanEck BNB ETF",
+"market": "US"
+},
+{
+"symbol": "VCIT",
+"name": "Vanguard Intermediate-Term Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VCLT",
+"name": "Vanguard Long-Term Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VCRB",
+"name": "Vanguard Core Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VCSH",
+"name": "Vanguard Short-Term Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VEFA",
+"name": "VanEck MSCI EAFE Analyst Sentiment ETF",
+"market": "US"
+},
+{
+"symbol": "VFLO",
+"name": "VictoryShares Free Cash Flow ETF",
+"market": "US"
+},
+{
+"symbol": "VGIT",
+"name": "Vanguard Intermediate-Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "VGLT",
+"name": "Vanguard Long-Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "VGSH",
+"name": "Vanguard Short-Term Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "VGSR",
+"name": "Vert Global Sustainable Real Estate ETF",
+"market": "US"
+},
+{
+"symbol": "VGUS",
+"name": "Vanguard Ultra-Short Treasury ETF",
+"market": "US"
+},
+{
+"symbol": "VIGI",
+"name": "Vanguard International Dividend Appreciation ETF",
+"market": "US"
+},
+{
+"symbol": "VMBS",
+"name": "Vanguard Mortgage-Backed Securities ETF",
+"market": "US"
+},
+{
+"symbol": "VNQI",
+"name": "Vanguard Global ex-U.S. Real Estate ETF",
+"market": "US"
+},
+{
+"symbol": "VOLT",
+"name": "Tema Electrification ETF",
+"market": "US"
+},
+{
+"symbol": "VONE",
+"name": "Vanguard Russell 1000 ETF",
+"market": "US"
+},
+{
+"symbol": "VONG",
+"name": "Vanguard Russell 1000 Growth ETF",
+"market": "US"
+},
+{
+"symbol": "VONV",
+"name": "Vanguard Russell 1000 Value ETF",
+"market": "US"
+},
+{
+"symbol": "VOTE",
+"name": "TCW Transform 500 ETF",
+"market": "US"
+},
+{
+"symbol": "VPLS",
+"name": "Vanguard Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VRIG",
+"name": "Invesco Variable Rate Investment Grade ETF",
+"market": "US"
+},
+{
+"symbol": "VRTL",
+"name": "GraniteShares 2x Long VRT Daily ETF",
+"market": "US"
+},
+{
+"symbol": "VSDA",
+"name": "VictoryShares Dividend Accelerator ETF",
+"market": "US"
+},
+{
+"symbol": "VSMV",
+"name": "VictoryShares US Multi-Factor Minimum Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "VSOL",
+"name": "VanEck Solana ETF",
+"market": "US"
+},
+{
+"symbol": "VSTL",
+"name": "Defiance Daily Target 2X Long VST ETF",
+"market": "US"
+},
+{
+"symbol": "VTC",
+"name": "Vanguard Total Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VTHR",
+"name": "Vanguard Russell 3000 ETF",
+"market": "US"
+},
+{
+"symbol": "VTIP",
+"name": "Vanguard Short-Term Inflation-Protected Securities Index Fund ETF Shares",
+"market": "US"
+},
+{
+"symbol": "VTWG",
+"name": "Vanguard Russell 2000 Growth ETF",
+"market": "US"
+},
+{
+"symbol": "VTWO",
+"name": "Vanguard Russell 2000 ETF",
+"market": "US"
+},
+{
+"symbol": "VTWV",
+"name": "Vanguard Russell 2000 Value ETF",
+"market": "US"
+},
+{
+"symbol": "VWOB",
+"name": "Vanguard Emerging Markets Government Bond ETF",
+"market": "US"
+},
+{
+"symbol": "VXUS",
+"name": "Vanguard Total International Stock ETF",
+"market": "US"
+},
+{
+"symbol": "VYMI",
+"name": "Vanguard International High Dividend Yield ETF",
+"market": "US"
+},
+{
+"symbol": "WABF",
+"name": "Western Asset Bond ETF",
+"market": "US"
+},
+{
+"symbol": "WARP",
+"name": "VanEck Space ETF",
+"market": "US"
+},
+{
+"symbol": "WEEI",
+"name": "Westwood Salient Enhanced Energy Income ETF",
+"market": "US"
+},
+{
+"symbol": "WGMI",
+"name": "CoinShares Bitcoin Mining ETF",
+"market": "US"
+},
+{
+"symbol": "WISE",
+"name": "Themes Generative Artificial Intelligence ETF",
+"market": "US"
+},
+{
+"symbol": "WOOD",
+"name": "iShares Global Timber & Forestry ETF",
+"market": "US"
+},
+{
+"symbol": "WRND",
+"name": "NYLI Global Equity R&D Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "WRTH",
+"name": "Worth Charting Options Income ETF",
+"market": "US"
+},
+{
+"symbol": "WSGE",
+"name": "Warren Street Global Equity ETF",
+"market": "US"
+},
+{
+"symbol": "WSML",
+"name": "iShares MSCI World Small-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "XAIX",
+"name": "Xtrackers Artificial Intelligence and Big Data ETF",
+"market": "US"
+},
+{
+"symbol": "XBCI",
+"name": "NEOS Boosted Bitcoin High Income ETF",
+"market": "US"
+},
+{
+"symbol": "XBIL",
+"name": "US Treasury 6 Month Bill ETF",
+"market": "US"
+},
+{
+"symbol": "XBTY",
+"name": "GraniteShares YieldBOOST Bitcoin ETF",
+"market": "US"
+},
+{
+"symbol": "XCNY",
+"name": "State Street SPDR S&P Emerging Markets ex-China ETF",
+"market": "US"
+},
+{
+"symbol": "XDEF",
+"name": "Xtrackers Europe Defense Technologies ETF",
+"market": "US"
+},
+{
+"symbol": "XEY",
+"name": "GraniteShares YieldBOOST Ether ETF",
+"market": "US"
+},
+{
+"symbol": "XMAG",
+"name": "Defiance Large Cap ex-Mag 7 ETF",
+"market": "US"
+},
+{
+"symbol": "XOMX",
+"name": "Direxion Daily XOM Bull 2X ETF",
+"market": "US"
+},
+{
+"symbol": "XOVR",
+"name": "ERShares Private-Public Crossover ETF",
+"market": "US"
+},
+{
+"symbol": "XPEG",
+"name": "Leverage Shares 2X Long XPEV Daily ETF",
+"market": "US"
+},
+{
+"symbol": "XQQI",
+"name": "NEOS Boosted Nasdaq-100 High Income ETF",
+"market": "US"
+},
+{
+"symbol": "XRPC",
+"name": "Canary XRP ETF",
+"market": "US"
+},
+{
+"symbol": "XRPI",
+"name": "Volatility Shares Trust XRP ETF",
+"market": "US"
+},
+{
+"symbol": "XRPT",
+"name": "Volatility Shares Trust XRP 2X ETF",
+"market": "US"
+},
+{
+"symbol": "XSPC",
+"name": "VegaShares SpaceX & Beyond Earth ETF",
+"market": "US"
+},
+{
+"symbol": "XSPI",
+"name": "NEOS Boosted S&P 500 High Income ETF",
+"market": "US"
+},
+{
+"symbol": "XT",
+"name": "iShares Future Exponential Technologies ETF",
+"market": "US"
+},
+{
+"symbol": "XXX",
+"name": "CYBER HORNET S&P 500 and XRP 75/25 Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "XYZG",
+"name": "Leverage Shares 2X Long XYZ Daily ETF",
+"market": "US"
+},
+{
+"symbol": "YBMN",
+"name": "Defiance BMNR Option Income ETF",
+"market": "US"
+},
+{
+"symbol": "YBST",
+"name": "GraniteShares YieldBoost Single Stock Universe ETF",
+"market": "US"
+},
+{
+"symbol": "YBTY",
+"name": "GraniteShares YieldBoost TopYielders ETF",
+"market": "US"
+},
+{
+"symbol": "YLDE",
+"name": "Franklin ClearBridge Enhanced Income ETF",
+"market": "US"
+},
+{
+"symbol": "YNOT",
+"name": "Horizon Digital Frontier ETF",
+"market": "US"
+},
+{
+"symbol": "YOKE",
+"name": "YOKE Core ETF",
+"market": "US"
+},
+{
+"symbol": "YQQQ",
+"name": "YieldMax Short N100 Option Income Strategy ETF",
+"market": "US"
+},
+{
+"symbol": "YSPY",
+"name": "GraniteShares YieldBOOST SPY ETF",
+"market": "US"
+},
+{
+"symbol": "ZAP",
+"name": "Global X U.S. Electrification ETF",
+"market": "US"
+},
+{
+"symbol": "ZHOG",
+"name": "F/m Opportunistic Income ETF",
+"market": "US"
+},
+{
+"symbol": "ZMUN",
+"name": "F/m Ultrashort Tax-Free Municipal ETF",
+"market": "US"
+},
+{
+"symbol": "ZTEN",
+"name": "F/m 10-Year Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "ZTOP",
+"name": "F/m High Yield 100 ETF",
+"market": "US"
+},
+{
+"symbol": "ZTRE",
+"name": "F/m 3-Year Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "ZTWO",
+"name": "F/m 2-Year Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "ACLO",
+"name": "TCW AAA CLO ETF",
+"market": "US"
+},
+{
+"symbol": "BCEM",
+"name": "Baron Emerging Markets Select ETF",
+"market": "US"
+},
+{
+"symbol": "BCGD",
+"name": "Baron Global Durable Advantage ETF",
+"market": "US"
+},
+{
+"symbol": "BCSM",
+"name": "Baron SMID Cap ETF",
+"market": "US"
+},
+{
+"symbol": "BRCE",
+"name": "MFS Blended Research Core Equity ETF",
+"market": "US"
+},
+{
+"symbol": "BREE",
+"name": "MFS Blended Research Emerging Markets Equity ETF",
+"market": "US"
+},
+{
+"symbol": "BRIE",
+"name": "MFS Blended Research International Equity ETF",
+"market": "US"
+},
+{
+"symbol": "BROL",
+"name": "Baron Risk Optimized Large Cap ETF",
+"market": "US"
+},
+{
+"symbol": "BUXX",
+"name": "Strive Enhanced Income Short Maturity ETF",
+"market": "US"
+},
+{
+"symbol": "CGV",
+"name": "Conductor Global Equity Value ETF",
+"market": "US"
+},
+{
+"symbol": "CPAI",
+"name": "Counterpoint Quantitative Equity ETF",
+"market": "US"
+},
+{
+"symbol": "DIVY",
+"name": "Sound Equity Dividend Income ETF",
+"market": "US"
+},
+{
+"symbol": "DRLL",
+"name": "Strive U.S. Energy ETF",
+"market": "US"
+},
+{
+"symbol": "DSMC",
+"name": "Distillate Small/Mid Cash Flow ETF",
+"market": "US"
+},
+{
+"symbol": "DSTX",
+"name": "Distillate International Fundamental Stability & Value ETF",
+"market": "US"
+},
+{
+"symbol": "EVTR",
+"name": "Eaton Vance Total Return Bond ETF",
+"market": "US"
+},
+{
+"symbol": "FEGE",
+"name": "First Eagle Global Equity ETF",
+"market": "US"
+},
+{
+"symbol": "FEOE",
+"name": "First Eagle Overseas Equity ETF",
+"market": "US"
+},
+{
+"symbol": "FIXT",
+"name": "TCW Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "FLXR",
+"name": "TCW Flexible Income ETF",
+"market": "US"
+},
+{
+"symbol": "FTWO",
+"name": "Strive Natural Resources and Security ETF",
+"market": "US"
+},
+{
+"symbol": "FXED",
+"name": "Sound Enhanced Fixed Income ETF",
+"market": "US"
+},
+{
+"symbol": "GDIV",
+"name": "Harbor Dividend Growth Leaders ETF",
+"market": "US"
+},
+{
+"symbol": "GMMF",
+"name": "iShares Government Money Market ETF",
+"market": "US"
+},
+{
+"symbol": "GYLD",
+"name": "Arrow Dow Jones Global Yield ETF ETF",
+"market": "US"
+},
+{
+"symbol": "HF",
+"name": "DGA Core Plus Absolute Return ETF",
+"market": "US"
+},
+{
+"symbol": "HFEQ",
+"name": "Unlimited HFEQ Equity Long/Short ETF",
+"market": "US"
+},
+{
+"symbol": "HFGM",
+"name": "Unlimited HFGM Global Macro ETF",
+"market": "US"
+},
+{
+"symbol": "HFMF",
+"name": "Unlimited HFMF Managed Futures ETF",
+"market": "US"
+},
+{
+"symbol": "HYBX",
+"name": "TCW High Yield Bond ETF",
+"market": "US"
+},
+{
+"symbol": "HYTR",
+"name": "Counterpoint High Yield Trend ETF",
+"market": "US"
+},
+{
+"symbol": "IGCB",
+"name": "TCW Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "INFO",
+"name": "Harbor PanAgora Dynamic Large Cap Core ETF",
+"market": "US"
+},
+{
+"symbol": "JBND",
+"name": "JPMorgan Active Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MDST",
+"name": "Westwood Salient Enhanced Midstream Income ETF",
+"market": "US"
+},
+{
+"symbol": "MFSB",
+"name": "MFS Active Core Plus Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MFSG",
+"name": "MFS Active Growth ETF",
+"market": "US"
+},
+{
+"symbol": "MFSI",
+"name": "MFS Active International ETF",
+"market": "US"
+},
+{
+"symbol": "MFSM",
+"name": "MFS Active Intermediate Muni Bond ETF",
+"market": "US"
+},
+{
+"symbol": "MFSV",
+"name": "MFS Active Value ETF",
+"market": "US"
+},
+{
+"symbol": "MMID",
+"name": "MFS Active Mid Cap ETF",
+"market": "US"
+},
+{
+"symbol": "MMK",
+"name": "State Street Prime Money Market ETF",
+"market": "US"
+},
+{
+"symbol": "MMKT",
+"name": "Texas Capital Government Money Market ETF",
+"market": "US"
+},
+{
+"symbol": "MUSE",
+"name": "TCW Multisector Credit Income ETF",
+"market": "US"
+},
+{
+"symbol": "PMMF",
+"name": "iShares Prime Money Market ETF",
+"market": "US"
+},
+{
+"symbol": "PRCS",
+"name": "Parnassus Core Select ETF",
+"market": "US"
+},
+{
+"symbol": "PRVS",
+"name": "Parnassus Value Select ETF",
+"market": "US"
+},
+{
+"symbol": "RONB",
+"name": "Baron First Principles ETF",
+"market": "US"
+},
+{
+"symbol": "SHOC",
+"name": "Strive U.S. Semiconductor ETF",
+"market": "US"
+},
+{
+"symbol": "SLNZ",
+"name": "TCW Senior Loan ETF",
+"market": "US"
+},
+{
+"symbol": "STXD",
+"name": "Strive 1000 Dividend Growth ETF",
+"market": "US"
+},
+{
+"symbol": "STXF",
+"name": "Strive 500 ETF",
+"market": "US"
+},
+{
+"symbol": "STXG",
+"name": "Strive 1000 Growth ETF",
+"market": "US"
+},
+{
+"symbol": "STXT",
+"name": "Strive Total Return Bond ETF",
+"market": "US"
+},
+{
+"symbol": "STXV",
+"name": "Strive 1000 Value ETF",
+"market": "US"
+},
+{
+"symbol": "TBLU",
+"name": "Tortoise Global Water ETF",
+"market": "US"
+},
+{
+"symbol": "TCAI",
+"name": "Tortoise AI Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "THIR",
+"name": "THOR Index Rotation ETF",
+"market": "US"
+},
+{
+"symbol": "THLV",
+"name": "THOR Equal Weight Low Volatility ETF",
+"market": "US"
+},
+{
+"symbol": "THMR",
+"name": "THOR AdaptiveRisk Dynamic ETF",
+"market": "US"
+},
+{
+"symbol": "TNGY",
+"name": "Tortoise Energy ETF",
+"market": "US"
+},
+{
+"symbol": "TPYP",
+"name": "Tortoise North American Pipeline ETF",
+"market": "US"
+},
+{
+"symbol": "TPZ",
+"name": "Tortoise Electrification Infrastructure ETF",
+"market": "US"
+},
+{
+"symbol": "WBIY",
+"name": "WBI Power Factor High Dividend ETF",
+"market": "US"
+},
+{
+"symbol": "WLTG",
+"name": "WealthTrust DBS Long Term Growth ETF",
+"market": "US"
+},
+{
+"symbol": "VOO",
+"name": "Vanguard S&P 500 ETF",
+"market": "US"
+},
+{
+"symbol": "VTI",
+"name": "Vanguard Total Stock Market ETF",
+"market": "US"
+},
+{
+"symbol": "VEA",
+"name": "Vanguard FTSE Developed Markets ETF",
+"market": "US"
+},
+{
+"symbol": "VWO",
+"name": "Vanguard FTSE Emerging Markets ETF",
+"market": "US"
+},
+{
+"symbol": "VTV",
+"name": "Vanguard Value ETF",
+"market": "US"
+},
+{
+"symbol": "VUG",
+"name": "Vanguard Growth ETF",
+"market": "US"
+},
+{
+"symbol": "VIG",
+"name": "Vanguard Dividend Appreciation ETF",
+"market": "US"
+},
+{
+"symbol": "VNQ",
+"name": "Vanguard Real Estate ETF",
+"market": "US"
+},
+{
+"symbol": "VYM",
+"name": "Vanguard High Dividend Yield ETF",
+"market": "US"
+},
+{
+"symbol": "VGT",
+"name": "Vanguard Information Technology ETF",
+"market": "US"
+},
+{
+"symbol": "VO",
+"name": "Vanguard Mid-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "VB",
+"name": "Vanguard Small-Cap ETF",
+"market": "US"
+},
+{
+"symbol": "SPY",
+"name": "SPDR S&P 500 ETF Trust",
+"market": "US"
+},
+{
+"symbol": "GLD",
+"name": "SPDR Gold Shares",
+"market": "US"
+},
+{
+"symbol": "SLV",
+"name": "iShares Silver Trust",
+"market": "US"
+},
+{
+"symbol": "IVV",
+"name": "iShares Core S&P 500 ETF",
+"market": "US"
+},
+{
+"symbol": "EFA",
+"name": "iShares MSCI EAFE ETF",
+"market": "US"
+},
+{
+"symbol": "IEFA",
+"name": "iShares Core MSCI EAFE ETF",
+"market": "US"
+},
+{
+"symbol": "IEMG",
+"name": "iShares Core MSCI Emerging Markets ETF",
+"market": "US"
+},
+{
+"symbol": "AGG",
+"name": "iShares Core US Aggregate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "BIL",
+"name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+"market": "US"
+},
+{
+"symbol": "SCHD",
+"name": "Schwab US Dividend Equity ETF",
+"market": "US"
+},
+{
+"symbol": "SCHB",
+"name": "Schwab US Broad Market ETF",
+"market": "US"
+},
+{
+"symbol": "SCHF",
+"name": "Schwab International Equity ETF",
+"market": "US"
+},
+{
+"symbol": "SCHG",
+"name": "Schwab US Large-Cap Growth ETF",
+"market": "US"
+},
+{
+"symbol": "JEPI",
+"name": "JPMorgan Equity Premium Income ETF",
+"market": "US"
+},
+{
+"symbol": "ARKK",
+"name": "ARK Innovation ETF",
+"market": "US"
+},
+{
+"symbol": "ARKW",
+"name": "ARK Next Generation Internet ETF",
+"market": "US"
+},
+{
+"symbol": "LQD",
+"name": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "HYG",
+"name": "iShares iBoxx $ High Yield Corporate Bond ETF",
+"market": "US"
+},
+{
+"symbol": "TLH",
+"name": "iShares 10-20 Year Treasury Bond ETF",
+"market": "US"
+},
+{
+"symbol": "XLF",
+"name": "Financial Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLE",
+"name": "Energy Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLK",
+"name": "Technology Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLV",
+"name": "Health Care Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLY",
+"name": "Consumer Discretionary Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLP",
+"name": "Consumer Staples Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLI",
+"name": "Industrial Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLU",
+"name": "Utilities Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLB",
+"name": "Materials Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLRE",
+"name": "Real Estate Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "XLC",
+"name": "Communication Services Select Sector SPDR Fund",
+"market": "US"
+},
+{
+"symbol": "EWJ",
+"name": "iShares MSCI Japan ETF",
+"market": "US"
+},
+{
+"symbol": "EWZ",
+"name": "iShares MSCI Brazil ETF",
+"market": "US"
+},
+{
+"symbol": "INDA",
+"name": "iShares MSCI India ETF",
+"market": "US"
+},
+{
+"symbol": "EWT",
+"name": "iShares MSCI Taiwan ETF",
+"market": "US"
+},
+{
+"symbol": "EWG",
+"name": "iShares MSCI Germany ETF",
+"market": "US"
+},
+{
+"symbol": "EWU",
+"name": "iShares MSCI United Kingdom ETF",
+"market": "US"
+},
+{
+"symbol": "SH",
+"name": "ProShares Short S&P500",
+"market": "US"
+},
+{
+"symbol": "SDS",
+"name": "ProShares UltraShort S&P500",
+"market": "US"
+},
+{
+"symbol": "SSO",
+"name": "ProShares Ultra S&P500",
+"market": "US"
+},
+{
+"symbol": "UPRO",
+"name": "ProShares UltraPro S&P500",
+"market": "US"
+},
+{
+"symbol": "SPXU",
+"name": "ProShares UltraPro Short S&P500",
+"market": "US"
+},
+{
+"symbol": "TQQQ",
+"name": "ProShares UltraPro QQQ",
+"market": "US"
+},
+{
+"symbol": "SQQQ",
+"name": "ProShares UltraPro Short QQQ",
+"market": "US"
+},
+{
+"symbol": "SOXL",
+"name": "Direxion Daily Semiconductor Bull 3X Shares",
+"market": "US"
+},
+{
+"symbol": "SOXS",
+"name": "Direxion Daily Semiconductor Bear 3X Shares",
+"market": "US"
+},
+{
+"symbol": "QQQ",
+"name": "Invesco QQQ Trust, Series 1",
 "market": "US"
 }
 ]
